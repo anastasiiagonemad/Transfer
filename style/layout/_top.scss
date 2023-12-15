@@ -1,0 +1,18 @@
+.header {
+  display: grid;
+  grid-template-columns: 1fr 7fr 3fr;
+
+  & ul {
+    list-style: none;
+  }
+
+  &__nav-container {
+    display: flex;
+    gap: 1rem;
+  }
+
+  &__contacts-container {
+    display: flex;
+    gap: 0.25rem;
+  }
+}
