@@ -19,6 +19,7 @@
   font-weight: 400;
   font-style: normal;
 }
+
 html {
   scroll-behavior: smooth;
 }
@@ -33,4 +34,11 @@ body {
   min-width: 320px;
   max-width: 1440px;
   margin: 0 auto;
+}
+
+.wrapper {
+  padding-left: 10%;
+  padding-right: 10%;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
 }
