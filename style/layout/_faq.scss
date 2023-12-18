@@ -1,0 +1,26 @@
+.FAQ__title {
+    margin-bottom: 50px;
+}
+
+.accordion-button:hover {
+    background-color: $light-blue;
+    
+}
+
+.accordion-button:focus {
+   background-color: $light-blue;
+   box-shadow: none;
+}
+
+.accordion-button:active {
+    background-color: $light-blue;
+    border: none;
+    
+}
+
+.accordion-collapse {
+    font-size: 1rem;
+}
+
+
+
