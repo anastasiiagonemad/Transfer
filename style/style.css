@@ -261,6 +261,12 @@ body {
   font-size: 1rem;
 }
 
+@media (min-width: 771px) and (max-width: 940px) {
+  .accordion {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
 @media screen and (max-width: 770px) {
   .accordion {
     display: grid;
