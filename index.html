@@ -12,7 +12,7 @@
 </head>
 <body>
   <div class="top wrapper">
-    <header class="header">
+    <!-- <header class="header">
       <div class="logo">TRANSFER</div>
       <nav class="header__nav">
         <ul class="header__nav-container">
@@ -30,7 +30,48 @@
           <li class="header__contacts-item">+7 999 603 15 85</li>
         </ul>
       </div>
-    </header>
+    </header> -->
+    <div id="myCarousel" class="carousel slide carousel-fade top__carousel" data-bs-ride="carousel" data-bs-interval="5000">
+      
+      <div class="carousel-indicators top__carousel-indicators">
+        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div>
+
+      <div class="carousel-inner top__carousel-inner">
+        <div class="carousel-item active top__carousel-item" data-bs-interval="3000">
+          <div class="top__overlay-image" style="background-image: url('assets/image/munich-main.jpg');"></div>
+          <div class="top__container">
+                    <!-- SOME TEXT -->
+          </div>
+      </div>
+          
+      <div class="carousel-item top__carousel-item">
+        <div class="top__overlay-image" style="background-image: url('assets/image/sprinter-1main.jpg');"></div>
+        <div class="top__container">
+          <!-- SOME TEXT -->
+        </div>
+      </div>
+          
+      <div class="carousel-item top__carousel-item">
+        <div class="top__overlay-image" style="background-image: url('assets/image/Stuttgart.jpg');"></div>
+        <div class="top__container">
+              <!-- SOME TEXT -->
+        </div>
+      </div>
+
+      <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Предыдущий</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Следующий</span>
+      </button>
+    </div>
+  </div>
+
 
     <section class="top__container"></section>
   </div>
@@ -49,7 +90,7 @@
           <div class="services__container-item-1">
             <img src="assets/image/passangers-delivery.jpg" alt="passangers-delivery">
             <p>Пассажирские перевозки</p>
-            <details open="open">
+            <details>
               <summary>Подробнее</summary>
               <div class="services__container-item-1-description">
                 <p>Еженедельные пассажирские перевозки Германия-Калининград-Германия;</p>
@@ -66,7 +107,7 @@
           <div class="services__container-item-2">
             <img src="assets/image/delivery.jpg" alt="delivery_box">
             <p>Доставка грузов / посылок</p>
-            <details open="open">
+            <details>
               <summary>Подробнее</summary>
               <div class="services__container-item-2-description">
                 <p>Доставка корреспонденции, посылок, лекарств (если требуется, то перевозка осуществляется в холодильнике), ценных писем, бандеролей;</p>
@@ -82,7 +123,7 @@
           <div class="services__container-item-3">
             <img src="assets/image/delivery-pets.jpeg" alt="delivery-pets">
             <p>Дополнительные услуги</p>
-             <details open="open">
+             <details>
                 <summary>Подробнее</summary>
                 <div class="services__container-item-3-description">
                   <p>Перевозка домашних животных. Перевозим любых домашних животных при наличии сопроводительных документов. Помощь с оформлением документов для животных;</p>
