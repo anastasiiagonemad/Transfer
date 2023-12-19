@@ -1,0 +1,18 @@
+.trip-order {
+
+    &__title {
+        margin-top: 50px;
+        height: 100px;
+    }
+
+    &__container {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        width: 100%;
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+}

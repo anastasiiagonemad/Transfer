@@ -266,4 +266,17 @@ body {
     display: grid;
     grid-template-columns: 1fr 1fr;
   }
+}
+.trip-order__title {
+  margin-top: 50px;
+  height: 100px;
+}
+.trip-order__container {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  width: 100%;
+}
+.trip-order__container img {
+  width: 100%;
+  height: auto;
 }/*# sourceMappingURL=style.css.map */
