@@ -264,7 +264,7 @@ body {
 @media screen and (max-width: 770px) {
   .accordion {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
   }
 }
 .trip-order__title {
