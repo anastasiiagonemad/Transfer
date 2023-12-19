@@ -39,106 +39,64 @@
     <section class="departures wrapper"></section>
 
     <section class="services wrapper">
-      <div class="container-fluid">
-        <div class="row">
-            <div class="col-md-12">
-               <h2 class="services__head-title">Услуги</h2>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-2">
-        </div>
+      <div class="services__title">
+        <h2>Услуги</h2>
+      </div>
+    
+      <div class="services__main">
 
-        <div class="col-md-8">
-
-              <div id="myCarousel" class="carousel slide carousel-fade services__carousel" data-bs-ride="carousel" data-bs-interval="10000">
-
-                <div class="carousel-inner services__carousel-inner">
-
-                  <div class="carousel-item active services__carousel-item" data-bs-interval="3000">
-                    <div class="services__overlay-image" style="background-image: url('assets/image/delivery_passangers.jpeg');"></div>
-                    <div class="services__container">
-                      <h2>
-                        Пассажирские перевозки
-                      </h2>
-                      <div class="css-modal-details">
-                        <details>
-                            <summary>Подробнее</summary>
-                            <div class="cmc">
-                                <div class="cmt">
-                                    <p>Еженедельные пассажирские перевозки Германия-Калининград-Германия;</p>
-                                    <p>Багаж включен в стоимость;</p>
-                                    <p>Возраст пассажиров не ограничен;</p>
-                                    <p>Трансфер от адреса до адреса;</p>
-                                    <p>Маршрут проходит,преимущественно, по скоростным и платным трассам.</p>
-                                </div>
-                            </div>
-                        </details>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="carousel-item services__carousel-item">
-                    <div class="services__overlay-image" style="background-image: url('assets/image/delivery.jpg');"></div>
-                    <div class="services__container">
-                      <h2>
-                        Перевозка грузов
-                      </h2>
-                      <div class="css-modal-details">
-                        <details>
-                            <summary>Подробнее</summary>
-                            <div class="cmc">
-                                <div class="cmt">
-                                    <p>Доставка корреспонденции, посылок, лекарств (если требуется, то перевозка осуществляется в холодильнике), ценных писем, бандеролей;</p>
-                                    <p>Посылки и корреспонденцию принимаем на почтовый адрес в Германии;</p>
-                                    <p>Посылки и корреспонденцию отправляем из Калининграда по всей России почтой России или СДЭК;</p>
-                                    <p>Транспортировка праха в урнах.</p>
-                                </div>
-                            </div>
-                        </details>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="carousel-item services__carousel-item">
-                    <div class="services__overlay-image" style="background-image: url('assets/image/delivery-pets.jpeg');"></div>
-                    <div class="services__container">
-                      <h2>
-                        Дополнительные услуги
-                      </h2>
-                      <div class="css-modal-details">
-                        <details>
-                            <summary>Подробнее</summary>
-                            <div class="cmc">
-                                <div class="cmt">
-                                    <p>Перевозка домашних животных. Перевозим любых домашних животных при наличии сопроводительных документов. Помощь с оформлением документов для животных;</p>
-                                    <p>Помощь с оформлением документов для Транспортировки праха;</p>
-                                    <p>Трансфер до аэропорта Храброво в Калининграде (15euro);</p>
-                                    <p>Сопровождение несовершеннолетних;</p>
-                                    <p>Бронь гостиницы, авиа и ж/д билетов по всей России без комиссии (услуга доступна только для пассажиров нашей компании);</p>
-                                    <p>Помощь с оформлением электронной визы в Россию (услуга доступна только для пассажиров с немецким гражданством)</p>
-                                </div>
-                            </div>
-                        </details>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
-                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                  <span class="visually-hidden">Предыдущий</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
-                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                  <span class="visually-hidden">Следующий</span>
-                </button>
-              </div>
-            </div>
-            <div class="col-md-2">
+        <div class="services__container">
+          <div class="services__container-item-1">
+            <img src="assets/image/passangers-delivery.jpg" alt="passangers-delivery">
+            <p>Пассажирские перевозки</p>
+            <details open="open">
+              <summary>Подробнее</summary>
+              <div class="services__container-item-1-description">
+                <p>Еженедельные пассажирские перевозки Германия-Калининград-Германия;</p>
+                <p>Багаж включен в стоимость;</p>
+                <p>Возраст пассажиров не ограничен;</p>
+                <p>Трансфер от адреса до адреса;</p>
+                <p>Маршрут проходит,преимущественно, по скоростным и платным трассам.</p>
+              </div>    
+            </details>
           </div>
         </div>
-      </div>
+
+        <div class="services__container">
+          <div class="services__container-item-2">
+            <img src="assets/image/delivery.jpg" alt="delivery_box">
+            <p>Доставка грузов / посылок</p>
+            <details open="open">
+              <summary>Подробнее</summary>
+              <div class="services__container-item-2-description">
+                <p>Доставка корреспонденции, посылок, лекарств (если требуется, то перевозка осуществляется в холодильнике), ценных писем, бандеролей;</p>
+                <p>Посылки и корреспонденцию принимаем на почтовый адрес в Германии;</p>
+                <p>Посылки и корреспонденцию отправляем из Калининграда по всей России почтой России или СДЭК;</p>
+                <p>Транспортировка праха в урнах.</p>
+              </div>    
+            </details> 
+          </div>
+        </div>
+          
+        <div class="services__container">  
+          <div class="services__container-item-3">
+            <img src="assets/image/delivery-pets.jpeg" alt="delivery-pets">
+            <p>Дополнительные услуги</p>
+             <details open="open">
+                <summary>Подробнее</summary>
+                <div class="services__container-item-3-description">
+                  <p>Перевозка домашних животных. Перевозим любых домашних животных при наличии сопроводительных документов. Помощь с оформлением документов для животных;</p>
+                  <p>Помощь с оформлением документов для Транспортировки праха;</p>
+                    <p>Трансфер до аэропорта Храброво в Калининграде (15euro);</p>  
+                  <p>Сопровождение несовершеннолетних;</p>
+                  <p>Бронь гостиницы, авиа и ж/д билетов по всей России без комиссии (услуга доступна только для пассажиров нашей компании);</p>
+                  <p>Помощь с оформлением электронной визы в Россию (услуга доступна только для пассажиров с немецким гражданством)</p>
+                </div>    
+              </details>
+            </div>
+          </div>
+        </div>
+
     </section>
 
     
@@ -244,11 +202,13 @@
         <div class="accordion-item">
           <h2 class="accordion-header">
             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseNine" aria-expanded="false" aria-controls="flush-collapseNine">
-              <h5>Какими картами возможна оплата?</h5>
+              <h5>Каким способом можно оплатить поездку?</h5>
             </button>
           </h2>
           <div id="flush-collapseNine" class="accordion-collapse collapse" data-bs-parent="#accordion_FAQ">
-            <div class="accordion-body">Российскими и любыми иностранными</div>
+            <div class="accordion-body">
+              <p>Оплата принимается картами Российских и иностранных банков.</p> 
+              <p>Для бронирования поездки требуется предоплата в размере 20 Euro за человека, она входит в стоимость билета. При отказе от поездки без уважительной причины менее чем за 2 суток предоплата не возвращается.</p></div>
           </div>
         </div>
 
@@ -336,17 +296,6 @@
           </h2>
           <div id="flush-collapseSixsteen" class="accordion-collapse collapse" data-bs-parent="#accordion_FAQ">
             <div class="accordion-body">Можно, но не все. Согласно законодательству, мы не имеем права перевозить чужой паспорт.</div>
-          </div>
-        </div>
-
-        <div class="accordion-item">
-          <h2 class="accordion-header">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseSeventeen" aria-expanded="false" aria-controls="flush-collapseSeventeen">
-              <h5>Требуется ли предоплата?</h5>
-            </button>
-          </h2>
-          <div id="flush-collapseSeventeen" class="accordion-collapse collapse" data-bs-parent="#accordion_FAQ">
-            <div class="accordion-body">Да, для бронирования поездки требуется предоплата 20 Euro за человека, она входит в стоимость билета. При отказе от поездки без уважительной причины менее чем за 2 суток предоплата не возвращается.</div>
           </div>
         </div>
       </div>

@@ -1,3 +1,8 @@
+.accordion {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
 .FAQ__title {
     margin-bottom: 50px;
 }
@@ -22,5 +27,11 @@
     font-size: 1rem;
 }
 
+@media screen and (max-width: 770px) {
+    .accordion {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}
 
 
