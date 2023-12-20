@@ -11,7 +11,7 @@ let passengers = `
     </div>
     <div class="input-line">
       <label for="date">Дата поездки: *</label>
-      <input class="date" name="date" type="text" placeholder="дата" required>
+      <input class="date" name="date" type="text" required>
     </div>
 
     <div class="input-line">
@@ -27,19 +27,19 @@ let passengers = `
     </div>
 
     <div class="input-line">
-      <label for="address">Ваш адрес с индексом: *</label>
-      <input class="address" name="address" type="text" placeholder="адрес с индексом">
+      <label for="address">Ваш адрес <br>с индексом: *</label>
+      <input class="address" name="address" type="text" required>
     </div>
 
     <div class="input-line">
-      <label for="tel">Ваш номер телефона:</label>
-      <input class="tel" name="tel" type="tel" placeholder="номер телефона" required>
+      <label for="tel">Ваш номер телефона: *</label>
+      <input class="tel" name="tel" type="tel" required>
     </div>
 
     <div class="input-line">
-      <label for="luggage">Есть ли у вас багаж?</label>
-      <select name="luggage" class="luggage">
-
+      <label for="luggage">Есть ли у вас багаж? *</label>
+      <select name="luggage" class="luggage" required>
+        <option value="">выберите значение</option>
         <option value="да">да</option>
         <option value="нет">нет</option>
       </select>
@@ -51,6 +51,11 @@ let passengers = `
     </div>
 
     <button class="submit-btn" name="passangers-submit">Оставить заявку</button>
+
+    <div class="order__footer">
+      <div class="confidentiality">Нажимая кнопку, вы даёте согласие на обработку персональных данных</div>
+      <div class="required-fields">Поля, обозначенные звёздочкой *, являются обязательными для заполнения</div>
+    </div>
   </form>
 
 
