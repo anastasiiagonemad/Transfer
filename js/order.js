@@ -9,24 +9,47 @@ let passengers = `
       <img class="reverse-btn" src="../assets/icons/exchange.svg">
       <div class="arrival">Калининград</div>
     </div>
-    <input class="date" type="text" placeholder="Выберите дату поездки">
-    <select name="places" class="places" required>
-      <option value="">Выберите количество пассажиров</option>
-      <option value="1">1</option>
-      <option value="2">2</option>
-      <option value="3">3</option>
-      <option value="4">4</option>
-      <option value="больше">Больше 4 - укажите в комментарии</option>
-    </select>
-    <input class="address" type="text" placeholder="Напишите Ваш адрес">
-    <input class="address" type="text" placeholder="Укажите Ваш индекс" required>
-    <input class="tel" type="tel" placeholder="Укажите Ваш номер телефона" required>
-    <select name="luggage" class="luggage">
-      <option value="">Есть ли у вас багаж?</option>
-      <option value="да">да</option>
-      <option value="нет">нет</option>
-    </select>
-    <textarea cols="40" rows="2" placeholder="Комментарии"></textarea>
+    <div class="input-line">
+      <label for="date">Дата поездки: *</label>
+      <input class="date" name="date" type="text" placeholder="дата" required>
+    </div>
+
+    <div class="input-line">
+      <label for="places">Количество пассажиров: *</label>
+      <select class="places" name="places" required>
+        <option value="">выберите количество</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="больше">Больше 4 - укажите в комментарии</option>
+      </select>
+    </div>
+
+    <div class="input-line">
+      <label for="address">Ваш адрес с индексом: *</label>
+      <input class="address" name="address" type="text" placeholder="адрес с индексом">
+    </div>
+
+    <div class="input-line">
+      <label for="tel">Ваш номер телефона:</label>
+      <input class="tel" name="tel" type="tel" placeholder="номер телефона" required>
+    </div>
+
+    <div class="input-line">
+      <label for="luggage">Есть ли у вас багаж?</label>
+      <select name="luggage" class="luggage">
+
+        <option value="да">да</option>
+        <option value="нет">нет</option>
+      </select>
+    </div>
+
+    <div class="input-line">
+      <label for="comments">Комментарии:</label>
+      <textarea name="comments" cols="40" rows="2"></textarea>
+    </div>
+
     <button class="submit-btn" name="passangers-submit">Оставить заявку</button>
   </form>
 
