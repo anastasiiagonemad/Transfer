@@ -5,7 +5,7 @@
         width: 100%;
         height: 100px;
     }
-    
+
 
     &__main {
         display: grid;
@@ -19,10 +19,10 @@
             width: 100%;
             height: auto;
 
-            &-item-1 { 
+            &-item-1 {
                 width: 100%;
                 height: auto;
-                
+
 
                 img {
                     width: 100%;
@@ -57,16 +57,16 @@
                     border-radius: 10px;
                     color: $blue;
                     cursor: pointer;
-                    
-                    
-                    
+
+
+
                     summary {
                         list-style: none;
                     }
 
                     .services__container-item-1-description {
                         width: 100%;
-                        
+
                         p {
                             font-size: 1rem;
                         }
@@ -74,12 +74,12 @@
                 }
 
                 details:hover {
-                    color: $light-gray;
+                    color: $light-grey;
                     background-color: $blue;
                 }
             }
 
-            &-item-2 { 
+            &-item-2 {
                 width: 100%;
                 height: auto;
 
@@ -116,7 +116,7 @@
                     border-radius: 10px;
                     color: $blue;
                     cursor: pointer;
-                    
+
                     summary {
                         list-style: none;
                     }
@@ -131,12 +131,12 @@
                 }
 
                 details:hover {
-                    color: $light-gray;
+                    color: $light-grey;
                     background-color: $blue;
                 }
-            } 
-            
-            &-item-3 { 
+            }
+
+            &-item-3 {
                 width: 100%;
                 height: auto;
 
@@ -146,7 +146,7 @@
                     object-position: center;
                     object-fit: cover;
                     border-radius: 10px;
-                    
+
                 }
 
                 p {
@@ -174,7 +174,7 @@
                     border-radius: 10px;
                     color: $blue;
                     cursor: pointer;
-                    
+
                     summary {
                         list-style: none;
                     }
@@ -189,7 +189,7 @@
                 }
 
                 details:hover {
-                    color: $light-gray;
+                    color: $light-grey;
                     background-color: $blue;
                 }
             }
