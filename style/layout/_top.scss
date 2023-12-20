@@ -8,7 +8,7 @@
     align-items: center;
 
     & a {
-      color: $light-gray;
+      color: $light-grey;
     }
 
     &__nav-container {
@@ -39,19 +39,18 @@
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
-    padding-bottom: 3rem;
+    padding-top: 1rem;
+    padding-bottom: 2.5rem;
 
     &__title {
       font-size: 2.2rem;
       font-weight: 900;
       max-width: 50%;
-      color: $light-gray;
+      color: $light-grey;
     }
 
-    .order-container {
-      width: 480px;
-      height: 500px;
-      background-color: $light-gray;
+    .order {
+      @include order;
     }
   }
 
@@ -67,7 +66,7 @@
   &__carousel-item {
     width: 100%;
     height: 710px;
-    background-color: #777;
+    background-color: $grey;
 
     .top__overlay-image {
       position: absolute;
@@ -77,6 +76,7 @@
       top: 0;
       background-position: top;
       background-size: cover;
+      opacity: 0.8;
     }
   }
 }
