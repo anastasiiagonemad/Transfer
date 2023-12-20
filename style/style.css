@@ -579,13 +579,13 @@ body {
 }
 
 .footer {
-  background-color: rgb(240, 238, 238);
+  background-color: #DFEFF9;
 }
 .footer__up {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  border-bottom: 1px solid gray;
+  border-bottom: 1px solid #1d4152;
   padding-bottom: 1.5rem;
   padding-top: 0.5rem;
 }
@@ -597,11 +597,11 @@ body {
   padding-left: 0;
 }
 .footer__up-link {
-  color: black;
+  color: #1d4152;
+  font-size: 1.2rem;
   transition: 0.3s ease-in-out;
 }
 .footer__up-link:hover {
-  color: #FB8D00;
   font-weight: bold;
 }
 .footer__down {
@@ -611,15 +611,15 @@ body {
   font-size: 0.9rem;
 }
 .footer__down-text {
-  margin-left: -10rem;
+  margin-left: -25rem;
 }
 .footer__down-contact {
   display: flex;
   gap: 0.8rem;
-  color: black;
+  color: #1d4152;
 }
 .footer__down-email, .footer__down-tel {
-  color: black;
+  color: #1d4152;
 }
 
 .social {

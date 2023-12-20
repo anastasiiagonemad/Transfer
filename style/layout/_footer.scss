@@ -1,11 +1,11 @@
 .footer{
-    background-color: rgb(240, 238, 238);
+    background-color: $light-blue-footer;
 
     &__up{
         display: flex;
         justify-content: space-between;
         align-items: flex-end;
-        border-bottom: 1px solid gray;
+        border-bottom: 1px solid $dark-blue;
         padding-bottom: 1.5rem;
         padding-top: 0.5rem;
 
@@ -18,10 +18,10 @@
         }
 
         &-link{
-            color: black;
+            color: $dark-blue;
+            font-size: 1.2rem;
             transition: 0.3s ease-in-out;
             &:hover{
-                color: #FB8D00;
                 font-weight: bold;
             }
         }
@@ -34,18 +34,18 @@
         font-size: 0.9rem;
 
         &-text{
-            margin-left: -10rem;
+            margin-left: -25rem;
         }
 
         &-contact{
             display: flex;
             gap: 0.8rem;
-            color: black;
+            color: $dark-blue;
         }
 
         &-email,
         &-tel{
-            color: black;
+            color: $dark-blue;
         }
     }
 }
