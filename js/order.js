@@ -12,12 +12,12 @@ let passengers = `
 
     <div class="input-line">
       <label for="date">Дата поездки: *</label>
-      <input class="date" name="date" type="text" required>
+      <input class="date" id="date" type="text" required>
     </div>
 
     <div class="input-line">
       <label for="places">Количество пассажиров: *</label>
-      <select class="places" name="places" required>
+      <select class="places" id="places" required>
         <option value="">выберите количество</option>
         <option value="1">1</option>
         <option value="2">2</option>
@@ -28,18 +28,18 @@ let passengers = `
     </div>
 
     <div class="input-line">
-      <label for="address">Ваш адрес <br>с индексом: *</label>
-      <input class="address" name="address" type="text" required>
+      <label for="address">Ваш адрес<br>с индексом: *</label>
+      <input class="address" id="address" type="text" required>
     </div>
 
     <div class="input-line">
       <label for="tel">Ваш номер телефона: *</label>
-      <input class="tel" name="tel" type="tel" required>
+      <input class="tel" id="tel" type="tel" required>
     </div>
 
     <div class="input-line">
       <label for="luggage">Есть ли у вас багаж? *</label>
-      <select name="luggage" class="luggage" required>
+      <select id="luggage" class="luggage" required>
         <option value="">выберите значение</option>
         <option value="да">да</option>
         <option value="нет">нет</option>
@@ -48,7 +48,7 @@ let passengers = `
 
     <div class="input-line">
       <label for="comments">Комментарии:</label>
-      <textarea name="comments" cols="40" rows="2"></textarea>
+      <textarea id="comments" cols="40" rows="2"></textarea>
     </div>
 
     <button class="submit-btn" name="passengers-submit">Оставить заявку</button>
@@ -66,17 +66,17 @@ let euroPassengers = `
   <form class="form form_euro-passengers" name="euro-passengers">
     <div class="input-line">
       <label for="euro-destination">Направление<br>поездки: *</label>
-      <input class="euro-destination" name="euro-destination" type="text" required>
+      <input class="euro-destination" id="euro-destination" type="text" required>
     </div>
 
     <div class="input-line">
       <label for="euro-date">Желаемая дата поездки: *</label>
-      <input class="date" name="euro-date" type="text" required>
+      <input class="date" id="euro-date" type="text" required>
     </div>
 
     <div class="input-line">
       <label for="places">Количество пассажиров: *</label>
-      <select class="places" name="places" required>
+      <select class="places" id="places" required>
         <option value="">выберите количество</option>
         <option value="1">1</option>
         <option value="2">2</option>
@@ -88,17 +88,17 @@ let euroPassengers = `
 
     <div class="input-line">
       <label for="address">Ваш адрес <br>с индексом: *</label>
-      <input class="address" name="address" type="text" required>
+      <input class="address" id="address" type="text" required>
     </div>
 
     <div class="input-line">
       <label for="tel">Ваш номер телефона: *</label>
-      <input class="tel" name="tel" type="tel" required>
+      <input class="tel" id="tel" type="tel" required>
     </div>
 
     <div class="input-line">
       <label for="luggage">Есть ли у вас багаж? *</label>
-      <select name="luggage" class="luggage" required>
+      <select id="luggage" class="luggage" required>
         <option value="">выберите значение</option>
         <option value="да">да</option>
         <option value="нет">нет</option>
@@ -107,10 +107,10 @@ let euroPassengers = `
 
     <div class="input-line">
       <label for="comments">Комментарии:</label>
-      <textarea name="comments" cols="40" rows="2"></textarea>
+      <textarea id="comments" cols="40" rows="2"></textarea>
     </div>
 
-    <button class="submit-btn" name="passengers-submit">Оставить заявку</button>
+    <button class="submit-btn" name="euro-passengers-submit">Оставить заявку</button>
 
     <div class="order__footer">
       <div class="confidentiality">Нажимая кнопку, вы даёте согласие на обработку персональных данных</div>
@@ -131,12 +131,12 @@ let cargo = `
 
     <div class="input-line">
       <label for="date">Дата отправления: *</label>
-      <input class="date" name="date" type="text" required>
+      <input class="date" id="date" type="text" required>
     </div>
 
     <div class="input-line">
       <label for="cargo-type">Тип груза: *</label>
-      <select class="cargo-type" name="cargo-type" required>
+      <select class="cargo-type" id="cargo-type" required>
         <option value="">выберите тип груза</option>
         <option value="письмо">Письмо</option>
         <option value="посылка">Посылка</option>
@@ -149,20 +149,20 @@ let cargo = `
 
     <div class="input-line">
       <label for="weight">Примерный вес<br>груза: *</label>
-      <input class="weight" name="weight" type="text" required>
+      <input class="weight" id="weight" type="text" required>
     </div>
 
     <div class="input-line">
       <label for="tel">Ваш номер телефона: *</label>
-      <input class="tel" name="tel" type="tel" required>
+      <input class="tel" id="tel" type="tel" required>
     </div>
 
     <div class="input-line">
       <label for="comments">Комментарии:</label>
-      <textarea name="comments" cols="40" rows="4"></textarea>
+      <textarea id="comments" cols="40" rows="4"></textarea>
     </div>
 
-    <button class="submit-btn" name="passengers-submit">Оставить заявку</button>
+    <button class="submit-btn" name="cargo-submit">Оставить заявку</button>
 
     <div class="order__footer">
       <div class="confidentiality">Нажимая кнопку, вы даёте согласие на обработку персональных данных</div>
@@ -245,11 +245,11 @@ function reverse() {
     ];
     createCalendar();
   })
-
 }
 
 // add block to the page
 window.addEventListener('load', function() {
+  passengersBtn.classList.add('checked');
   addOrderContentsPass();
   reverse();
   createCalendar();
@@ -257,6 +257,9 @@ window.addEventListener('load', function() {
 
 //change block contents
 passengersBtn.addEventListener("click", function() {
+  passengersBtn.classList.add('checked');
+  euroPassengersBtn.classList.remove('checked');
+  cargoBtn.classList.remove('checked');
   removeOrderContents();
   addOrderContentsPass();
   reverse();
@@ -264,13 +267,18 @@ passengersBtn.addEventListener("click", function() {
 })
 
 euroPassengersBtn.addEventListener("click", function() {
+  passengersBtn.classList.remove('checked');
+  cargoBtn.classList.remove('checked');
+  euroPassengersBtn.classList.add('checked');
   removeOrderContents();
   addOrderContentsEuroPass();
-
   createCalendar();
 })
 
 cargoBtn.addEventListener("click", function() {
+  passengersBtn.classList.remove('checked');
+  euroPassengersBtn.classList.remove('checked');
+  cargoBtn.classList.add('checked');
   removeOrderContents();
   addOrderContentsCargo();
   reverse();
