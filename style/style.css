@@ -78,7 +78,8 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  padding-bottom: 3rem;
+  padding-top: 1rem;
+  padding-bottom: 2.5rem;
 }
 .top-order__title {
   font-size: 2.2rem;
@@ -88,8 +89,100 @@ body {
 }
 .top-order .order {
   width: 480px;
-  height: 500px;
+  height: 530px;
   background-color: #F7F9FB;
+  padding: 1rem 1.2rem;
+  border-radius: 0.2rem;
+  box-shadow: 0 0 0.2rem 0.05rem #777777;
+}
+.top-order .order__title {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+.top-order .order__buttons {
+  padding-bottom: 0.7rem;
+}
+.top-order .order__button {
+  font-size: 0.8rem;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.8s ease;
+}
+.top-order .order__button::before {
+  content: url("../assets/icons/checkbox.svg");
+  position: relative;
+  margin: 0;
+  padding-right: 0.25rem;
+  top: 0.25rem;
+}
+.top-order .order__button.checked::before {
+  content: url("../assets/icons/checkbox-checked.svg");
+}
+.top-order .order__button:hover {
+  font-weight: 800;
+  transform: scale(0.97);
+}
+.top-order .order__button.checked {
+  font-weight: 800;
+}
+.top-order .order .form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+  justify-content: center;
+}
+.top-order .order .form__dest {
+  display: grid;
+  grid-template-columns: 1fr 0.5fr 1fr;
+  padding-left: 0.6rem;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.9rem;
+}
+.top-order .order .form select {
+  font-size: 0.8rem;
+  width: 100%;
+  border-radius: 0.1rem;
+  border: 1px solid #F7F9FB;
+  padding: 0.4rem 0.4rem;
+  color: #1d4152;
+}
+.top-order .order .form input {
+  font-size: 0.8rem;
+  width: 100%;
+  border-radius: 0.1rem;
+  border: 1px solid #F7F9FB;
+  padding: 0.4rem 0.6rem;
+  color: #1d4152;
+}
+.top-order .order .form textarea {
+  font-size: 0.8rem;
+  width: 100%;
+  border-radius: 0.1rem;
+  border: 1px solid #F7F9FB;
+  padding: 0.4rem 0.6rem;
+  color: #1d4152;
+  resize: none;
+}
+.top-order .order .form *::placeholder {
+  color: #1d4152;
+}
+.top-order .order .form .submit-btn {
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 0.2rem;
+  color: #1d4152;
+  background-color: #b5d9f1;
+  border: none;
+  padding: 0.4rem 0.6rem;
+  transition: all 0.8s ease;
+}
+.top-order .order .form .submit-btn:hover, .top-order .order .form .submit-btn:active {
+  background-color: #8FC1E3;
+  transform: scale(0.98);
+}
+.top-order .order .form .date {
+  box-shadow: none;
 }
 .top .carousel {
   position: absolute;

@@ -8,7 +8,7 @@
     align-items: center;
 
     & a {
-      color: $light-gray;
+      color: $light-grey;
     }
 
     &__nav-container {
@@ -39,19 +39,18 @@
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
-    padding-bottom: 3rem;
+    padding-top: 1rem;
+    padding-bottom: 2.5rem;
 
     &__title {
       font-size: 2.2rem;
       font-weight: 900;
       max-width: 50%;
-      color: $light-gray;
+      color: $light-grey;
     }
 
     .order {
-      width: 480px;
-      height: 500px;
-      background-color: $light-gray;
+      @include order;
     }
   }
 

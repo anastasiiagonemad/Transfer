@@ -2,12 +2,34 @@
 
 //create blocks for passengers and cargo
 let passengers = `
-<div class="">
-  <div style="border-bottom: 2px solid blue; width: 100px;">Пассажиры</div>
-  <div class="departure">Германия</div>
-  <div class="reverse-btn" style="border: 1px solid red; width: 40px;">btn</div>
-  <div class="arrival">Калининград</div>
-  <input class="date" type="text" placeholder="выберите дату">
+<div class="form-container">
+  <form class="form" name="passangers">
+    <div class="form__dest">
+      <div class="departure">Германия</div>
+      <img class="reverse-btn" src="../assets/icons/exchange.svg">
+      <div class="arrival">Калининград</div>
+    </div>
+    <input class="date" type="text" placeholder="Выберите дату поездки">
+    <select name="places" class="places" required>
+      <option value="">Выберите количество пассажиров</option>
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="больше">Больше 4 - укажите в комментарии</option>
+    </select>
+    <input class="address" type="text" placeholder="Напишите Ваш адрес">
+    <input class="address" type="text" placeholder="Укажите Ваш индекс" required>
+    <input class="tel" type="tel" placeholder="Укажите Ваш номер телефона" required>
+    <select name="luggage" class="luggage">
+      <option value="">Есть ли у вас багаж?</option>
+      <option value="да">да</option>
+      <option value="нет">нет</option>
+    </select>
+    <textarea cols="40" rows="2" placeholder="Комментарии"></textarea>
+    <button class="submit-btn" name="passangers-submit">Оставить заявку</button>
+  </form>
+
 
 </div>
 `;
@@ -19,6 +41,7 @@ let cargo = `
   <div class="reverse-btn" style="border: 1px solid red; width: 40px;">btn</div>
   <div class="arrival">Калининград</div>
   <input class="date" type="text" placeholder="выберите дату">
+
 </div>
 `;
 
