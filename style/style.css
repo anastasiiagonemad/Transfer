@@ -425,6 +425,46 @@ body {
     gap: 20px;
   }
 }
+.comments__border {
+  width: 10rem;
+  height: 0.25rem;
+  background: rgb(247, 210, 5);
+  margin: 1rem auto;
+}
+.comments__container {
+  overflow: hidden;
+  background-color: rgb(248, 247, 247);
+  text-align: center;
+  display: grid;
+  grid-template-columns: repeat(4, 25%);
+  grid-auto-flow: column;
+}
+.comments__item {
+  margin: 1rem 0.875rem;
+  background-color: white;
+  border-radius: 5%;
+}
+.comments__img {
+  margin: 0.875rem;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+}
+.comments__text {
+  font-size: 0.875rem;
+  height: 4.5rem;
+  padding: 0 0.5rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+}
+.comments__name {
+  font-size: 0.875rem;
+  margin-bottom: 0.25rem;
+}
+
 .accordion {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
