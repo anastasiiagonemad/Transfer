@@ -202,9 +202,6 @@ body {
   color: #1d4152;
   resize: none;
 }
-.top-order .order .form *::-moz-placeholder {
-  color: #1d4152;
-}
 .top-order .order .form *::placeholder {
   color: #1d4152;
 }
@@ -279,10 +276,8 @@ body {
 .services__main .services__container-item-1 img {
   width: 100%;
   height: 270px;
-  -o-object-position: center;
-     object-position: center;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-position: center;
+  object-fit: cover;
   border-radius: 3px;
 }
 .services__main .services__container-item-1 p {
@@ -329,10 +324,8 @@ body {
 .services__main .services__container-item-2 img {
   width: 100%;
   height: 270px;
-  -o-object-position: 50% 80%;
-     object-position: 50% 80%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-position: 50% 80%;
+  object-fit: cover;
   border-radius: 3px;
 }
 .services__main .services__container-item-2 p {
@@ -379,10 +372,8 @@ body {
 .services__main .services__container-item-3 img {
   width: 100%;
   height: 270px;
-  -o-object-position: center;
-     object-position: center;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-position: center;
+  object-fit: cover;
   border-radius: 3px;
 }
 .services__main .services__container-item-3 p {
