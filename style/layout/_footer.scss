@@ -1,0 +1,55 @@
+.footer{
+    background-color: rgb(240, 238, 238);
+
+    &__up{
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        border-bottom: 1px solid gray;
+        padding-bottom: 1.5rem;
+        padding-top: 0.5rem;
+
+        &-wrapper{
+            list-style: none;
+            display: flex;
+            gap: 2rem;
+            margin-bottom: 0;
+            padding-left: 0;
+        }
+
+        &-link{
+            color: black;
+            transition: 0.3s ease-in-out;
+            &:hover{
+                color: #FB8D00;
+                font-weight: bold;
+            }
+        }
+    }
+    
+    &__down{
+        display: flex;
+        justify-content: space-between;
+        padding: 0.75rem 0;
+        font-size: 0.9rem;
+
+        &-text{
+            margin-left: -10rem;
+        }
+
+        &-contact{
+            display: flex;
+            gap: 0.8rem;
+            color: black;
+        }
+
+        &-email,
+        &-tel{
+            color: black;
+        }
+    }
+}
+.social{
+    display: flex;
+    gap: 0.5rem;
+}
