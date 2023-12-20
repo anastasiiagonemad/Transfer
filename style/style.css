@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @font-face {
   font-family: "BT";
   src: url("../assets/fonts/BellotaText-Regular.ttf");
@@ -91,7 +92,7 @@ body {
   width: 480px;
   height: 530px;
   background-color: #F7F9FB;
-  padding: 1rem 1.2rem;
+  padding: 0.8rem 1.2rem;
   border-radius: 0.2rem;
   box-shadow: 0 0 0.2rem 0.05rem #777777;
 }
@@ -100,7 +101,7 @@ body {
   font-weight: 600;
 }
 .top-order .order__buttons {
-  padding-bottom: 0.7rem;
+  padding-bottom: 1rem;
 }
 .top-order .order__button {
   font-size: 0.8rem;
@@ -138,6 +139,24 @@ body {
   justify-content: space-between;
   align-items: center;
   font-size: 0.9rem;
+}
+.top-order .order .form__dest .departure {
+  position: relative;
+}
+.top-order .order .form__dest .departure::before {
+  content: "Пункт отправления";
+  position: absolute;
+  top: -0.65rem;
+  font-size: 0.5rem;
+}
+.top-order .order .form__dest .arrival {
+  position: relative;
+}
+.top-order .order .form__dest .arrival::before {
+  content: "Пункт прибытия";
+  position: absolute;
+  top: -0.65rem;
+  font-size: 0.5rem;
 }
 .top-order .order .form select {
   font-size: 0.8rem;

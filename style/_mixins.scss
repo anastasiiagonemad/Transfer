@@ -2,7 +2,7 @@
   width: 480px;
   height: 530px;
   background-color: $light-grey;
-  padding: 1rem 1.2rem;
+  padding: 0.8rem 1.2rem;
   border-radius: 0.2rem;
   box-shadow: 0 0 0.2rem 0.05rem $grey;
 
@@ -12,7 +12,7 @@
   }
 
   &__buttons {
-    padding-bottom: 0.7rem;
+    padding-bottom: 1rem;
   }
 
   &__button {
@@ -49,66 +49,86 @@
     gap: 0.1rem;
     justify-content: center;
 
-      &__dest {
-      display: grid;
-      grid-template-columns: 1fr 0.5fr 1fr;
-      padding-left: 0.6rem;
-      justify-content: space-between;
-      align-items: center;
-      font-size: 0.9rem;
-    }
+    &__dest {
+    display: grid;
+    grid-template-columns: 1fr 0.5fr 1fr;
+    padding-left: 0.6rem;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.9rem;
 
-
-    & select {
-      font-size: 0.8rem;
-      width: 100%;
-      border-radius: 0.1rem;
-      border: 1px solid $light-grey;
-
-      padding: 0.4rem 0.4rem;
-      color: $dark-blue;
-
-    }
-
-    & input {
-      font-size: 0.8rem;
-      width: 100%;
-      border-radius: 0.1rem;
-      border: 1px solid $light-grey;
-      padding: 0.4rem 0.6rem;
-      color: $dark-blue;
-    }
-
-    & textarea {
-      font-size: 0.8rem;
-      width: 100%;
-      border-radius: 0.1rem;
-      border: 1px solid $light-grey;
-      padding: 0.4rem 0.6rem;
-      color: $dark-blue;
-      resize: none;
-    }
-
-    *::placeholder {
-      color: $dark-blue;
-    }
-
-    .submit-btn {
-      font-size: 1.1rem;
-      font-weight: 600;
-      border-radius: 0.2rem;
-      color: $dark-blue;
-      background-color: $light-blue-btn;
-      border: none;
-      padding: 0.4rem 0.6rem;
-      transition: $transition;
-
-      &:hover,
-      &:active {
-        background-color: $light-blue;
-        transform: scale(0.98);
+    .departure {
+      position: relative;
+      &::before {
+        content: "Пункт отправления";
+        position: absolute;
+        top: -0.65rem;
+        font-size: 0.5rem;
       }
     }
+
+    .arrival {
+      position: relative;
+      &::before {
+        content: "Пункт прибытия";
+        position: absolute;
+        top: -0.65rem;
+        font-size: 0.5rem;
+      }
+    }
+  }
+
+
+  & select {
+    font-size: 0.8rem;
+    width: 100%;
+    border-radius: 0.1rem;
+    border: 1px solid $light-grey;
+
+    padding: 0.4rem 0.4rem;
+    color: $dark-blue;
+
+  }
+
+  & input {
+    font-size: 0.8rem;
+    width: 100%;
+    border-radius: 0.1rem;
+    border: 1px solid $light-grey;
+    padding: 0.4rem 0.6rem;
+    color: $dark-blue;
+  }
+
+  & textarea {
+    font-size: 0.8rem;
+    width: 100%;
+    border-radius: 0.1rem;
+    border: 1px solid $light-grey;
+    padding: 0.4rem 0.6rem;
+    color: $dark-blue;
+    resize: none;
+  }
+
+  *::placeholder {
+    color: $dark-blue;
+  }
+
+  .submit-btn {
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-radius: 0.2rem;
+    color: $dark-blue;
+    background-color: $light-blue-btn;
+    border: none;
+    padding: 0.4rem 0.6rem;
+    transition: $transition;
+
+    &:hover,
+    &:active {
+      background-color: $light-blue;
+      transform: scale(0.98);
+    }
+  }
 
   .date {
     box-shadow: none;
