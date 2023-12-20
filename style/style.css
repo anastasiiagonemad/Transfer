@@ -203,6 +203,9 @@ body {
   color: #1d4152;
   resize: none;
 }
+.top-order .order .form *::-moz-placeholder {
+  color: #1d4152;
+}
 .top-order .order .form *::placeholder {
   color: #1d4152;
 }
@@ -282,7 +285,7 @@ body {
      object-position: center;
   -o-object-fit: cover;
      object-fit: cover;
-  border-radius: 10px;
+  border-radius: 3px;
 }
 .services__main .services__container-item-1 p {
   position: relative;
@@ -304,7 +307,7 @@ body {
   text-align: center;
   border: 3px solid #31708E;
   padding: 10px;
-  border-radius: 10px;
+  border-radius: 3px;
   color: #31708E;
   cursor: pointer;
 }
@@ -332,7 +335,7 @@ body {
      object-position: 50% 80%;
   -o-object-fit: cover;
      object-fit: cover;
-  border-radius: 10px;
+  border-radius: 3px;
 }
 .services__main .services__container-item-2 p {
   position: relative;
@@ -354,7 +357,7 @@ body {
   text-align: center;
   border: 3px solid #31708E;
   padding: 10px;
-  border-radius: 10px;
+  border-radius: 3px;
   color: #31708E;
   cursor: pointer;
 }
@@ -382,7 +385,7 @@ body {
      object-position: center;
   -o-object-fit: cover;
      object-fit: cover;
-  border-radius: 10px;
+  border-radius: 3px;
 }
 .services__main .services__container-item-3 p {
   position: relative;
@@ -404,7 +407,7 @@ body {
   text-align: center;
   border: 3px solid #31708E;
   padding: 10px;
-  border-radius: 10px;
+  border-radius: 3px;
   color: #31708E;
   cursor: pointer;
 }
