@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="bootstrap/bootstrap.min.css">
   <link rel="stylesheet" href="style/normalize.css">
   <link rel="stylesheet" href="style/style.css">
+  <link rel="stylesheet" href="flatpickr/flatpickr.min.css">
 </head>
 <body>
   <div class="top">
@@ -40,30 +41,31 @@
 
     <section class="top-order wrapper">
       <h1 class="top-order__title">ПАССАЖИРСКИЕ ПЕРЕВОЗКИ ГЕРМАНИЯ - КАЛИНИНГРАД - ГЕРМАНИЯ</h1>
-      <div class="order-container">order container</div>
+      <div class="order">
+        <div class="order__title">Выберите услугу:</div>
+
+        <div class="order__buttons">
+          <div class="order__button checked order__passengers">Международные пассажирские перевозки</div>
+          <div class="order__button order__europe">Пассажирские перевозки по Европе</div>
+          <div class="order__button order__cargo">Перевозка грузов / почты</div>
+        </div>
+
+        <div class="order__container"></div>
+      </div>
     </section>
 
     <div id="myCarousel" class="carousel slide carousel-fade top__carousel" data-bs-ride="carousel" data-bs-interval="5000">
       <div class="carousel-inner top__carousel-inner">
         <div class="carousel-item active top__carousel-item" data-bs-interval="3000">
           <div class="top__overlay-image" style="background-image: url('assets/image/munich-main.jpg');"></div>
-          <div class="top__container">
-
-          </div>
-      </div>
+        </div>
 
       <div class="carousel-item top__carousel-item">
         <div class="top__overlay-image" style="background-image: url('assets/image/sprinter-1main.jpg');"></div>
-        <div class="top__container">
-
-        </div>
       </div>
 
       <div class="carousel-item top__carousel-item">
         <div class="top__overlay-image" style="background-image: url('assets/image/Stuttgart.jpg');"></div>
-        <div class="top__container">
-
-        </div>
       </div>
     </div>
   </div>
@@ -352,5 +354,8 @@
   <footer class="footer wrapper"></footer>
 
   <script src="bootstrap/bootstrap.bundle.min.js"></script>
+  <script src="flatpickr/flatpickr.min.js"></script>
+  <script src="flatpickr/ru.js"></script>
+  <script src="js/order.js"></script>
 </body>
 </html>
