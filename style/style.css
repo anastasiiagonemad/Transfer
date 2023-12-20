@@ -101,9 +101,6 @@ body {
   font-weight: 600;
   padding-bottom: 0.3rem;
 }
-.top-order .order__buttons {
-  padding-bottom: 1.5rem;
-}
 .top-order .order__button {
   font-size: 0.75rem;
   position: relative;
@@ -128,10 +125,17 @@ body {
   font-weight: 800;
 }
 .top-order .order .form {
+  padding-top: 1.5rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   gap: 0.3rem;
+}
+.top-order .order .form_cargo {
+  gap: 0.39rem;
+}
+.top-order .order .form_euro-passengers {
+  padding-top: 1rem;
 }
 .top-order .order .form__dest {
   display: grid;

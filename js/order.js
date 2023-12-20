@@ -1,14 +1,15 @@
 'use strict'
 
-//create blocks for passengers and cargo
+//create blocks for passengers, euro-passengers and cargo
 let passengers = `
 <div class="form-container">
-  <form class="form" name="passangers">
+  <form class="form form_passengers" name="passengers">
     <div class="form__dest">
       <div class="departure">Германия</div>
       <img class="reverse-btn" src="../assets/icons/exchange.svg">
       <div class="arrival">Калининград</div>
     </div>
+
     <div class="input-line">
       <label for="date">Дата поездки: *</label>
       <input class="date" name="date" type="text" required>
@@ -50,32 +51,131 @@ let passengers = `
       <textarea name="comments" cols="40" rows="2"></textarea>
     </div>
 
-    <button class="submit-btn" name="passangers-submit">Оставить заявку</button>
+    <button class="submit-btn" name="passengers-submit">Оставить заявку</button>
 
     <div class="order__footer">
       <div class="confidentiality">Нажимая кнопку, вы даёте согласие на обработку персональных данных</div>
       <div class="required-fields">Поля, обозначенные звёздочкой *, являются обязательными для заполнения</div>
     </div>
   </form>
+</div>
+`;
 
+let euroPassengers = `
+<div class="form-container">
+  <form class="form form_euro-passengers" name="euro-passengers">
+    <div class="input-line">
+      <label for="euro-destination">Направление<br>поездки: *</label>
+      <input class="euro-destination" name="euro-destination" type="text" required>
+    </div>
 
+    <div class="input-line">
+      <label for="euro-date">Желаемая дата поездки: *</label>
+      <input class="date" name="euro-date" type="text" required>
+    </div>
+
+    <div class="input-line">
+      <label for="places">Количество пассажиров: *</label>
+      <select class="places" name="places" required>
+        <option value="">выберите количество</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4 и больше">4 и больше - укажите в комментарии</option>
+        <option value="груз">перевозка груза</option>
+      </select>
+    </div>
+
+    <div class="input-line">
+      <label for="address">Ваш адрес <br>с индексом: *</label>
+      <input class="address" name="address" type="text" required>
+    </div>
+
+    <div class="input-line">
+      <label for="tel">Ваш номер телефона: *</label>
+      <input class="tel" name="tel" type="tel" required>
+    </div>
+
+    <div class="input-line">
+      <label for="luggage">Есть ли у вас багаж? *</label>
+      <select name="luggage" class="luggage" required>
+        <option value="">выберите значение</option>
+        <option value="да">да</option>
+        <option value="нет">нет</option>
+      </select>
+    </div>
+
+    <div class="input-line">
+      <label for="comments">Комментарии:</label>
+      <textarea name="comments" cols="40" rows="2"></textarea>
+    </div>
+
+    <button class="submit-btn" name="passengers-submit">Оставить заявку</button>
+
+    <div class="order__footer">
+      <div class="confidentiality">Нажимая кнопку, вы даёте согласие на обработку персональных данных</div>
+      <div class="required-fields">Поля, обозначенные звёздочкой *, являются обязательными для заполнения</div>
+    </div>
+  </form>
 </div>
 `;
 
 let cargo = `
-<div class="">
-  <div style="border-bottom: 2px solid green; width: 80px;">Посылки</div>
-  <div class="departure">Германия</div>
-  <div class="reverse-btn" style="border: 1px solid red; width: 40px;">btn</div>
-  <div class="arrival">Калининград</div>
-  <input class="date" type="text" placeholder="выберите дату">
+<div class="form-container">
+  <form class="form form_cargo" name="cargo">
+    <div class="form__dest">
+      <div class="departure">Германия</div>
+      <img class="reverse-btn" src="../assets/icons/exchange.svg">
+      <div class="arrival">Калининград</div>
+    </div>
 
+    <div class="input-line">
+      <label for="date">Дата отправления: *</label>
+      <input class="date" name="date" type="text" required>
+    </div>
+
+    <div class="input-line">
+      <label for="cargo-type">Тип груза: *</label>
+      <select class="cargo-type" name="cargo-type" required>
+        <option value="">выберите тип груза</option>
+        <option value="письмо">Письмо</option>
+        <option value="посылка">Посылка</option>
+        <option value="лекарства">Лекарства</option>
+        <option value="животное">Животное</option>
+        <option value="прах">Прах</option>
+        <option value="другое">Другое - укажите в комментарии</option>
+      </select>
+    </div>
+
+    <div class="input-line">
+      <label for="weight">Примерный вес<br>груза: *</label>
+      <input class="weight" name="weight" type="text" required>
+    </div>
+
+    <div class="input-line">
+      <label for="tel">Ваш номер телефона: *</label>
+      <input class="tel" name="tel" type="tel" required>
+    </div>
+
+    <div class="input-line">
+      <label for="comments">Комментарии:</label>
+      <textarea name="comments" cols="40" rows="4"></textarea>
+    </div>
+
+    <button class="submit-btn" name="passengers-submit">Оставить заявку</button>
+
+    <div class="order__footer">
+      <div class="confidentiality">Нажимая кнопку, вы даёте согласие на обработку персональных данных</div>
+      <div class="required-fields">Поля, обозначенные звёздочкой *, являются обязательными для заполнения</div>
+    </div>
+  </form>
 </div>
 `;
 
 let box = document.querySelector('.order__container');
 
 let passengersBtn = document.querySelector('.order__passengers');
+let euroPassengersBtn = document.querySelector('.order__euro-passengers');
 let cargoBtn = document.querySelector('.order__cargo');
 
 //function - clean contents of the block
@@ -89,6 +189,14 @@ function addOrderContentsPass() {
   let block = document.createElement('div');
   block.className = 'block';
   block.innerHTML = passengers;
+  box.append(block);
+}
+
+//function - add contents to the block Euro passengers
+function addOrderContentsEuroPass() {
+  let block = document.createElement('div');
+  block.className = 'block';
+  block.innerHTML = euroPassengers;
   box.append(block);
 }
 
@@ -108,12 +216,14 @@ function createCalendar() {
     dateFormat: "Y-m-d",
     minDate: "today",
     locale: "ru",
-    enable: [
+    disable: [
       function(date) {
-        if (document.querySelector('.departure').textContent === 'Германия') {
-          return (date.getDay() === 3);
+        if (!document.querySelector('.departure')) {
+          return;
+        } else if (document.querySelector('.departure').textContent === 'Германия') {
+          return (date.getDay() !== 3);
         } else if (document.querySelector('.departure').textContent === 'Калининград') {
-          return (date.getDay() === 6);
+          return (date.getDay() !== 6);
         }
       }
     ]
@@ -150,6 +260,13 @@ passengersBtn.addEventListener("click", function() {
   removeOrderContents();
   addOrderContentsPass();
   reverse();
+  createCalendar();
+})
+
+euroPassengersBtn.addEventListener("click", function() {
+  removeOrderContents();
+  addOrderContentsEuroPass();
+
   createCalendar();
 })
 

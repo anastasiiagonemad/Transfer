@@ -12,10 +12,6 @@
     padding-bottom: 0.3rem;
   }
 
-  &__buttons {
-    padding-bottom: 1.5rem;
-  }
-
   &__button {
     font-size: 0.75rem;
     position: relative;
@@ -45,10 +41,19 @@
   }
 
   .form {
+    padding-top: 1.5rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
     gap: 0.3rem;
+
+    &_cargo {
+      gap: 0.39rem;
+    }
+
+    &_euro-passengers {
+      padding-top: 1rem;
+    }
 
     &__dest {
       display: grid;
