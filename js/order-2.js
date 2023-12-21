@@ -175,9 +175,9 @@ let cargo = `
 let boxArr = document.querySelectorAll('.order__container');
 console.log(boxArr);
 
-let passengersBtn = document.querySelector('.order__passengers');
-let euroPassengersBtn = document.querySelector('.order__euro-passengers');
-let cargoBtn = document.querySelector('.order__cargo');
+let passengersBtnArr = document.querySelectorAll('.order__passengers');
+let euroPassengersBtnArr = document.querySelectorAll('.order__euro-passengers');
+let cargoBtnArr = document.querySelectorAll('.order__cargo');
 
 //function - clean contents of the block
 function removeOrderContents() {
@@ -194,6 +194,7 @@ function addOrderContentsPass() {
     block.className = 'block';
     block.innerHTML = passengers;
     box.append(block);
+    console.log(block);
   }
 }
 
@@ -240,56 +241,83 @@ function createCalendar() {
 }
 
 //function - change destinations
-function reverse() {
-  let reverseBtn = document.querySelector('.reverse-btn');
-  let departure = document.querySelector('.departure');
-  let arrival = document.querySelector('.arrival');
-  reverseBtn.addEventListener('click', function() {
-    [
-      departure.textContent,
-      arrival.textContent
-    ] = [
-      arrival.textContent,
-      departure.textContent
-    ];
-    createCalendar();
-  })
+ function reverse() {
+  let reverseBtnArr = document.querySelectorAll('.reverse-btn');
+  let departureArr = document.querySelectorAll('.departure');
+  let arrivalArr = document.querySelectorAll('.arrival');
+  for (let btn of reverseBtnArr) {
+    btn.addEventListener('click', function() {
+      console.log(btn);
+      for (let departure of departureArr) {
+        for (let arrival of arrivalArr) {
+          [
+            departure.textContent,
+            arrival.textContent
+          ] = [
+            arrival.textContent,
+            departure.textContent
+          ];
+          createCalendar();
+        }
+      }
+    })
+  }
 }
 
 // add block to the page
 window.addEventListener('load', function() {
-  passengersBtn.classList.add('checked');
+  for (let btn of  passengersBtnArr) {
+    btn.classList.add('checked');
+  }
   addOrderContentsPass();
   reverse();
   createCalendar();
 });
 
 //change block contents
-passengersBtn.addEventListener("click", function() {
-  passengersBtn.classList.add('checked');
-  euroPassengersBtn.classList.remove('checked');
-  cargoBtn.classList.remove('checked');
-  removeOrderContents();
-  addOrderContentsPass();
-  reverse();
-  createCalendar();
-})
+for (let btn of passengersBtnArr) {
+  btn.addEventListener("click", function() {
+    btn.classList.add('checked');
+    removeOrderContents();
+    addOrderContentsPass();
+    reverse();
+    createCalendar();
+    for (let btn of euroPassengersBtnArr) {
+      btn.classList.remove('checked')
+    }
+    for (let btn of cargoBtnArr) {
+      btn.classList.remove('checked')
+    }
+  })
+}
 
-euroPassengersBtn.addEventListener("click", function() {
-  passengersBtn.classList.remove('checked');
-  cargoBtn.classList.remove('checked');
-  euroPassengersBtn.classList.add('checked');
-  removeOrderContents();
-  addOrderContentsEuroPass();
-  createCalendar();
-})
+for (let btn of euroPassengersBtnArr) {
+  btn.addEventListener("click", function() {
+    btn.classList.add('checked');
+    removeOrderContents();
+    addOrderContentsEuroPass();
+    createCalendar();
+    for (let btn of passengersBtnArr) {
+      btn.classList.remove('checked')
+    }
+    for (let btn of cargoBtnArr) {
+      btn.classList.remove('checked')
+    }
+  })
+}
 
-cargoBtn.addEventListener("click", function() {
-  passengersBtn.classList.remove('checked');
-  euroPassengersBtn.classList.remove('checked');
-  cargoBtn.classList.add('checked');
-  removeOrderContents();
-  addOrderContentsCargo();
-  reverse();
-  createCalendar();
-})
+for (let btn of cargoBtnArr) {
+  btn.addEventListener("click", function() {
+    btn.classList.add('checked');
+    removeOrderContents();
+    addOrderContentsCargo();
+    reverse();
+    createCalendar();
+    for (let btn of passengersBtnArr) {
+      btn.classList.remove('checked')
+    }
+    for (let btn of euroPassengersBtnArr) {
+      btn.classList.remove('checked')
+    }
+  })
+}
