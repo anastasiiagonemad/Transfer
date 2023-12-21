@@ -172,7 +172,8 @@ let cargo = `
 </div>
 `;
 
-let box = document.querySelector('.order__container');
+let boxArr = document.querySelectorAll('.order__container');
+console.log(boxArr);
 
 let passengersBtn = document.querySelector('.order__passengers');
 let euroPassengersBtn = document.querySelector('.order__euro-passengers');
@@ -180,32 +181,40 @@ let cargoBtn = document.querySelector('.order__cargo');
 
 //function - clean contents of the block
 function removeOrderContents() {
-  let orderContents = document.querySelector('.block');
-  orderContents.remove();
+  let orderContentsArr = document.querySelectorAll('.block');
+  for (let orderContents of orderContentsArr) {
+    orderContents.remove();
+  }
 }
 
 //function - add contents to the block passengers
 function addOrderContentsPass() {
-  let block = document.createElement('div');
-  block.className = 'block';
-  block.innerHTML = passengers;
-  box.append(block);
+  for (let box of boxArr) {
+    let block = document.createElement('div');
+    block.className = 'block';
+    block.innerHTML = passengers;
+    box.append(block);
+  }
 }
 
 //function - add contents to the block Euro passengers
 function addOrderContentsEuroPass() {
-  let block = document.createElement('div');
-  block.className = 'block';
-  block.innerHTML = euroPassengers;
-  box.append(block);
+  for (let box of boxArr) {
+    let block = document.createElement('div');
+    block.className = 'block';
+    block.innerHTML = euroPassengers;
+    box.append(block);
+  }
 }
 
 //function - add contents to the block cargo
 function addOrderContentsCargo() {
-  let block = document.createElement('div');
-  block.className = 'block';
-  block.innerHTML = cargo;
-  box.append(block);
+  for (let box of boxArr) {
+    let block = document.createElement('div');
+    block.className = 'block';
+    block.innerHTML = cargo;
+    box.append(block);
+  }
 }
 
 //function - create calendar
