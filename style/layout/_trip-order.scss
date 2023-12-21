@@ -1,23 +1,17 @@
 .trip-order {
   display: flex;
-
-  &__title {
-    margin-top: 50px;
-    // height: 100px;
-  }
+  justify-content: space-between;
 
   &__container {
-    // display: grid;
-    // grid-template-columns: 2fr 1fr;
-    // width: 100%;
-
-    img {
-      width: 100%;
-      height: auto;
-    }
+    max-width: 50%;
   }
 
-  &__order {
+  .order {
     @include order;
+  }
+
+  &__img {
+    width: 80%;
+    height: auto;
   }
 }
