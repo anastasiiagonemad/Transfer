@@ -11,12 +11,12 @@ let passengers = `
     </div>
 
     <div class="input-line">
-      <label for="date">Дата поездки: *</label>
+      <label for="date">Дата поездки:*</label>
       <input class="date" id="date" type="text" required>
     </div>
 
     <div class="input-line">
-      <label for="places">Количество пассажиров: *</label>
+      <label for="places">Количество пассажиров:*</label>
       <select class="places" id="places" required>
         <option value="">выберите количество</option>
         <option value="1">1</option>
@@ -28,17 +28,17 @@ let passengers = `
     </div>
 
     <div class="input-line">
-      <label for="address">Ваш адрес<br>с индексом: *</label>
+      <label for="address">Ваш адрес с индексом:*</label>
       <input class="address" id="address" type="text" required>
     </div>
 
     <div class="input-line">
-      <label for="tel">Ваш номер телефона: *</label>
+      <label for="tel">Ваш номер телефона:*</label>
       <input class="tel" id="tel" type="tel" required>
     </div>
 
     <div class="input-line">
-      <label for="luggage">Есть ли у вас багаж? *</label>
+      <label for="luggage">Есть ли у вас багаж?*</label>
       <select id="luggage" class="luggage" required>
         <option value="">выберите значение</option>
         <option value="да">да</option>
@@ -70,12 +70,12 @@ let euroPassengers = `
     </div>
 
     <div class="input-line">
-      <label for="euro-date">Желаемая дата поездки: *</label>
+      <label for="euro-date">Желаемая дата поездки:*</label>
       <input class="date" id="euro-date" type="text" required>
     </div>
 
     <div class="input-line">
-      <label for="places">Количество пассажиров: *</label>
+      <label for="places">Количество пассажиров:*</label>
       <select class="places" id="places" required>
         <option value="">выберите количество</option>
         <option value="1">1</option>
@@ -87,17 +87,17 @@ let euroPassengers = `
     </div>
 
     <div class="input-line">
-      <label for="address">Ваш адрес <br>с индексом: *</label>
+      <label for="address">Ваш адрес с индексом:*</label>
       <input class="address" id="address" type="text" required>
     </div>
 
     <div class="input-line">
-      <label for="tel">Ваш номер телефона: *</label>
+      <label for="tel">Ваш номер телефона:*</label>
       <input class="tel" id="tel" type="tel" required>
     </div>
 
     <div class="input-line">
-      <label for="luggage">Есть ли у вас багаж? *</label>
+      <label for="luggage">Есть ли у вас багаж?*</label>
       <select id="luggage" class="luggage" required>
         <option value="">выберите значение</option>
         <option value="да">да</option>
@@ -130,12 +130,12 @@ let cargo = `
     </div>
 
     <div class="input-line">
-      <label for="date">Дата отправления: *</label>
+      <label for="date">Дата отправления:*</label>
       <input class="date" id="date" type="text" required>
     </div>
 
     <div class="input-line">
-      <label for="cargo-type">Тип груза: *</label>
+      <label for="cargo-type">Тип груза:*</label>
       <select class="cargo-type" id="cargo-type" required>
         <option value="">выберите тип груза</option>
         <option value="письмо">Письмо</option>
@@ -148,12 +148,12 @@ let cargo = `
     </div>
 
     <div class="input-line">
-      <label for="weight">Примерный вес<br>груза: *</label>
+      <label for="weight">Примерный вес груза:*</label>
       <input class="weight" id="weight" type="text" required>
     </div>
 
     <div class="input-line">
-      <label for="tel">Ваш номер телефона: *</label>
+      <label for="tel">Ваш номер телефона:*</label>
       <input class="tel" id="tel" type="tel" required>
     </div>
 

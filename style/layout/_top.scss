@@ -11,7 +11,7 @@
 
     @media screen and (max-width: $middle-desktop) {
       padding-top: 1.4rem;
-      padding-bottom: 0.8rem;
+      padding-bottom: 0.4rem;
       grid-template-columns: 1fr 8fr;
       grid-template-rows: 1fr 1fr;
       grid-template-areas:
@@ -21,6 +21,21 @@
 
     .logo {
       grid-area: logo;
+
+      @media screen and (max-width: $tablet) {
+        & img {
+          width: 10rem;
+          height: auto;
+        }
+      }
+    }
+
+    &__burger {
+      display: none;
+
+      @media screen and (max-width: $mini-tablet) {
+        display: block;
+      }
     }
 
     & a {
@@ -30,10 +45,14 @@
     &__nav {
       grid-area: nav;
 
+      @media screen and (max-width: $mini-tablet) {
+        display: none;
+      }
+
       &-container {
         list-style: none;
         display: flex;
-        gap: 1rem;
+        gap: 1.2rem;
         align-items: center;
         margin: 0;
         font-size: 1rem;
@@ -41,6 +60,12 @@
 
         @media screen and (max-width: $middle-desktop) {
           justify-content: flex-end;
+          padding-bottom: 0.2rem;
+        }
+        @media screen and (max-width: $tablet) {
+          gap: 0.8rem;
+          font-size: 0.8rem;
+          padding-bottom: 0rem;
         }
       }
     }
@@ -52,7 +77,12 @@
 
       @media screen and (max-width: $middle-desktop) {
         justify-content: flex-end;
+        padding-top: 0.2rem;
         gap: 5rem;
+      }
+
+      @media screen and (max-width: $tablet) {
+        gap: 2rem;
       }
 
       &-item {
@@ -88,7 +118,12 @@
       font-size: 2.2rem;
       font-weight: 900;
       max-width: 50%;
+      padding-right: 1rem;
       color: $light-grey;
+
+      @media screen and (max-width: $tablet) {
+        font-size: 1.8rem;
+      }
     }
 
     .order {

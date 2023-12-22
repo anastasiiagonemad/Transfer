@@ -21,10 +21,18 @@
             color: $dark-blue;
             font-size: 1rem;
             font-weight: 700;
-            transition: 0.3s ease-in-out;
-            &:hover{
-                font-weight: bold;
+            transition: $transition;
+            // &:hover{
+            //     font-weight: bold;
+            // }
+        }
+        &-logo {
+          @media screen and (max-width: $tablet) {
+            & img {
+              width: 10rem;
+              height: auto;
             }
+          }
         }
     }
 
@@ -53,4 +61,12 @@
 .social{
     display: flex;
     gap: 0.5rem;
+
+    &__icon {
+      @media screen and (max-width: $middle-desktop) {
+        width: 1.6rem;
+        height: auto;
+      }
+    }
+
 }
