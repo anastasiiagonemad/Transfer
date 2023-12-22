@@ -1,10 +1,31 @@
 @mixin order {
-  max-width: 550px;
-  max-height: 530px;
+  width: 550px;
+  height: 530px;
   background-color: $light-grey;
   padding: 0.8rem 1.2rem;
   border-radius: 0.2rem;
   box-shadow: 0 0 0.2rem 0.05rem $grey;
+
+  @media screen and (max-width: $tablet) {
+    height: 510px;
+  }
+
+  @media screen and (max-width: $large-mobile) {
+    width: 400px;
+    height: 510px;
+  }
+
+  @media screen and (max-width: $mobile) {
+    width: 320px;
+    height: 530px;
+    padding: 0.6rem 0.7rem;
+  }
+
+  @media screen and (max-width: $small-mobile) {
+    width: 270px;
+    height: 515px;
+    padding: 0.4rem 0.2rem;
+  }
 
   &__title {
     font-size: 1.2rem;
@@ -15,6 +36,10 @@
       font-size: 1rem;
       padding-bottom: 0.1rem;
     }
+
+    @media screen and (max-width: $small-mobile) {
+      font-size: 0.8rem;
+    }
   }
 
   &__button {
@@ -24,8 +49,13 @@
     transition: $transition;
 
     @media screen and (max-width: $tablet) {
-      font-size: 0.7rem;
+      font-size: 0.73rem;
     }
+
+    @media screen and (max-width: $small-mobile) {
+      font-size: 0.65rem;
+    }
+
 
     &::before {
       content: url("../assets/icons/checkbox18.svg");
@@ -72,6 +102,10 @@
       font-size: 0.9rem;
       font-weight: 700;
 
+      @media screen and (max-width: $small-mobile) {
+        font-size: 0.7rem;
+      }
+
       .departure {
         position: relative;
         &::before {
@@ -79,6 +113,10 @@
           position: absolute;
           top: -0.75rem;
           font-size: 0.55rem;
+
+          @media screen and (max-width: $small-mobile) {
+            font-size: 0.45rem;
+          }
         }
       }
 
@@ -89,6 +127,10 @@
           position: absolute;
           top: -0.75rem;
           font-size: 0.55rem;
+
+          @media screen and (max-width: $small-mobile) {
+            font-size: 0.45rem;
+          }
         }
       }
 
