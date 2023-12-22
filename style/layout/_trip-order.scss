@@ -1,18 +1,17 @@
 .trip-order {
+  display: flex;
+  justify-content: space-between;
 
-    &__title {
-        margin-top: 50px;
-        height: 100px;
-    }
+  &__container {
+    max-width: 50%;
+  }
 
-    &__container {
-        display: grid;
-        grid-template-columns: 2fr 1fr;
-        width: 100%;
+  .order {
+    @include order;
+  }
 
-        img {
-            width: 100%;
-            height: auto;
-        }
-    }
+  &__img {
+    width: 80%;
+    height: auto;
+  }
 }

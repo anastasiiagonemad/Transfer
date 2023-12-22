@@ -132,4 +132,75 @@
     .footer__down{
         flex-direction: column;
     }
+}.footer{
+    background-color: $light-blue-footer;
+
+    &__up{
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        border-bottom: 1px solid $dark-blue;
+        padding-bottom: 1.5rem;
+        padding-top: 0.5rem;
+
+        &-wrapper{
+            list-style: none;
+            display: flex;
+            gap: 2rem;
+            margin-bottom: 0;
+            padding-left: 0;
+        }
+
+        &-link{
+            color: $dark-blue;
+            font-size: 1rem;
+            font-weight: 700;
+            transition: $transition;
+            // &:hover{
+            //     font-weight: bold;
+            // }
+        }
+        &-logo {
+            @media screen and (max-width: $tablet) {
+            & img {
+                width: 10rem;
+                height: auto;
+            }
+        }
+        }
+    }
+
+    &__down{
+        display: flex;
+        justify-content: space-between;
+        padding: 0.75rem 0;
+        font-size: 0.9rem;
+
+        &-text{
+            margin-left: -25rem;
+        }
+
+        &-contact{
+            display: flex;
+            gap: 0.8rem;
+            color: $dark-blue;
+        }
+
+        &-email,
+        &-tel{
+            color: $dark-blue;
+        }
+    }
+}
+.social{
+    display: flex;
+    gap: 0.5rem;
+
+    &__icon {
+      @media screen and (max-width: $middle-desktop) {
+        width: 1.6rem;
+        height: auto;
+      }
+    }
+
 }
