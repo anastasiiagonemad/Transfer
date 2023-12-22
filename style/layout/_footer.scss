@@ -12,9 +12,15 @@
         &-wrapper{
             list-style: none;
             display: flex;
+            justify-content: space-evenly;
             gap: 2rem;
             margin-bottom: 0;
             padding-left: 0;
+        }
+
+        &-social{
+            display: flex;
+            gap: 0.5rem;
         }
 
         &-link{
@@ -34,22 +40,96 @@
         font-size: 0.9rem;
 
         &-text{
-            margin-left: -25rem;
+            display: flex;
+            gap: 1rem;
         }
 
         &-contact{
             display: flex;
-            gap: 0.8rem;
-            color: $dark-blue;
+            gap: 1rem;
         }
 
-        &-email,
         &-tel{
             color: $dark-blue;
         }
     }
 }
-.social{
-    display: flex;
-    gap: 0.5rem;
+
+@media screen and (max-width: 1400px) {
+    .footer__up{
+
+        &-link{
+            font-size: 1rem;
+        }
+
+        &-wrapper{
+            gap: 1rem;
+        }
+    }
+}
+@media screen and (max-width: 1220px) {
+
+    .footer__up{
+        flex-direction: column;
+        gap: 0.5rem;
+        align-items: flex-start;
+
+        &-info{
+            width: 100%;
+        }
+
+        &-wrapper{
+            display: flex;
+            flex-wrap: wrap;
+            width: 100%;
+            justify-content: space-evenly;
+        }
+    }
+    .social{
+        align-self: flex-end;
+        &__icon-img{
+            height: 1.5rem;
+        }
+    }
+
+    .footer__down{
+        &-text{
+            font-size: 0.8rem;
+        }
+    }
+}
+@media screen and (max-width: 910px) {
+
+    .footer__up{
+        &-link{
+            font-size: 0.8rem;
+        }
+    }
+
+    .footer__down{
+        &-text{
+            display: flex;
+            flex-direction: column;
+            gap: 0;
+        }
+        &-contact{
+            font-size: 0.8rem;
+        }
+    }
+}
+@media screen and (max-width: 670px) {
+
+    .footer__up-wrapper{
+        gap: 1rem;
+    }
+    .footer__down-contact{
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 430px) {
+    .footer__down{
+        flex-direction: column;
+    }
 }
