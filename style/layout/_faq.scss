@@ -9,7 +9,7 @@
 
 .accordion-button:hover {
     background-color: $light-blue;
-    
+
 }
 
 .accordion-button:focus {
@@ -20,7 +20,7 @@
 .accordion-button:active {
     background-color: $light-blue;
     border: none;
-    
+
 }
 
 .accordion-item {
@@ -31,17 +31,15 @@
 .accordion-collapse {
     font-size: 0.8rem;
 }
-@media (min-width: 771px) and (max-width: 940px) {
+@media screen and (max-width: $tablet) {
     .accordion {
         display: grid;
         grid-template-columns: 1fr 1fr;
     }
 }
-@media screen and (max-width: 770px) {
+@media screen and (max-width: $large-mobile) {
     .accordion {
         display: grid;
         grid-template-columns: 1fr;
     }
 }
-
-

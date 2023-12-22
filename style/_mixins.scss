@@ -1,6 +1,6 @@
 @mixin order {
-  width: 550px;
-  height: 530px;
+  max-width: 550px;
+  max-height: 530px;
   background-color: $light-grey;
   padding: 0.8rem 1.2rem;
   border-radius: 0.2rem;
@@ -10,6 +10,11 @@
     font-size: 1.2rem;
     font-weight: 600;
     padding-bottom: 0.3rem;
+
+    @media screen and (max-width: $tablet) {
+      font-size: 1rem;
+      padding-bottom: 0.1rem;
+    }
   }
 
   &__button {
@@ -17,6 +22,10 @@
     position: relative;
     cursor: pointer;
     transition: $transition;
+
+    @media screen and (max-width: $tablet) {
+      font-size: 0.7rem;
+    }
 
     &::before {
       content: url("../assets/icons/checkbox18.svg");
@@ -100,34 +109,51 @@
 
     & label {
       font-size: 0.75rem;
-      width: 37%;
+      width: 35%;
+
+      @media screen and (max-width: $tablet) {
+        font-size: 0.68rem;
+      }
     }
+
     & select {
       font-size: 0.75rem;
-      width: 63%;
+      width: 65%;
       border-radius: 0.1rem;
       border: 1px solid $light-grey;
       padding: 0.4rem 0.4rem;
       color: $dark-blue;
+
+      @media screen and (max-width: $tablet) {
+        font-size: 0.68rem;
+      }
     }
 
     & input {
       font-size: 0.75rem;
-      width: 63%;
+      width: 65%;
       border-radius: 0.1rem;
       border: 1px solid $light-grey;
       padding: 0.4rem 0.6rem;
       color: $dark-blue;
+
+      @media screen and (max-width: $tablet) {
+        font-size: 0.68rem;
+      }
     }
 
     & textarea {
       font-size: 0.75rem;
-      width: 63%;
+      width: 65%;
       border-radius: 0.1rem;
       border: 1px solid $light-grey;
       padding: 0.4rem 0.6rem;
       color: $dark-blue;
       resize: none;
+
+      @media screen and (max-width: $tablet) {
+        font-size: 0.68rem;
+      }
     }
 
     *::placeholder {
@@ -143,6 +169,10 @@
       border: none;
       padding: 0.4rem 0.6rem;
       transition: $transition;
+
+      @media screen and (max-width: $tablet) {
+        font-size: 0.95rem;
+      }
 
       &:hover,
       &:active {
