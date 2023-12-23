@@ -1,39 +1,9 @@
 @font-face {
-  font-family: 'BT';
-  src: url('../assets/fonts/BellotaText-Regular.ttf');
-  src: url('../assets/fonts/BellotaText-Regular.eot') format('embedded-opentype'),
-      url('../assets/fonts/BellotaText-Regular.woff2') format('woff2'),
-      url('../assets/fonts/BellotaText-Regular.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'BT-Bold';
-  src: url('../assets/fonts/BellotaText-Bold.ttf');
-  src: url('../assets/fonts/BellotaText-Bold.eot') format('embedded-opentype'),
-      url('../assets/fonts/BellotaText-Bold.woff2') format('woff2'),
-      url('../assets/fonts/BellotaText-Bold.woff') format('woff');
-  font-weight: 700;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Prata';
-  src: url('../assets/fonts/Prata-Regular.ttf');
-  src: url('../assets/fonts/Prata-Regular.eot') format('embedded-opentype'),
-      url('../assets/fonts/Prata-Regular.woff2') format('woff2'),
-      url('../assets/fonts/Prata-Regular.woff') format('woff');
-  font-weight: 400;
-  font-style: normal;
-}
-
-
-@font-face {
   font-family: 'SS';
-  src: url('/assets/fonts/sourcesansprolight.ttf');
-  src: url('/assets/fonts/sourcesansprolight.woff') format('woff'),
-       url('/assets/fonts/sourcesansprolight.woff2') format('woff2');
+  src: url('../assets/fonts/sourcesansprolight.ttf');
+  src: url('../assets/fonts/sourcesansprolight.eot') format('embedded-opentype'),
+       url('../assets/fonts/sourcesansprolight.woff') format('woff'),
+       url('../assets/fonts/sourcesansprolight.woff2') format('woff2');
        font-weight: 400;
        font-style: normal;
 }
