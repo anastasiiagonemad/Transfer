@@ -32,10 +32,17 @@
   }
 
   &__instructions {
+    font-size: 0.85rem;
     @media screen and (max-width: $mini-tablet) {
-      text-align: center;
-      font-weight: 0.9rem;
+      // text-align: center;
+      font-size: 0.8rem;
+
     }
+  }
+
+  &__link {
+    font-weight: 800;
+    color: $dark-blue;
   }
 
   .order {
