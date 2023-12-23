@@ -6,17 +6,17 @@ let passengers = `
   <form class="form form_passengers" name="passengers">
     <div class="form__dest">
       <div class="departure">Германия</div>
-      <img class="reverse-btn" src="../assets/icons/exchange.svg">
+      <img class="reverse-btn" src="assets/icons/exchange.svg">
       <div class="arrival">Калининград</div>
     </div>
 
     <div class="input-line">
-      <label for="date">Дата поездки: *</label>
+      <label for="date">Дата поездки:*</label>
       <input class="date" id="date" type="text" required>
     </div>
 
     <div class="input-line">
-      <label for="places">Количество пассажиров: *</label>
+      <label for="places">Количество пассажиров:*</label>
       <select class="places" id="places" required>
         <option value="">выберите количество</option>
         <option value="1">1</option>
@@ -28,17 +28,17 @@ let passengers = `
     </div>
 
     <div class="input-line">
-      <label for="address">Ваш адрес<br>с индексом: *</label>
+      <label for="address">Ваш адрес с индексом:*</label>
       <input class="address" id="address" type="text" required>
     </div>
 
     <div class="input-line">
-      <label for="tel">Ваш номер телефона: *</label>
+      <label for="tel">Ваш номер телефона:*</label>
       <input class="tel" id="tel" type="tel" required>
     </div>
 
     <div class="input-line">
-      <label for="luggage">Есть ли у вас багаж? *</label>
+      <label for="luggage">Есть ли у вас багаж?*</label>
       <select id="luggage" class="luggage" required>
         <option value="">выберите значение</option>
         <option value="да">да</option>
@@ -70,12 +70,12 @@ let euroPassengers = `
     </div>
 
     <div class="input-line">
-      <label for="euro-date">Желаемая дата поездки: *</label>
+      <label for="euro-date">Желаемая дата поездки:*</label>
       <input class="date" id="euro-date" type="text" required>
     </div>
 
     <div class="input-line">
-      <label for="places">Количество пассажиров: *</label>
+      <label for="places">Количество пассажиров:*</label>
       <select class="places" id="places" required>
         <option value="">выберите количество</option>
         <option value="1">1</option>
@@ -87,17 +87,17 @@ let euroPassengers = `
     </div>
 
     <div class="input-line">
-      <label for="address">Ваш адрес <br>с индексом: *</label>
+      <label for="address">Ваш адрес с индексом:*</label>
       <input class="address" id="address" type="text" required>
     </div>
 
     <div class="input-line">
-      <label for="tel">Ваш номер телефона: *</label>
+      <label for="tel">Ваш номер телефона:*</label>
       <input class="tel" id="tel" type="tel" required>
     </div>
 
     <div class="input-line">
-      <label for="luggage">Есть ли у вас багаж? *</label>
+      <label for="luggage">Есть ли у вас багаж?*</label>
       <select id="luggage" class="luggage" required>
         <option value="">выберите значение</option>
         <option value="да">да</option>
@@ -125,17 +125,17 @@ let cargo = `
   <form class="form form_cargo" name="cargo">
     <div class="form__dest">
       <div class="departure">Германия</div>
-      <img class="reverse-btn" src="../assets/icons/exchange.svg">
+      <img class="reverse-btn" src="assets/icons/exchange.svg">
       <div class="arrival">Калининград</div>
     </div>
 
     <div class="input-line">
-      <label for="date">Дата отправления: *</label>
+      <label for="date">Дата отправления:*</label>
       <input class="date" id="date" type="text" required>
     </div>
 
     <div class="input-line">
-      <label for="cargo-type">Тип груза: *</label>
+      <label for="cargo-type">Тип груза:*</label>
       <select class="cargo-type" id="cargo-type" required>
         <option value="">выберите тип груза</option>
         <option value="письмо">Письмо</option>
@@ -148,12 +148,12 @@ let cargo = `
     </div>
 
     <div class="input-line">
-      <label for="weight">Примерный вес<br>груза: *</label>
+      <label for="weight">Примерный вес груза:*</label>
       <input class="weight" id="weight" type="text" required>
     </div>
 
     <div class="input-line">
-      <label for="tel">Ваш номер телефона: *</label>
+      <label for="tel">Ваш номер телефона:*</label>
       <input class="tel" id="tel" type="tel" required>
     </div>
 
@@ -172,40 +172,50 @@ let cargo = `
 </div>
 `;
 
-let box = document.querySelector('.order__container');
+let boxArr = document.querySelectorAll('.order__container');
+console.log(boxArr);
 
-let passengersBtn = document.querySelector('.order__passengers');
-let euroPassengersBtn = document.querySelector('.order__euro-passengers');
-let cargoBtn = document.querySelector('.order__cargo');
+let passengersBtnArr = document.querySelectorAll('.order__passengers');
+let euroPassengersBtnArr = document.querySelectorAll('.order__euro-passengers');
+let cargoBtnArr = document.querySelectorAll('.order__cargo');
 
 //function - clean contents of the block
 function removeOrderContents() {
-  let orderContents = document.querySelector('.block');
-  orderContents.remove();
+  let orderContentsArr = document.querySelectorAll('.block');
+  for (let orderContents of orderContentsArr) {
+    orderContents.remove();
+  }
 }
 
 //function - add contents to the block passengers
 function addOrderContentsPass() {
-  let block = document.createElement('div');
-  block.className = 'block';
-  block.innerHTML = passengers;
-  box.append(block);
+  for (let box of boxArr) {
+    let block = document.createElement('div');
+    block.className = 'block';
+    block.innerHTML = passengers;
+    box.append(block);
+    console.log(block);
+  }
 }
 
 //function - add contents to the block Euro passengers
 function addOrderContentsEuroPass() {
-  let block = document.createElement('div');
-  block.className = 'block';
-  block.innerHTML = euroPassengers;
-  box.append(block);
+  for (let box of boxArr) {
+    let block = document.createElement('div');
+    block.className = 'block';
+    block.innerHTML = euroPassengers;
+    box.append(block);
+  }
 }
 
 //function - add contents to the block cargo
 function addOrderContentsCargo() {
-  let block = document.createElement('div');
-  block.className = 'block';
-  block.innerHTML = cargo;
-  box.append(block);
+  for (let box of boxArr) {
+    let block = document.createElement('div');
+    block.className = 'block';
+    block.innerHTML = cargo;
+    box.append(block);
+  }
 }
 
 //function - create calendar
@@ -231,56 +241,69 @@ function createCalendar() {
 }
 
 //function - change destinations
-function reverse() {
-  let reverseBtn = document.querySelector('.reverse-btn');
-  let departure = document.querySelector('.departure');
-  let arrival = document.querySelector('.arrival');
-  reverseBtn.addEventListener('click', function() {
-    [
-      departure.textContent,
-      arrival.textContent
-    ] = [
-      arrival.textContent,
-      departure.textContent
-    ];
-    createCalendar();
-  })
+ function reverse() {
+  let reverseBtnArr = document.querySelectorAll('.reverse-btn');
+  let departureArr = document.querySelectorAll('.departure');
+  let arrivalArr = document.querySelectorAll('.arrival');
+  for (let btn of reverseBtnArr) {
+    btn.addEventListener('click', function() {
+      console.log(btn);
+      for (let departure of departureArr) {
+        for (let arrival of arrivalArr) {
+          [
+            departure.textContent,
+            arrival.textContent
+          ] = [
+            arrival.textContent,
+            departure.textContent
+          ];
+          createCalendar();
+        }
+      }
+    })
+  }
 }
 
 // add block to the page
 window.addEventListener('load', function() {
-  passengersBtn.classList.add('checked');
+  passengersBtnArr.forEach((item) => item.classList.add("checked"));
   addOrderContentsPass();
   reverse();
   createCalendar();
 });
 
 //change block contents
-passengersBtn.addEventListener("click", function() {
-  passengersBtn.classList.add('checked');
-  euroPassengersBtn.classList.remove('checked');
-  cargoBtn.classList.remove('checked');
-  removeOrderContents();
-  addOrderContentsPass();
-  reverse();
-  createCalendar();
-})
+for (let btn of passengersBtnArr) {
+  btn.addEventListener("click", function() {
+    passengersBtnArr.forEach((item) => item.classList.add("checked"));
+    euroPassengersBtnArr.forEach((item) => item.classList.remove("checked"));
+    cargoBtnArr.forEach((item) => item.classList.remove("checked"));
+    removeOrderContents();
+    addOrderContentsPass();
+    reverse();
+    createCalendar();
+  })
+}
 
-euroPassengersBtn.addEventListener("click", function() {
-  passengersBtn.classList.remove('checked');
-  cargoBtn.classList.remove('checked');
-  euroPassengersBtn.classList.add('checked');
-  removeOrderContents();
-  addOrderContentsEuroPass();
-  createCalendar();
-})
+for (let btn of euroPassengersBtnArr) {
+  btn.addEventListener("click", function() {
+    euroPassengersBtnArr.forEach((item) => item.classList.add("checked"));
+    passengersBtnArr.forEach((item) => item.classList.remove("checked"));
+    cargoBtnArr.forEach((item) => item.classList.remove("checked"));
+    removeOrderContents();
+    addOrderContentsEuroPass();
+    createCalendar();
+  })
+}
 
-cargoBtn.addEventListener("click", function() {
-  passengersBtn.classList.remove('checked');
-  euroPassengersBtn.classList.remove('checked');
-  cargoBtn.classList.add('checked');
-  removeOrderContents();
-  addOrderContentsCargo();
-  reverse();
-  createCalendar();
-})
+for (let btn of cargoBtnArr) {
+  btn.addEventListener("click", function() {
+    cargoBtnArr.forEach((item) => item.classList.add("checked"));
+    removeOrderContents();
+    addOrderContentsCargo();
+    reverse();
+    createCalendar();
+    passengersBtnArr.forEach((item) => item.classList.remove("checked"));
+    euroPassengersBtnArr.forEach((item) => item.classList.remove("checked"));
+  })
+}
