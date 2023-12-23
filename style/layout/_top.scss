@@ -241,6 +241,18 @@
       background-position: center;
       background-size: cover;
       opacity: 0.8;
+
+      &-1 {
+        background-image: url('../assets/image/munich-main.jpg');
+      }
+
+      &-2 {
+        background-image: url('../assets/image/sprinter-1main.jpg');
+      }
+
+      &-3 {
+        background-image: url('../assets/image/Stuttgart.jpg');
+      }
     }
   }
 }
