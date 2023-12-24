@@ -6,6 +6,7 @@
     align-items: center;
     grid-template-columns: min-content 7fr 3fr;
     grid-template-areas: 'logo nav contacts';
+    position: relative;
 
     @media screen and (max-width: $middle-desktop) {
       padding-top: 1.4rem;
@@ -39,7 +40,7 @@
       }
     }
 
-    &__burger {
+    .burger-btn {
       grid-area: burger;
       display: none;
       cursor: pointer;

@@ -1,10 +1,12 @@
 'use strict'
 
 let burger = document.querySelector('.burger');
-let burgerBtn = document.querySelector('.header__burger');
+let burgerBtn = document.querySelector('.burger-btn');
 let links = document.querySelectorAll('.burger__nav-item');
 let body = document.body;
 let fade = document.querySelector('.fade');
+
+console.log(burgerBtn);
 
 let burgerMenu = `
   <div class="burger_container">
