@@ -299,11 +299,11 @@ for (let btn of euroPassengersBtnArr) {
 for (let btn of cargoBtnArr) {
   btn.addEventListener("click", function() {
     cargoBtnArr.forEach((item) => item.classList.add("checked"));
+    passengersBtnArr.forEach((item) => item.classList.remove("checked"));
+    euroPassengersBtnArr.forEach((item) => item.classList.remove("checked"));
     removeOrderContents();
     addOrderContentsCargo();
     reverse();
     createCalendar();
-    passengersBtnArr.forEach((item) => item.classList.remove("checked"));
-    euroPassengersBtnArr.forEach((item) => item.classList.remove("checked"));
   })
 }
