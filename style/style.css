@@ -181,7 +181,6 @@ body {
   flex-direction: column;
   gap: 0.2rem;
   justify-content: center;
-  max-height: -moz-min-content;
   max-height: min-content;
 }
 @media screen and (max-width: 1400px) {
@@ -454,9 +453,6 @@ body {
     font-size: 0.68rem;
   }
 }
-.top-order .order .form *::-moz-placeholder {
-  color: #1d4152;
-}
 .top-order .order .form *::placeholder {
   color: #1d4152;
 }
@@ -664,8 +660,7 @@ body {
 .services__main {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  -moz-column-gap: 30px;
-       column-gap: 30px;
+  column-gap: 30px;
   width: 100%;
   height: 50%;
 }
@@ -680,10 +675,8 @@ body {
 .services__main .services__container-item-1 img {
   width: 100%;
   height: 270px;
-  -o-object-position: center;
-     object-position: center;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-position: center;
+  object-fit: cover;
   border-radius: 3px;
 }
 .services__main .services__container-item-1 p {
@@ -730,10 +723,8 @@ body {
 .services__main .services__container-item-2 img {
   width: 100%;
   height: 270px;
-  -o-object-position: 50% 80%;
-     object-position: 50% 80%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-position: 50% 80%;
+  object-fit: cover;
   border-radius: 3px;
 }
 .services__main .services__container-item-2 p {
@@ -780,10 +771,8 @@ body {
 .services__main .services__container-item-3 img {
   width: 100%;
   height: 270px;
-  -o-object-position: center;
-     object-position: center;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-position: center;
+  object-fit: cover;
   border-radius: 3px;
 }
 .services__main .services__container-item-3 p {
@@ -851,8 +840,7 @@ body {
   grid-template-columns: 50px 1fr 50px 1fr;
   height: 350px;
   width: 100%;
-  -moz-column-gap: 10px;
-       column-gap: 10px;
+  column-gap: 10px;
   margin-bottom: 10%;
 }
 .advantages__container-number {
@@ -1190,9 +1178,6 @@ body {
     font-size: 0.68rem;
   }
 }
-.trip-order .order .form *::-moz-placeholder {
-  color: #1d4152;
-}
 .trip-order .order .form *::placeholder {
   color: #1d4152;
 }
@@ -1390,4 +1375,4 @@ body {
     width: 1.6rem;
     height: auto;
   }
-}/*# sourceMappingURL=style.css.map */
+}
