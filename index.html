@@ -12,17 +12,17 @@
   <link rel="stylesheet" href="flatpickr/flatpickr.min.css">
 </head>
 <body>
-  <div class="top">
+  <div class="top" id="top">
     <header class="header wrapper">
       <a class="logo" href="#"><img src="assets/icons/logo.svg" alt="company logo"></a>
 
       <nav class="header__nav">
         <ul class="header__nav-container">
-          <li><a class="header__nav-item" href="#">Направления</a></li>
-          <li><a class="header__nav-item" href="#">Услуги</a></li>
-          <li><a class="header__nav-item" href="#">Преимущества</a></li>
-          <li><a class="header__nav-item" href="#">Отзывы</a></li>
-          <li><a class="header__nav-item" href="#">Вопросы и ответы</a></li>
+          <li><a class="header__nav-item" href="#departures">Направления</a></li>
+          <li><a class="header__nav-item" href="#services">Услуги</a></li>
+          <li><a class="header__nav-item" href="#advantages">Преимущества</a></li>
+          <li><a class="header__nav-item" href="#review">Отзывы</a></li>
+          <li><a class="header__nav-item" href="#faq">Вопросы и ответы</a></li>
         </ul>
       </nav>
 
@@ -73,7 +73,7 @@
   </div>
 
   <main>
-    <section class="departures wrapper">
+    <section class="departures wrapper" id="departures">
       <div class="departures__container">
         <h2 class="departures__container-title">Направления</h2>
 
@@ -98,7 +98,7 @@
      </div>
     </section>
 
-    <section class="services wrapper">
+    <section class="services wrapper" id="services">
       <div class="services__title">
         <h2>Услуги</h2>
       </div>
@@ -158,7 +158,7 @@
         </div>
     </section>
 
-    <section class="advantages wrapper">
+    <section class="advantages wrapper" id="advantages">
       <div class="advantages__container">
         <div class="advantages__container-title">
           <h2>Почему мы?</h2>
@@ -228,7 +228,7 @@
       </div>
     </section>
 
-    <section class="comments wrapper">
+    <section class="comments wrapper" id="review">
       <h2>Отзывы</h2>
       <div class="comments__border"></div>
       <div class="comments__container">
@@ -284,7 +284,7 @@
           <p class="comments__text">Спасибо Вам большое! Мама сказала, что все было замечательно! Водителям большая благодарность!!!</p>
         </div>
 
-        <div class="review__item">
+        <div class="comments__item">
           <img src="assets/image/avatar.png" alt="" class="comments__img">
           <p class="comments__name">@jduvesni</p>
           <div class="comments__stars">
@@ -299,7 +299,7 @@
       </div>
     </section>
 
-    <section class="faq wrapper">
+    <section class="faq wrapper" id="faq">
       <div class="FAQ__title">
         <h2>Вопросы - Ответы</h2>
       </div>
@@ -514,17 +514,17 @@
   <footer class="footer wrapper" id="contacts">
     <div class="footer__up">
       <div class="footer__up-logo">
-        <a href="/">
+        <a href="#top">
           <img src="assets/icons/logo-blue.svg" alt="Logo Transfer">
         </a>
       </div>
       <nav class="footer__up-info">
         <ul class="footer__up-wrapper">
-          <li class="footer__up-item"> <a class="footer__up-link" href="">Направления</a></li>
-          <li class="footer__up-item"> <a class="footer__up-link" href="">Услуги</a></li>
-          <li class="footer__up-item"> <a class="footer__up-link" href="">Преимущества</a></li>
-          <li class="footer__up-item"> <a class="footer__up-link" href="">Отзывы</a></li>
-          <li class="footer__up-item"> <a class="footer__up-link" href="">Вопросы и ответы</a></li>
+          <li class="footer__up-item"> <a class="footer__up-link" href="#departures">Направления</a></li>
+          <li class="footer__up-item"> <a class="footer__up-link" href="#services">Услуги</a></li>
+          <li class="footer__up-item"> <a class="footer__up-link" href="#advantages">Преимущества</a></li>
+          <li class="footer__up-item"> <a class="footer__up-link" href="#review">Отзывы</a></li>
+          <li class="footer__up-item"> <a class="footer__up-link" href="#faq">Вопросы и ответы</a></li>
         </ul>
       </nav>
       <div class="footer__up-social social">
