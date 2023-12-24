@@ -610,6 +610,20 @@ body {
     font-size: 0.4rem;
   }
 }
+@media screen and (max-width: 600px) {
+  .departures__container-item-content h3 {
+    font-size: 1.2rem;
+    margin-left: 7px;
+  }
+  .departures__container-item-content-d1 {
+    font-size: 0.6rem;
+    margin-left: 7px;
+  }
+  .departures__container-item-content-d2 {
+    font-size: 0.3rem;
+    margin-left: 7px;
+  }
+}
 @media screen and (max-width: 450px) {
   .departures__container-item {
     display: flex;
@@ -626,6 +640,18 @@ body {
   }
   .departures__container-item-title-3 {
     padding-top: 1rem;
+  }
+  .departures__container-item-content h3 {
+    font-size: 1.5rem;
+    margin-left: 7px;
+  }
+  .departures__container-item-content-d1 {
+    font-size: 0.8rem;
+    margin-left: 7px;
+  }
+  .departures__container-item-content-d2 {
+    font-size: 0.4rem;
+    margin-left: 7px;
   }
 }
 .services {
