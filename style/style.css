@@ -902,7 +902,7 @@ body {
   border: none;
 }
 
-.accordion-item h5 {
+.accordion-item button {
   font-size: 0.8rem;
 }
 
