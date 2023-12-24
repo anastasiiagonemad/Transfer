@@ -1,0 +1,27 @@
+.advantages__container{
+    &-title{
+        width: 100%;
+        height: 80px;
+        text-align: center;
+        border-bottom: $light-grey solid 0.09rem;
+        
+    }
+
+    &-item{
+        display: grid;
+        grid-template-columns: 50px 1fr 50px 1fr;
+        height: 350px;
+        width: 100%;
+        column-gap: 10px;
+        margin-bottom: 10%;
+    }
+    &-number{
+        color: $blue;
+        font-size: 50px;
+        -webkit-text-fill-color: transparent;
+        -webkit-text-stroke: 0.7px;
+    }
+    &-text{
+        align-self: center;
+    }
+}
