@@ -181,6 +181,7 @@ body {
   flex-direction: column;
   gap: 0.2rem;
   justify-content: center;
+  max-height: -moz-min-content;
   max-height: min-content;
 }
 @media screen and (max-width: 1400px) {
@@ -453,6 +454,9 @@ body {
     font-size: 0.68rem;
   }
 }
+.top-order .order .form *::-moz-placeholder {
+  color: #1d4152;
+}
 .top-order .order .form *::placeholder {
   color: #1d4152;
 }
@@ -660,7 +664,8 @@ body {
 .services__main {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  column-gap: 30px;
+  -moz-column-gap: 30px;
+       column-gap: 30px;
   width: 100%;
   height: 50%;
 }
@@ -675,8 +680,10 @@ body {
 .services__main .services__container-item-1 img {
   width: 100%;
   height: 270px;
-  object-position: center;
-  object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  -o-object-fit: cover;
+     object-fit: cover;
   border-radius: 3px;
 }
 .services__main .services__container-item-1 p {
@@ -723,8 +730,10 @@ body {
 .services__main .services__container-item-2 img {
   width: 100%;
   height: 270px;
-  object-position: 50% 80%;
-  object-fit: cover;
+  -o-object-position: 50% 80%;
+     object-position: 50% 80%;
+  -o-object-fit: cover;
+     object-fit: cover;
   border-radius: 3px;
 }
 .services__main .services__container-item-2 p {
@@ -771,8 +780,10 @@ body {
 .services__main .services__container-item-3 img {
   width: 100%;
   height: 270px;
-  object-position: center;
-  object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  -o-object-fit: cover;
+     object-fit: cover;
   border-radius: 3px;
 }
 .services__main .services__container-item-3 p {
@@ -835,24 +846,60 @@ body {
   text-align: center;
   border-bottom: #F7F9FB solid 0.09rem;
 }
+.advantages__container-title h2 {
+  font-size: 2.5rem;
+}
 .advantages__container-item {
   display: grid;
   grid-template-columns: 50px 1fr 50px 1fr;
-  height: 350px;
   width: 100%;
-  column-gap: 10px;
-  margin-bottom: 10%;
+  -moz-column-gap: 15px;
+       column-gap: 15px;
 }
 .advantages__container-number {
   color: #31708E;
-  font-size: 50px;
+  font-size: 3.125rem;
   -webkit-text-fill-color: transparent;
-  -webkit-text-stroke: 0.7px;
+  -webkit-text-stroke: 0.043rem;
 }
 .advantages__container-text {
   align-self: center;
+  font-size: 1rem;
 }
 
+@media screen and (max-width: 770px) {
+  .advantages__container-title h2 {
+    font-size: 2.25rem;
+  }
+  .advantages__container-text {
+    font-size: 0.75rem;
+  }
+  .advantages__container-number {
+    font-size: 2.875rem;
+  }
+}
+@media screen and (max-width: 450px) {
+  .advantages__container-title h2 {
+    font-size: 2rem;
+  }
+  .advantages__container-text {
+    font-size: 0.625rem;
+  }
+  .advantages__container-number {
+    font-size: 2.625rem;
+  }
+}
+@media screen and (max-width: 340px) {
+  .advantages__container-title h2 {
+    font-size: 1.75rem;
+  }
+  .advantages__container-text {
+    font-size: 0.5625rem;
+  }
+  .advantages__container-number {
+    font-size: 2.375rem;
+  }
+}
 .comments__border {
   width: 10rem;
   height: 0.25rem;
@@ -1178,6 +1225,9 @@ body {
     font-size: 0.68rem;
   }
 }
+.trip-order .order .form *::-moz-placeholder {
+  color: #1d4152;
+}
 .trip-order .order .form *::placeholder {
   color: #1d4152;
 }
@@ -1375,4 +1425,4 @@ body {
     width: 1.6rem;
     height: auto;
   }
-}
+}/*# sourceMappingURL=style.css.map */
