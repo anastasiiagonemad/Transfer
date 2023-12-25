@@ -152,7 +152,7 @@ body {
 @media screen and (max-width: 1025px) {
   .top .header__contacts {
     padding-top: 0;
-    gap: 2rem;
+    gap: 1.5rem;
   }
 }
 @media screen and (max-width: 520px) {
@@ -225,6 +225,11 @@ body {
     gap: 6rem;
   }
 }
+@media screen and (max-width: 520px) {
+  .top-order {
+    padding-top: 3.2rem;
+  }
+}
 .top-order__title {
   font-size: 2.2rem;
   font-weight: 900;
@@ -245,6 +250,16 @@ body {
     padding-right: 0;
     text-align: center;
     font-size: 1.4rem;
+  }
+}
+@media screen and (max-width: 600px) {
+  .top-order__title {
+    font-size: 1.3rem;
+  }
+}
+@media screen and (max-width: 450px) {
+  .top-order__title {
+    font-size: 1.1rem;
   }
 }
 .top-order .order {

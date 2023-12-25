@@ -106,7 +106,7 @@
 
       @media screen and (max-width: $tablet) {
         padding-top: 0;
-        gap: 2rem;
+        gap: 1.5rem;
       }
 
       @media screen and (max-width: $mobile) {
@@ -177,14 +177,9 @@
       gap: 6rem;
     }
 
-    // @media screen and (max-width: $large-mobile) {
-    //   padding-top: 3.2rem;
-    //   gap: 7rem;
-    // }
-
-    // @media screen and (max-width: $mobile) {
-    //   gap: 6rem;
-    // }
+    @media screen and (max-width: $mobile) {
+      padding-top: 3.2rem;
+    }
 
     &__title {
       font-size: 2.2rem;
@@ -206,9 +201,13 @@
         font-size: 1.4rem;
       }
 
-      // @media screen and (max-width: $large-mobile) {
-      //   font-size: 1.3rem;
-      // }
+      @media screen and (max-width: $large-mobile) {
+        font-size: 1.3rem;
+      }
+
+      @media screen and (max-width: $medium-mobile) {
+        font-size: 1.1rem;
+      }
     }
 
     .order {
