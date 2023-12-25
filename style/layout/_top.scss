@@ -40,33 +40,12 @@
       }
     }
 
-    .burger-btn {
-      grid-area: burger;
-      display: none;
-      cursor: pointer;
-
-      @media screen and (max-width: $mini-tablet) {
-        display: block;
-        justify-self: end;
-        align-self: center;
-
-        &-img {
-          width: 1rem;
-          height: 1rem;
-        }
-      }
-    }
-
     & a {
       color: $light-grey;
     }
 
     &__nav {
       grid-area: nav;
-
-      @media screen and (max-width: $mini-tablet) {
-        display: none;
-      }
 
       &-container {
         list-style: none;
@@ -91,6 +70,49 @@
       &-item {
         white-space: nowrap;
       }
+
+      &-item-burger {
+        display: none;
+
+        @media screen and (max-width: $mini-tablet) {
+          display: block;
+        }
+      }
+
+      //nav container for burger
+      @media screen and (max-width: $mini-tablet) {
+        display: none;
+        width: fit-content;
+        height: fit-content;
+        background-color: $blue;
+        position: fixed;
+        top: 0;
+        right: 0;
+        z-index: 4;
+        padding: 2.5rem;
+        border-radius: 0.2rem;
+        box-shadow: 0 0 0.2rem 0.05rem $dark-blue;
+
+        &.active {
+          display: block;
+        }
+
+        &-container {
+          list-style: none;
+          padding: 1rem 0 0 0;
+          margin: 0;
+          display: flex;
+          flex-direction: column;
+          gap: 1.3rem;
+          align-items: flex-start;
+        }
+
+        &-item {
+          color: $light-grey;
+          font-weight: 800;
+        }
+      }
+
     }
 
     &__contacts {
@@ -161,6 +183,7 @@
     }
   }
 
+  //order
   &-order {
     display: flex;
     justify-content: space-between;
@@ -215,6 +238,7 @@
     }
   }
 
+  //carousel
   .carousel {
     position: absolute;
     bottom: 0;
@@ -259,4 +283,64 @@
       }
     }
   }
+
+
+  //burger
+  .burger-open-btn {
+    grid-area: burger;
+    display: none;
+    cursor: pointer;
+
+    @media screen and (max-width: $mini-tablet) {
+      display: block;
+      justify-self: end;
+      align-self: center;
+
+      &-img {
+        width: 1rem;
+        height: 1rem;
+      }
+    }
+  }
+
+  .burger-close-btn {
+    display: none;
+    cursor: pointer;
+
+    @media screen and (max-width: $mini-tablet) {
+      display: block;
+      position: absolute;
+      width: 1rem;
+      height: 1rem;
+      cursor: pointer;
+      top: 1rem;
+      right: 1rem;
+
+      & img {
+        width: 1rem;
+        height: 1rem;
+      }
+    }
+  }
+
+
+}
+
+.burger__fade {
+  width: 100%;
+  height: 100%;
+  background-color: $turquoise;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 3;
+  opacity: 0.5;
+  display: none;
+  &.active {
+    display: block;
+  }
+}
+
+.body-lock {
+  overflow: hidden;
 }

@@ -42,6 +42,7 @@ body {
   min-width: 320px;
   max-width: 1500px;
   margin: 0 auto;
+  position: relative;
 }
 
 .top {
@@ -85,32 +86,11 @@ body {
     height: auto;
   }
 }
-.top .header .burger-btn {
-  grid-area: burger;
-  display: none;
-  cursor: pointer;
-}
-@media screen and (max-width: 800px) {
-  .top .header .burger-btn {
-    display: block;
-    justify-self: end;
-    align-self: center;
-  }
-  .top .header .burger-btn-img {
-    width: 1rem;
-    height: 1rem;
-  }
-}
 .top .header a {
   color: #F7F9FB;
 }
 .top .header__nav {
   grid-area: nav;
-}
-@media screen and (max-width: 800px) {
-  .top .header__nav {
-    display: none;
-  }
 }
 .top .header__nav-container {
   list-style: none;
@@ -136,6 +116,45 @@ body {
 }
 .top .header__nav-item {
   white-space: nowrap;
+}
+.top .header__nav-item-burger {
+  display: none;
+}
+@media screen and (max-width: 800px) {
+  .top .header__nav-item-burger {
+    display: block;
+  }
+}
+@media screen and (max-width: 800px) {
+  .top .header__nav {
+    display: none;
+    width: fit-content;
+    height: fit-content;
+    background-color: #256582;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 4;
+    padding: 2.5rem;
+    border-radius: 0.2rem;
+    box-shadow: 0 0 0.2rem 0.05rem #1d4152;
+  }
+  .top .header__nav.active {
+    display: block;
+  }
+  .top .header__nav-container {
+    list-style: none;
+    padding: 1rem 0 0 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1.3rem;
+    align-items: flex-start;
+  }
+  .top .header__nav-item {
+    color: #F7F9FB;
+    font-weight: 800;
+  }
 }
 .top .header__contacts {
   grid-area: contacts;
@@ -528,6 +547,60 @@ body {
 }
 .top__carousel-item .top__overlay-image-3 {
   background-image: url("../assets/image/Stuttgart.jpg");
+}
+.top .burger-open-btn {
+  grid-area: burger;
+  display: none;
+  cursor: pointer;
+}
+@media screen and (max-width: 800px) {
+  .top .burger-open-btn {
+    display: block;
+    justify-self: end;
+    align-self: center;
+  }
+  .top .burger-open-btn-img {
+    width: 1rem;
+    height: 1rem;
+  }
+}
+.top .burger-close-btn {
+  display: none;
+  cursor: pointer;
+}
+@media screen and (max-width: 800px) {
+  .top .burger-close-btn {
+    display: block;
+    position: absolute;
+    width: 1rem;
+    height: 1rem;
+    cursor: pointer;
+    top: 1rem;
+    right: 1rem;
+  }
+  .top .burger-close-btn img {
+    width: 1rem;
+    height: 1rem;
+  }
+}
+
+.burger__fade {
+  width: 100%;
+  height: 100%;
+  background-color: #5085A5;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 3;
+  opacity: 0.5;
+  display: none;
+}
+.burger__fade.active {
+  display: block;
+}
+
+.body-lock {
+  overflow: hidden;
 }
 
 .departures__container-title {
@@ -1414,61 +1487,4 @@ body {
     width: 1.6rem;
     height: auto;
   }
-}
-
-.burger {
-  display: none;
-}
-.burger.active {
-  display: block;
-}
-.burger__container {
-  width: fit-content;
-  height: fit-content;
-  background-color: #256582;
-  position: fixed;
-  top: 0;
-  right: 0;
-  z-index: 4;
-  padding: 2rem;
-  border-radius: 0.2rem;
-  box-shadow: 0 0 0.2rem 0.05rem #1d4152;
-}
-.burger__nav-container {
-  list-style: none;
-  padding: 1rem 0 0 0;
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 1.2rem;
-}
-.burger__nav-item {
-  color: #F7F9FB;
-  font-weight: 800;
-}
-.burger__close {
-  position: absolute;
-  width: 1rem;
-  height: 1rem;
-  cursor: pointer;
-  top: 1rem;
-  right: 1rem;
-}
-.burger__close img {
-  width: 1rem;
-  height: 1rem;
-}
-
-.burger__fade {
-  width: 100%;
-  height: 100%;
-  background-color: #5085A5;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 3;
-  display: none;
-}
-.burger__fade.active {
-  display: block;
 }

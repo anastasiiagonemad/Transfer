@@ -1,49 +1,95 @@
 'use strict'
 
-let burger = document.querySelector('.burger');
-let burgerOpenBtn = document.querySelector('.burger-btn');
-let burgerCloseBtn = document.querySelector('.burger__close')
-let linksArr = document.querySelectorAll('.burger__nav-item');
+let burgerOpen = document.querySelector(".burger-open-btn");
+let burgerClose = document.querySelector(".burger-close-btn");
+let menu = document.querySelector(".header__nav");
+let fade = document.querySelector(".burger__fade");
+let links = document.querySelectorAll(".header__nav-item");
 let body = document.body;
-let fade = document.querySelector('.burger__fade');
+
+function toggleBurgerMenu() {
+      menu.classList.toggle('active');
+      // burgerBtn.classList.toggle('active');
+      body.classList.toggle('body-lock');
+      fade.classList.toggle('active');
+  }
+  function closeBurgerMenu() {
+        menu.classList.remove('active');
+        // burgerBtn.classList.remove('active');
+        body.classList.remove('body-lock');
+        fade.classList.remove('active');
+    }
 
 
-
-let burgerMenu = `
-  <div class="burger__container">
-    <div class="burger__close"><img src="assets/icons/close-icon.svg" alt="close button"></div>
-    <nav class="burger__nav">
-      <ul class="burger__nav-container">
-        <li><a class="burger__nav-item" href="#departures">Направления</a></li>
-        <li><a class="burger__nav-item" href="#services">Услуги</a></li>
-        <li><a class="burger__nav-item" href="#advantages">Преимущества</a></li>
-        <li><a class="burger__nav-item" href="#review">Отзывы</a></li>
-        <li><a class="burger__nav-item" href="#faq">Вопросы и ответы</a></li>
-        <li><a class="burger__nav-item" href="#contacts">Контакты</a></li>
-      </ul>
-    </nav>
-  </div>
-`;
-
-
-function createBurger() {
-  let burgerBlock = document.createElement('div');
-  burgerBlock.innerHTML = burgerMenu;
-  burger.append(burgerBlock);
-  burger.classList.add('active');
-}
-
-burgerOpenBtn.addEventListener('click', function() {
-  createBurger();
-  fade.classList.add('active');
-
+burgerOpen.addEventListener('click', toggleBurgerMenu);
+burgerClose.addEventListener('click', closeBurgerMenu);
+fade.addEventListener('click', closeBurgerMenu);
+links.forEach(link => {
+    link.addEventListener('click', closeBurgerMenu);
 })
 
-burgerCloseBtn.addEventListener ('click', function() {
-  burger.classList.remove('active');
-  fade.classList.remove('active');
 
-})
+
+// function openBurgerMenu() {
+//     menu.classList.add("active");
+//     fade.classList.add("active");
+// }
+
+// function closeBurgerMenu() {
+//     menu.classList.remove("header-nav-active");
+//     fade.classList.remove("fade-active");
+// }
+
+// burgerClose.addEventListener("click", closeBurgerMenu);
+// fade.addEventListener("click", closeBurgerMenu);
+// burgerMenuItem.addEventListener("click", closeBurgerMenu);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// let burger = document.querySelector('.burger');
+// let burgerOpenBtn = document.querySelector('.burger-btn');
+// let burgerCloseBtn = document.querySelector('.burger__close')
+// let linksArr = document.querySelectorAll('.burger__nav-item');
+// let body = document.body;
+// let fade = document.querySelector('.burger__fade');
+
+
+
+// function createBurger() {
+//   let burgerBlock = document.createElement('div');
+//   burgerBlock.innerHTML = burgerMenu;
+//   burger.append(burgerBlock);
+//   burger.classList.add('active');
+// }
+
+// burgerOpenBtn.addEventListener('click', function() {
+//   createBurger();
+//   fade.classList.add('active');
+
+// })
+
+// burgerCloseBtn.addEventListener ('click', function() {
+//   burger.classList.remove('active');
+//   fade.classList.remove('active');
+
+// })
+
+
+
+
 
 // function toggleBurgerMenu() {
 //     menu.classList.toggle('active');
@@ -64,3 +110,33 @@ burgerCloseBtn.addEventListener ('click', function() {
 // links.forEach(link => {
 //     link.addEventListener('click', closeBurgerMenu);
 // })
+
+
+
+
+// let burgerOpen = document.querySelector(".burger-open-btn");
+// let burgerClose = document.querySelector(".burger-close-btn");
+// let menu = document.querySelector(".header-nav");
+// let fade = document.querySelector(".fade");
+// let burgerMenuItem = document.querySelector(".nav-container");
+
+// function openBurgerMenu() {
+//     menu.classList.add("header-nav-active");
+//     fade.classList.add("fade-active");
+// }
+
+// function closeBurgerMenu() {
+//     menu.classList.remove("header-nav-active");
+//     fade.classList.remove("fade-active");
+// }
+
+// burgerOpen.addEventListener("click", openBurgerMenu);
+// burgerClose.addEventListener("click", closeBurgerMenu);
+// fade.addEventListener("click", closeBurgerMenu);
+// burgerMenuItem.addEventListener("click", closeBurgerMenu);
+
+
+
+// .lock-scroll {
+//   overflow: hidden;
+// }
