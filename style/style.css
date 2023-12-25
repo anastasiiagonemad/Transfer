@@ -895,15 +895,15 @@ body {
 .comments__border {
   width: 10rem;
   height: 0.25rem;
-  background: rgb(247, 210, 5);
+  background: #5085A5;
   margin: 1rem auto;
 }
 .comments__container {
   overflow: hidden;
-  background-color: rgb(248, 247, 247);
+  background-color: #F7F9FB;
   text-align: center;
   display: grid;
-  grid-template-columns: repeat(4, 25%);
+  grid-template-columns: repeat(5, 20%);
   grid-auto-flow: column;
 }
 .comments__item {
@@ -932,6 +932,54 @@ body {
   margin-bottom: 0.25rem;
 }
 
+@media screen and (max-width: 1025px) {
+  .comments__container {
+    grid-template-columns: repeat(4, 25%);
+  }
+  .comments__img {
+    margin: 0.6rem;
+    width: 3.5rem;
+    height: 3.5rem;
+  }
+  .comments__text {
+    font-size: 0.75rem;
+    height: 4rem;
+  }
+}
+@media screen and (max-width: 800px) {
+  .comments__container {
+    grid-template-columns: repeat(3, 33%);
+  }
+  .comments__text {
+    font-size: 0.7rem;
+    height: 3.5rem;
+    margin-bottom: 0;
+  }
+}
+@media screen and (max-width: 600px) {
+  .comments__container {
+    grid-template-columns: repeat(2, 50%);
+  }
+  .comments__img {
+    width: 3rem;
+    height: 3rem;
+  }
+}
+@media screen and (max-width: 450px) {
+  .comments__container {
+    grid-template-columns: repeat(1, 100%);
+  }
+  .comments__img {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+  .comments__text {
+    font-size: 0.625rem;
+  }
+  .comments__name {
+    font-size: 0.7rem;
+  }
+}
 .accordion {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
