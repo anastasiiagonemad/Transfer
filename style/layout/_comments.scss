@@ -1,46 +1,104 @@
-.comments{
+.comments {
+  &__border {
+    width: 10rem;
+    height: 0.25rem;
+    background: $turquoise;
+    margin: 1rem auto;
+  }
 
-    &__border{
-        width: 10rem;
-        height: 0.25rem;
-        background: rgb(247, 210, 5);
-        margin: 1rem auto;
-    }
+  &__container {
+    overflow: hidden;
+    background-color: $light-grey;
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(5, 20%);
+    grid-auto-flow: column;
+  }
 
-    &__container{
-        overflow: hidden;
-        background-color: rgb(248, 247, 247);
-        text-align: center;
-        display: grid;
-        grid-template-columns: repeat(4, 25%);
-        grid-auto-flow: column;
-    }
+  &__item {
+    margin: 1rem 0.875rem;
+    background-color: white;
+    border-radius: 5%;
+  }
 
-    &__item{
-        margin: 1rem 0.875rem;
-        background-color: white;
-        border-radius: 5%;
-    }
+  &__img {
+    margin: 0.875rem;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+  }
 
-    &__img{
-        margin: 0.875rem;
-        width: 4rem;
-        height: 4rem;
-        border-radius: 50%;
+  &__text {
+    font-size: 0.875rem;
+    height: 4.5rem;
+    padding: 0 0.5rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+  }
+  &__name {
+    font-size: 0.875rem;
+    margin-bottom: 0.25rem;
+  }
+}
+@media screen and (max-width: $tablet) {
+  .comments {
+    &__container {
+      grid-template-columns: repeat(4, 25%);
     }
+    &__img {
+      margin: 0.6rem;
+      width: 3.5rem;
+      height: 3.5rem;
+    }
+    &__text {
+      font-size: 0.75rem;
+      height: 4rem;
+    }
+  }
+}
 
-    &__text{
-        font-size: 0.875rem;
-        height: 4.5rem;
-        padding: 0 0.5rem;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        display: -webkit-box;
-        -webkit-line-clamp: 4;
-        -webkit-box-orient: vertical;
+@media screen and (max-width: $mini-tablet) {
+  .comments {
+    &__container {
+      grid-template-columns: repeat(3, 33%);
     }
-    &__name{
-        font-size: 0.875rem;
-        margin-bottom: 0.25rem;
+    &__text {
+      font-size: 0.7rem;
+      height: 3.5rem;
+      margin-bottom: 0;
     }
+  }
+}
+
+@media screen and (max-width: $large-mobile) {
+  .comments {
+    &__container {
+      grid-template-columns: repeat(2, 50%);
+    }
+    &__img {
+      width: 3rem;
+      height: 3rem;
+    }
+  }
+}
+
+@media screen and (max-width: $medium-mobile) {
+  .comments {
+    &__container {
+      grid-template-columns: repeat(1, 100%);
+    }
+    &__img {
+      width: 2.5rem;
+      height: 2.5rem;
+    }
+    &__text {
+      font-size: 0.625rem;
+    }
+    &__name {
+      font-size: 0.7rem;
+    }
+  }
 }
