@@ -173,7 +173,6 @@ let cargo = `
 `;
 
 let boxArr = document.querySelectorAll('.order__container');
-console.log(boxArr);
 
 let passengersBtnArr = document.querySelectorAll('.order__passengers');
 let euroPassengersBtnArr = document.querySelectorAll('.order__euro-passengers');
@@ -194,7 +193,6 @@ function addOrderContentsPass() {
     block.className = 'block';
     block.innerHTML = passengers;
     box.append(block);
-    console.log(block);
   }
 }
 
@@ -247,7 +245,6 @@ function createCalendar() {
   let arrivalArr = document.querySelectorAll('.arrival');
   for (let btn of reverseBtnArr) {
     btn.addEventListener('click', function() {
-      console.log(btn);
       for (let departure of departureArr) {
         for (let arrival of arrivalArr) {
           [

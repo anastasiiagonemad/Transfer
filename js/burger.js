@@ -1,23 +1,25 @@
 'use strict'
 
 let burger = document.querySelector('.burger');
-let burgerBtn = document.querySelector('.burger-btn');
-let links = document.querySelectorAll('.burger__nav-item');
+let burgerOpenBtn = document.querySelector('.burger-btn');
+let burgerCloseBtn = document.querySelector('.burger__close')
+let linksArr = document.querySelectorAll('.burger__nav-item');
 let body = document.body;
-let fade = document.querySelector('.fade');
+let fade = document.querySelector('.burger__fade');
 
-console.log(burgerBtn);
+
 
 let burgerMenu = `
-  <div class="burger_container">
-    <div class="burger__close><img class="assets/icons/close-icon.svg"</div>
+  <div class="burger__container">
+    <div class="burger__close"><img src="assets/icons/close-icon.svg" alt="close button"></div>
     <nav class="burger__nav">
       <ul class="burger__nav-container">
-        <li><a class="burger__nav-item" href="#">Направления</a></li>
-        <li><a class="burger__nav-item" href="#">Услуги</a></li>
-        <li><a class="burger__nav-item" href="#">Преимущества</a></li>
-        <li><a class="burger__nav-item" href="#">Отзывы</a></li>
-        <li><a class="burger__nav-item" href="#">Вопросы и ответы</a></li>
+        <li><a class="burger__nav-item" href="#departures">Направления</a></li>
+        <li><a class="burger__nav-item" href="#services">Услуги</a></li>
+        <li><a class="burger__nav-item" href="#advantages">Преимущества</a></li>
+        <li><a class="burger__nav-item" href="#review">Отзывы</a></li>
+        <li><a class="burger__nav-item" href="#faq">Вопросы и ответы</a></li>
+        <li><a class="burger__nav-item" href="#contacts">Контакты</a></li>
       </ul>
     </nav>
   </div>
@@ -25,17 +27,22 @@ let burgerMenu = `
 
 
 function createBurger() {
-
-    let burgerBlock = document.createElement('div');
-    // burgerBlock.className = 'burger_container';
-    burgerBlock.innerHTML = burgerMenu;
-    burger.append(burgerBlock);
-    console.log(burgerBlock);
-
+  let burgerBlock = document.createElement('div');
+  burgerBlock.innerHTML = burgerMenu;
+  burger.append(burgerBlock);
+  burger.classList.add('active');
 }
 
-burgerBtn.addEventListener('click', function() {
+burgerOpenBtn.addEventListener('click', function() {
   createBurger();
+  fade.classList.add('active');
+
+})
+
+burgerCloseBtn.addEventListener ('click', function() {
+  burger.classList.remove('active');
+  fade.classList.remove('active');
+
 })
 
 // function toggleBurgerMenu() {

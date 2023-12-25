@@ -693,18 +693,18 @@ body {
 .services__main .services__container-item-1 a {
   width: 100%;
   text-align: center;
-  border: 3px solid #31708E;
+  border: 3px solid #256582;
   padding: 10px;
   border-radius: 10px;
-  color: #31708E;
+  color: #256582;
 }
 .services__main .services__container-item-1 details {
   width: 100%;
   text-align: center;
-  border: 3px solid #31708E;
+  border: 3px solid #256582;
   padding: 10px;
   border-radius: 3px;
-  color: #31708E;
+  color: #256582;
   cursor: pointer;
 }
 .services__main .services__container-item-1 details summary {
@@ -718,7 +718,7 @@ body {
 }
 .services__main .services__container-item-1 details:hover {
   color: #F7F9FB;
-  background-color: #31708E;
+  background-color: #256582;
 }
 .services__main .services__container-item-2 {
   width: 100%;
@@ -741,18 +741,18 @@ body {
 .services__main .services__container-item-2 a {
   width: 100%;
   text-align: center;
-  border: 3px solid #31708E;
+  border: 3px solid #256582;
   padding: 10px;
   border-radius: 10px;
-  color: #31708E;
+  color: #256582;
 }
 .services__main .services__container-item-2 details {
   width: 100%;
   text-align: center;
-  border: 3px solid #31708E;
+  border: 3px solid #256582;
   padding: 10px;
   border-radius: 3px;
-  color: #31708E;
+  color: #256582;
   cursor: pointer;
 }
 .services__main .services__container-item-2 details summary {
@@ -766,7 +766,7 @@ body {
 }
 .services__main .services__container-item-2 details:hover {
   color: #F7F9FB;
-  background-color: #31708E;
+  background-color: #256582;
 }
 .services__main .services__container-item-3 {
   width: 100%;
@@ -789,18 +789,18 @@ body {
 .services__main .services__container-item-3 a {
   width: 100%;
   text-align: center;
-  border: 3px solid #31708E;
+  border: 3px solid #256582;
   padding: 10px;
   border-radius: 10px;
-  color: #31708E;
+  color: #256582;
 }
 .services__main .services__container-item-3 details {
   width: 100%;
   text-align: center;
-  border: 3px solid #31708E;
+  border: 3px solid #256582;
   padding: 10px;
   border-radius: 3px;
-  color: #31708E;
+  color: #256582;
   cursor: pointer;
 }
 .services__main .services__container-item-3 details summary {
@@ -814,7 +814,7 @@ body {
 }
 .services__main .services__container-item-3 details:hover {
   color: #F7F9FB;
-  background-color: #31708E;
+  background-color: #256582;
 }
 
 @media screen and (max-width: 770px) {
@@ -849,7 +849,7 @@ body {
   column-gap: 15px;
 }
 .advantages__container-number {
-  color: #31708E;
+  color: #256582;
   font-size: 3.125rem;
   -webkit-text-fill-color: transparent;
   -webkit-text-stroke: 0.043rem;
@@ -1414,4 +1414,61 @@ body {
     width: 1.6rem;
     height: auto;
   }
+}
+
+.burger {
+  display: none;
+}
+.burger.active {
+  display: block;
+}
+.burger__container {
+  width: fit-content;
+  height: fit-content;
+  background-color: #256582;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 4;
+  padding: 2rem;
+  border-radius: 0.2rem;
+  box-shadow: 0 0 0.2rem 0.05rem #1d4152;
+}
+.burger__nav-container {
+  list-style: none;
+  padding: 1rem 0 0 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+.burger__nav-item {
+  color: #F7F9FB;
+  font-weight: 800;
+}
+.burger__close {
+  position: absolute;
+  width: 1rem;
+  height: 1rem;
+  cursor: pointer;
+  top: 1rem;
+  right: 1rem;
+}
+.burger__close img {
+  width: 1rem;
+  height: 1rem;
+}
+
+.burger__fade {
+  width: 100%;
+  height: 100%;
+  background-color: #5085A5;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 3;
+  display: none;
+}
+.burger__fade.active {
+  display: block;
 }
