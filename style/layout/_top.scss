@@ -46,7 +46,6 @@
       cursor: pointer;
 
       @media screen and (max-width: $mini-tablet) {
-
         display: block;
         justify-self: end;
         align-self: center;
@@ -87,6 +86,10 @@
           font-size: 0.8rem;
           padding-bottom: 0rem;
         }
+      }
+
+      &-item {
+        white-space: nowrap;
       }
     }
 
@@ -171,17 +174,17 @@
       padding-bottom: 1rem;
       flex-direction: column;
       align-items: center;
-      gap: 7rem;
-    }
-
-    @media screen and (max-width: $large-mobile) {
-      padding-top: 3.2rem;
-      gap: 7rem;
-    }
-
-    @media screen and (max-width: $mobile) {
       gap: 6rem;
     }
+
+    // @media screen and (max-width: $large-mobile) {
+    //   padding-top: 3.2rem;
+    //   gap: 7rem;
+    // }
+
+    // @media screen and (max-width: $mobile) {
+    //   gap: 6rem;
+    // }
 
     &__title {
       font-size: 2.2rem;
@@ -196,15 +199,16 @@
       }
 
       @media screen and (max-width: $mini-tablet) {
-        max-width: 100%;
+        max-width: 80%;
+        height: 4.7rem;
         padding-right: 0;
         text-align: center;
         font-size: 1.4rem;
       }
 
-      @media screen and (max-width: $large-mobile) {
-        font-size: 1.3rem;
-      }
+      // @media screen and (max-width: $large-mobile) {
+      //   font-size: 1.3rem;
+      // }
     }
 
     .order {
