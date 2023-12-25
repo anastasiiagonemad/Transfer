@@ -6,6 +6,7 @@
     align-items: center;
     grid-template-columns: min-content 7fr 3fr;
     grid-template-areas: 'logo nav contacts';
+    position: relative;
 
     @media screen and (max-width: $middle-desktop) {
       padding-top: 1.4rem;
@@ -39,13 +40,12 @@
       }
     }
 
-    &__burger {
+    .burger-btn {
       grid-area: burger;
       display: none;
       cursor: pointer;
 
       @media screen and (max-width: $mini-tablet) {
-
         display: block;
         justify-self: end;
         align-self: center;
@@ -87,6 +87,10 @@
           padding-bottom: 0rem;
         }
       }
+
+      &-item {
+        white-space: nowrap;
+      }
     }
 
     &__contacts {
@@ -102,7 +106,7 @@
 
       @media screen and (max-width: $tablet) {
         padding-top: 0;
-        gap: 2rem;
+        gap: 1.5rem;
       }
 
       @media screen and (max-width: $mobile) {
@@ -170,16 +174,11 @@
       padding-bottom: 1rem;
       flex-direction: column;
       align-items: center;
-      gap: 7rem;
-    }
-
-    @media screen and (max-width: $large-mobile) {
-      padding-top: 3.2rem;
-      gap: 7rem;
+      gap: 6rem;
     }
 
     @media screen and (max-width: $mobile) {
-      gap: 6rem;
+      padding-top: 3.2rem;
     }
 
     &__title {
@@ -195,7 +194,8 @@
       }
 
       @media screen and (max-width: $mini-tablet) {
-        max-width: 100%;
+        max-width: 80%;
+        height: 4.7rem;
         padding-right: 0;
         text-align: center;
         font-size: 1.4rem;
@@ -203,6 +203,10 @@
 
       @media screen and (max-width: $large-mobile) {
         font-size: 1.3rem;
+      }
+
+      @media screen and (max-width: $medium-mobile) {
+        font-size: 1.1rem;
       }
     }
 
