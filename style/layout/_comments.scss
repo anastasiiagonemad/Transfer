@@ -6,6 +6,25 @@
     margin: 1rem auto;
   }
 
+  &__carousel {
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    &-button {
+      position: absolute;
+      max-width: 5%;
+      cursor: pointer;
+
+      &_left {
+        left: -1.5%;
+      }
+
+      &_right {
+        right: -1.5%;
+      }
+    }
+  }
   &__container {
     overflow: hidden;
     background-color: $light-grey;
@@ -70,6 +89,19 @@
       height: 3.5rem;
       margin-bottom: 0;
     }
+    &__carousel {
+      &-button {
+        max-width: 6%;
+
+        &_left {
+          left: -2.5%;
+        }
+
+        &_right {
+          right: -2.5%;
+        }
+      }
+    }
   }
 }
 
@@ -81,6 +113,11 @@
     &__img {
       width: 3rem;
       height: 3rem;
+    }
+    &__carousel {
+      &-button {
+        max-width: 9%;
+      }
     }
   }
 }
