@@ -220,10 +220,10 @@ function addOrderContentsCargo() {
 function createCalendar() {
   flatpickr('.date', {
     altInput: true,
-    altFormat: "j F Y",
-    dateFormat: "Y-m-d",
-    minDate: "today",
-    locale: "ru",
+    altFormat: 'j F Y',
+    dateFormat: 'Y-m-d',
+    minDate: 'today',
+    locale: 'ru',
     disable: [
       function(date) {
         if (!document.querySelector('.departure')) {
@@ -263,7 +263,7 @@ function createCalendar() {
 
 // add block to the page
 window.addEventListener('load', function() {
-  passengersBtnArr.forEach((item) => item.classList.add("checked"));
+  passengersBtnArr.forEach((item) => item.classList.add('checked'));
   addOrderContentsPass();
   reverse();
   createCalendar();
@@ -271,10 +271,10 @@ window.addEventListener('load', function() {
 
 //change block contents
 for (let btn of passengersBtnArr) {
-  btn.addEventListener("click", function() {
-    passengersBtnArr.forEach((item) => item.classList.add("checked"));
-    euroPassengersBtnArr.forEach((item) => item.classList.remove("checked"));
-    cargoBtnArr.forEach((item) => item.classList.remove("checked"));
+  btn.addEventListener('click', function() {
+    passengersBtnArr.forEach((item) => item.classList.add('checked'));
+    euroPassengersBtnArr.forEach((item) => item.classList.remove('checked'));
+    cargoBtnArr.forEach((item) => item.classList.remove('checked'));
     removeOrderContents();
     addOrderContentsPass();
     reverse();
@@ -283,10 +283,10 @@ for (let btn of passengersBtnArr) {
 }
 
 for (let btn of euroPassengersBtnArr) {
-  btn.addEventListener("click", function() {
-    euroPassengersBtnArr.forEach((item) => item.classList.add("checked"));
-    passengersBtnArr.forEach((item) => item.classList.remove("checked"));
-    cargoBtnArr.forEach((item) => item.classList.remove("checked"));
+  btn.addEventListener('click', function() {
+    euroPassengersBtnArr.forEach((item) => item.classList.add('checked'));
+    passengersBtnArr.forEach((item) => item.classList.remove('checked'));
+    cargoBtnArr.forEach((item) => item.classList.remove('checked'));
     removeOrderContents();
     addOrderContentsEuroPass();
     createCalendar();
@@ -294,10 +294,10 @@ for (let btn of euroPassengersBtnArr) {
 }
 
 for (let btn of cargoBtnArr) {
-  btn.addEventListener("click", function() {
-    cargoBtnArr.forEach((item) => item.classList.add("checked"));
-    passengersBtnArr.forEach((item) => item.classList.remove("checked"));
-    euroPassengersBtnArr.forEach((item) => item.classList.remove("checked"));
+  btn.addEventListener('click', function() {
+    cargoBtnArr.forEach((item) => item.classList.add('checked'));
+    passengersBtnArr.forEach((item) => item.classList.remove('checked'));
+    euroPassengersBtnArr.forEach((item) => item.classList.remove('checked'));
     removeOrderContents();
     addOrderContentsCargo();
     reverse();

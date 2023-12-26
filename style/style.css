@@ -42,12 +42,8 @@ body {
   min-width: 320px;
   max-width: 1500px;
   margin: 0 auto;
-  position: relative;
 }
 
-.top {
-  position: relative;
-}
 .top .header {
   display: grid;
   align-items: center;
@@ -127,7 +123,6 @@ body {
 }
 @media screen and (max-width: 800px) {
   .top .header__nav {
-    display: none;
     width: fit-content;
     height: fit-content;
     background-color: #256582;
@@ -138,9 +133,12 @@ body {
     padding: 2.5rem;
     border-radius: 0.2rem;
     box-shadow: 0 0 0.2rem 0.05rem #1d4152;
+    transition: all 0.8s ease;
+    transform: scale(0);
+    transform-origin: right top;
   }
   .top .header__nav.active {
-    display: block;
+    transform: scale(1);
   }
   .top .header__nav-container {
     list-style: none;
@@ -514,22 +512,22 @@ body {
   top: 0;
   z-index: -1;
 }
-.top__carousel-item {
+.top .carousel-item {
   width: 100%;
   height: 710px;
   background-color: #777777;
 }
 @media screen and (max-width: 1025px) {
-  .top__carousel-item {
+  .top .carousel-item {
     height: 680px;
   }
 }
 @media screen and (max-width: 800px) {
-  .top__carousel-item {
+  .top .carousel-item {
     height: 300px;
   }
 }
-.top__carousel-item .top__overlay-image {
+.top .carousel__overlay-image {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -539,19 +537,20 @@ body {
   background-size: cover;
   opacity: 0.8;
 }
-.top__carousel-item .top__overlay-image-1 {
+.top .carousel__overlay-image-1 {
   background-image: url("../assets/image/munich-main.jpg");
 }
-.top__carousel-item .top__overlay-image-2 {
+.top .carousel__overlay-image-2 {
   background-image: url("../assets/image/sprinter-1main.jpg");
 }
-.top__carousel-item .top__overlay-image-3 {
+.top .carousel__overlay-image-3 {
   background-image: url("../assets/image/Stuttgart.jpg");
 }
 .top .burger-open-btn {
   grid-area: burger;
   display: none;
   cursor: pointer;
+  top: 2rem;
 }
 @media screen and (max-width: 800px) {
   .top .burger-open-btn {
