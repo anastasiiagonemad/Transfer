@@ -1,59 +1,27 @@
 'use strict'
 
-let burger = document.querySelector('.burger');
-let burgerBtn = document.querySelector('.burger-btn');
-let links = document.querySelectorAll('.burger__nav-item');
+let burgerOpen = document.querySelector('.burger-open-btn');
+let burgerClose = document.querySelector('.burger-close-btn');
+let menu = document.querySelector('.header__nav');
+let links = document.querySelectorAll('.header__nav-item');
+let fade = document.querySelector('.burger__fade');
 let body = document.body;
-let fade = document.querySelector('.fade');
 
-console.log(burgerBtn);
-
-let burgerMenu = `
-  <div class="burger_container">
-    <div class="burger__close><img class="assets/icons/close-icon.svg"</div>
-    <nav class="burger__nav">
-      <ul class="burger__nav-container">
-        <li><a class="burger__nav-item" href="#">Направления</a></li>
-        <li><a class="burger__nav-item" href="#">Услуги</a></li>
-        <li><a class="burger__nav-item" href="#">Преимущества</a></li>
-        <li><a class="burger__nav-item" href="#">Отзывы</a></li>
-        <li><a class="burger__nav-item" href="#">Вопросы и ответы</a></li>
-      </ul>
-    </nav>
-  </div>
-`;
-
-
-function createBurger() {
-
-    let burgerBlock = document.createElement('div');
-    // burgerBlock.className = 'burger_container';
-    burgerBlock.innerHTML = burgerMenu;
-    burger.append(burgerBlock);
-    console.log(burgerBlock);
-
+function openBurgerMenu() {
+  menu.classList.add('active');
+  body.classList.add('body-lock');
+  fade.classList.add('active');
 }
 
-burgerBtn.addEventListener('click', function() {
-  createBurger();
+function closeBurgerMenu() {
+  menu.classList.remove('active');
+  body.classList.remove('body-lock');
+  fade.classList.remove('active');
+}
+
+burgerOpen.addEventListener('click', openBurgerMenu);
+burgerClose.addEventListener('click', closeBurgerMenu);
+fade.addEventListener('click', closeBurgerMenu);
+links.forEach(link => {
+    link.addEventListener('click', closeBurgerMenu);
 })
-
-// function toggleBurgerMenu() {
-//     menu.classList.toggle('active');
-//     burgerBtn.classList.toggle('active');
-//     body.classList.toggle('lock');
-//     fade.classList.toggle('active');
-// }
-
-// function closeBurgerMenu() {
-//     menu.classList.remove('active');
-//     burgerBtn.classList.remove('active');
-//     body.classList.remove('lock');
-//     fade.classList.remove('active');
-// }
-
-// burgerBtn.addEventListener('click', toggleBurgerMenu);
-// fade.addEventListener('click', closeBurgerMenu);
-// links.forEach(link => {
-//     link.addEventListener('click', closeBurgerMenu);
-// })

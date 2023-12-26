@@ -44,9 +44,6 @@ body {
   margin: 0 auto;
 }
 
-.top {
-  position: relative;
-}
 .top .header {
   display: grid;
   align-items: center;
@@ -85,32 +82,11 @@ body {
     height: auto;
   }
 }
-.top .header .burger-btn {
-  grid-area: burger;
-  display: none;
-  cursor: pointer;
-}
-@media screen and (max-width: 800px) {
-  .top .header .burger-btn {
-    display: block;
-    justify-self: end;
-    align-self: center;
-  }
-  .top .header .burger-btn-img {
-    width: 1rem;
-    height: 1rem;
-  }
-}
 .top .header a {
   color: #F7F9FB;
 }
 .top .header__nav {
   grid-area: nav;
-}
-@media screen and (max-width: 800px) {
-  .top .header__nav {
-    display: none;
-  }
 }
 .top .header__nav-container {
   list-style: none;
@@ -136,6 +112,47 @@ body {
 }
 .top .header__nav-item {
   white-space: nowrap;
+}
+.top .header__nav-item-burger {
+  display: none;
+}
+@media screen and (max-width: 800px) {
+  .top .header__nav-item-burger {
+    display: block;
+  }
+}
+@media screen and (max-width: 800px) {
+  .top .header__nav {
+    width: fit-content;
+    height: fit-content;
+    background-color: #256582;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 4;
+    padding: 2.5rem;
+    border-radius: 0.2rem;
+    box-shadow: 0 0 0.2rem 0.05rem #1d4152;
+    transition: all 0.8s ease;
+    transform: scale(0);
+    transform-origin: right top;
+  }
+  .top .header__nav.active {
+    transform: scale(1);
+  }
+  .top .header__nav-container {
+    list-style: none;
+    padding: 1rem 0 0 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1.3rem;
+    align-items: flex-start;
+  }
+  .top .header__nav-item {
+    color: #F7F9FB;
+    font-weight: 800;
+  }
 }
 .top .header__contacts {
   grid-area: contacts;
@@ -495,22 +512,22 @@ body {
   top: 0;
   z-index: -1;
 }
-.top__carousel-item {
+.top .carousel-item {
   width: 100%;
   height: 710px;
   background-color: #777777;
 }
 @media screen and (max-width: 1025px) {
-  .top__carousel-item {
+  .top .carousel-item {
     height: 680px;
   }
 }
 @media screen and (max-width: 800px) {
-  .top__carousel-item {
+  .top .carousel-item {
     height: 300px;
   }
 }
-.top__carousel-item .top__overlay-image {
+.top .carousel__overlay-image {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -520,14 +537,69 @@ body {
   background-size: cover;
   opacity: 0.8;
 }
-.top__carousel-item .top__overlay-image-1 {
+.top .carousel__overlay-image-1 {
   background-image: url("../assets/image/munich-main.jpg");
 }
-.top__carousel-item .top__overlay-image-2 {
+.top .carousel__overlay-image-2 {
   background-image: url("../assets/image/sprinter-1main.jpg");
 }
-.top__carousel-item .top__overlay-image-3 {
+.top .carousel__overlay-image-3 {
   background-image: url("../assets/image/Stuttgart.jpg");
+}
+.top .burger-open-btn {
+  grid-area: burger;
+  display: none;
+  cursor: pointer;
+  top: 2rem;
+}
+@media screen and (max-width: 800px) {
+  .top .burger-open-btn {
+    display: block;
+    justify-self: end;
+    align-self: center;
+  }
+  .top .burger-open-btn-img {
+    width: 1rem;
+    height: 1rem;
+  }
+}
+.top .burger-close-btn {
+  display: none;
+  cursor: pointer;
+}
+@media screen and (max-width: 800px) {
+  .top .burger-close-btn {
+    display: block;
+    position: absolute;
+    width: 1rem;
+    height: 1rem;
+    cursor: pointer;
+    top: 1rem;
+    right: 1rem;
+  }
+  .top .burger-close-btn img {
+    width: 1rem;
+    height: 1rem;
+  }
+}
+
+.burger__fade {
+  width: 100%;
+  height: 100%;
+  background-color: #5085A5;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 3;
+  opacity: 0.5;
+  display: none;
+}
+.burger__fade.active {
+  display: block;
+}
+
+.body-lock {
+  overflow: hidden;
 }
 
 .departures__container-title {
@@ -693,18 +765,18 @@ body {
 .services__main .services__container-item-1 a {
   width: 100%;
   text-align: center;
-  border: 3px solid #31708E;
+  border: 3px solid #256582;
   padding: 10px;
   border-radius: 10px;
-  color: #31708E;
+  color: #256582;
 }
 .services__main .services__container-item-1 details {
   width: 100%;
   text-align: center;
-  border: 3px solid #31708E;
+  border: 3px solid #256582;
   padding: 10px;
   border-radius: 3px;
-  color: #31708E;
+  color: #256582;
   cursor: pointer;
 }
 .services__main .services__container-item-1 details summary {
@@ -718,7 +790,7 @@ body {
 }
 .services__main .services__container-item-1 details:hover {
   color: #F7F9FB;
-  background-color: #31708E;
+  background-color: #256582;
 }
 .services__main .services__container-item-2 {
   width: 100%;
@@ -741,18 +813,18 @@ body {
 .services__main .services__container-item-2 a {
   width: 100%;
   text-align: center;
-  border: 3px solid #31708E;
+  border: 3px solid #256582;
   padding: 10px;
   border-radius: 10px;
-  color: #31708E;
+  color: #256582;
 }
 .services__main .services__container-item-2 details {
   width: 100%;
   text-align: center;
-  border: 3px solid #31708E;
+  border: 3px solid #256582;
   padding: 10px;
   border-radius: 3px;
-  color: #31708E;
+  color: #256582;
   cursor: pointer;
 }
 .services__main .services__container-item-2 details summary {
@@ -766,7 +838,7 @@ body {
 }
 .services__main .services__container-item-2 details:hover {
   color: #F7F9FB;
-  background-color: #31708E;
+  background-color: #256582;
 }
 .services__main .services__container-item-3 {
   width: 100%;
@@ -789,18 +861,18 @@ body {
 .services__main .services__container-item-3 a {
   width: 100%;
   text-align: center;
-  border: 3px solid #31708E;
+  border: 3px solid #256582;
   padding: 10px;
   border-radius: 10px;
-  color: #31708E;
+  color: #256582;
 }
 .services__main .services__container-item-3 details {
   width: 100%;
   text-align: center;
-  border: 3px solid #31708E;
+  border: 3px solid #256582;
   padding: 10px;
   border-radius: 3px;
-  color: #31708E;
+  color: #256582;
   cursor: pointer;
 }
 .services__main .services__container-item-3 details summary {
@@ -814,7 +886,7 @@ body {
 }
 .services__main .services__container-item-3 details:hover {
   color: #F7F9FB;
-  background-color: #31708E;
+  background-color: #256582;
 }
 
 @media screen and (max-width: 770px) {
@@ -849,7 +921,7 @@ body {
   column-gap: 15px;
 }
 .advantages__container-number {
-  color: #31708E;
+  color: #256582;
   font-size: 3.125rem;
   -webkit-text-fill-color: transparent;
   -webkit-text-stroke: 0.043rem;

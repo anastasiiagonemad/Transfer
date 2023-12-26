@@ -12,20 +12,21 @@
     <link rel="stylesheet" href="flatpickr/flatpickr.min.css">
   </head>
   <body>
-    <div class="fade"></div>
-    <div class="burger"></div>
+    <div class="burger__fade"></div>
 
     <div class="top" id="top">
       <header class="header wrapper">
         <a class="logo" href="#"><img src="assets/icons/logo.svg" alt="company logo"></a>
 
         <nav class="header__nav">
+          <img class="burger-close-btn" src="assets/icons/close-icon.svg" alt="close burger menu">
           <ul class="header__nav-container">
             <li><a class="header__nav-item" href="#departures">Направления</a></li>
             <li><a class="header__nav-item" href="#services">Услуги</a></li>
             <li><a class="header__nav-item" href="#advantages">Преимущества</a></li>
             <li><a class="header__nav-item" href="#review">Отзывы</a></li>
             <li><a class="header__nav-item" href="#faq">Вопросы и ответы</a></li>
+            <li><a class="header__nav-item header__nav-item-burger" href="#contacts">Контакты</a></li>
           </ul>
         </nav>
 
@@ -48,7 +49,7 @@
           </div>
         </div>
 
-        <div class="burger-btn"><img src="assets/icons/burger.svg" alt="burger button"></div>
+        <div class="burger-open-btn"><img src="assets/icons/burger.svg" alt="open burger menu"></div>
       </header>
 
       <section class="top-order wrapper">
@@ -75,26 +76,22 @@
         </div>
       </section>
 
-      <div
-        id="myCarousel"
-        class="carousel slide carousel-fade top__carousel"
-        data-bs-ride="carousel"
-        data-bs-interval="5000"
+      <div id="myCarousel"
+          class="carousel slide carousel-fade"
+          data-bs-ride="carousel"
+          data-bs-interval="5000"
       >
-        <div class="carousel-inner top__carousel-inner">
-          <div
-            class="carousel-item active top__carousel-item"
-            data-bs-interval="3000"
-          >
-            <div class="top__overlay-image top__overlay-image-1"></div>
+        <div class="carousel-inner">
+          <div class="carousel-item active" data-bs-interval="3000">
+            <div class="carousel__overlay-image carousel__overlay-image-1"></div>
           </div>
 
-          <div class="carousel-item top__carousel-item">
-            <div class="top__overlay-image top__overlay-image-2"></div>
+          <div class="carousel-item">
+            <div class="carousel__overlay-image carousel__overlay-image-2"></div>
           </div>
 
-          <div class="carousel-item top__carousel-item">
-            <div class="top__overlay-image top__overlay-image-3"></div>
+          <div class="carousel-item">
+            <div class="carousel__overlay-image carousel__overlay-image-3"></div>
           </div>
         </div>
       </div>
@@ -1035,5 +1032,6 @@
     <script src="flatpickr/flatpickr.min.js"></script>
     <script src="flatpickr/ru.js"></script>
     <script src="js/order.js"></script>
+    <script src="js/burger.js"></script>
   </body>
 </html>
