@@ -3,9 +3,9 @@
 //create blocks for passengers, euro-passengers and cargo
 let passengers = `
 <div class="form-container">
-  <form class="form form_passengers" name="passengers">
+  <form class="form form_passengers" name="passengers" id="form" action="#" method="POST">
     <div class="form__dest">
-      <div class="departure">Германия</div>
+      <div class="departure" id="departure">Германия</div>
       <img class="reverse-btn" src="assets/icons/exchange.svg">
       <div class="arrival">Калининград</div>
     </div>
@@ -51,7 +51,7 @@ let passengers = `
       <textarea id="comments" cols="40" rows="2"></textarea>
     </div>
 
-    <button class="submit-btn" name="passengers-submit">Оставить заявку</button>
+    <button class="submit-btn" name="passengers-submit" type="submit">Оставить заявку</button>
 
     <div class="order__footer">
       <div class="confidentiality">Нажимая кнопку, вы даёте согласие на обработку персональных данных</div>
@@ -63,15 +63,15 @@ let passengers = `
 
 let euroPassengers = `
 <div class="form-container">
-  <form class="form form_euro-passengers" name="euro-passengers">
+  <form class="form form_euro-passengers" name="euro-passengers" id="form" action="#" method="POST">
     <div class="input-line">
-      <label for="euro-destination">Направление<br>поездки: *</label>
-      <input class="euro-destination" id="euro-destination" type="text" required>
+      <label for="destination">Направление<br>поездки: *</label>
+      <input class="euro-destination" id="destination" type="text" required>
     </div>
 
     <div class="input-line">
-      <label for="euro-date">Желаемая дата поездки:*</label>
-      <input class="date" id="euro-date" type="text" required>
+      <label for="date">Желаемая дата поездки:*</label>
+      <input class="date" id="date" type="text" required>
     </div>
 
     <div class="input-line">
@@ -110,7 +110,7 @@ let euroPassengers = `
       <textarea id="comments" cols="40" rows="2"></textarea>
     </div>
 
-    <button class="submit-btn" name="euro-passengers-submit">Оставить заявку</button>
+    <button class="submit-btn" name="euro-passengers-submit" type="submit">Оставить заявку</button>
 
     <div class="order__footer">
       <div class="confidentiality">Нажимая кнопку, вы даёте согласие на обработку персональных данных</div>
@@ -122,9 +122,9 @@ let euroPassengers = `
 
 let cargo = `
 <div class="form-container">
-  <form class="form form_cargo" name="cargo">
+  <form class="form form_cargo" name="cargo" id="form" action="#" method="POST">
     <div class="form__dest">
-      <div class="departure">Германия</div>
+      <div class="departure" id="departure">Германия</div>
       <img class="reverse-btn" src="assets/icons/exchange.svg">
       <div class="arrival">Калининград</div>
     </div>
@@ -267,6 +267,7 @@ window.addEventListener('load', function() {
   addOrderContentsPass();
   reverse();
   createCalendar();
+  whatsappPass();
 });
 
 //change block contents
@@ -279,6 +280,7 @@ for (let btn of passengersBtnArr) {
     addOrderContentsPass();
     reverse();
     createCalendar();
+    whatsappPass();
   })
 }
 
@@ -290,6 +292,7 @@ for (let btn of euroPassengersBtnArr) {
     removeOrderContents();
     addOrderContentsEuroPass();
     createCalendar();
+    whatsappEuroPass();
   })
 }
 
@@ -302,5 +305,90 @@ for (let btn of cargoBtnArr) {
     addOrderContentsCargo();
     reverse();
     createCalendar();
+    whatsappCargo();
   })
+}
+
+//whatsapp
+function whatsappPass() {
+  let form = document.getElementById('form');
+  let number = '375296770484';
+  console.log(form);
+
+  function sendToWhatsapp(text, phone) {
+    text = encodeURIComponent(text);
+    let url = `https://web.whatsapp.com/send?phone=${phone}&text=${text}&source=&data=`;
+    window.open(url);
+  }
+
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    let text = 'Заявка от ' + document.getElementById('tel').value + ' ' +
+              'пункт отправления: ' + document.getElementById('departure').textContent + ', ' +
+              'дата отправления: ' + document.getElementById('date').value + ', ' +
+              'количество пассажиров: ' + document.getElementById('places').value + ', ' +
+              'адрес: ' + document.getElementById('address').value + ', ' +
+              'есть ли багаж: ' + document.getElementById('luggage').value + ', ' +
+              'комментарии: ' + document.getElementById('comments').value;
+    console.log(text);
+
+    sendToWhatsapp(text, number);
+  });
+}
+
+
+function whatsappEuroPass() {
+  let form = document.getElementById('form');
+  let number = '375296770484';
+  console.log(form);
+
+  function sendToWhatsapp(text, phone) {
+    text = encodeURIComponent(text);
+    let url = `https://web.whatsapp.com/send?phone=${phone}&text=${text}&source=&data=`;
+    window.open(url);
+  }
+
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    let text = 'Заявка от ' + document.getElementById('tel').value + ' ' +
+              'желаемое направление по Европе: ' + document.getElementById('destination').textContent + ', ' +
+              'дата отправления: ' + document.getElementById('date').value + ', ' +
+              'количество пассажиров или перевозка груза: ' + document.getElementById('places').value + ', ' +
+              'адрес: ' + document.getElementById('address').value + ', ' +
+              'есть ли багаж: ' + document.getElementById('luggage').value + ', ' +
+              'комментарии: ' + document.getElementById('comments').value;
+    console.log(text);
+
+    sendToWhatsapp(text, number);
+  });
+}
+
+
+
+function whatsappCargo() {
+  let form = document.getElementById('form');
+  let number = '375296770484';
+  console.log(form);
+
+  function sendToWhatsapp(text, phone) {
+    text = encodeURIComponent(text);
+    let url = `https://web.whatsapp.com/send?phone=${phone}&text=${text}&source=&data=`;
+    window.open(url);
+  }
+
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    let text = 'Заявка от ' + document.getElementById('tel').value + ' ' +
+              'пункт отправления: ' + document.getElementById('departure').textContent + ', ' +
+              'дата отправления: ' + document.getElementById('date').value + ', ' +
+              'тип груза: ' + document.getElementById('cargo-type').value + ', ' +
+              'примерный вес: ' + document.getElementById('weight').value + ', ' +
+              'комментарии: ' + document.getElementById('comments').value;
+    console.log(text);
+
+    sendToWhatsapp(text, number);
+  });
 }
