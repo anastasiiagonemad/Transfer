@@ -56,84 +56,7 @@
 }
 
 
-
-
-
-//media queries
-
-@media screen and (max-width: $tablet) {
-  .carousel-item {
-    height: 680px;
-  }
-  .top-order__title {
-    font-size: 1.8rem;
-    max-width: 40%;
-  }
-}
-
-@media screen and (max-width: $mini-tablet) {
-  .carousel-item {
-    height: 300px;
-  }
-
-  .top-order {
-    padding-top: 3rem;
-    padding-bottom: 1rem;
-    flex-direction: column;
-    align-items: center;
-    gap: 4.3rem;
-
-    &__title {
-      max-width: 80%;
-      height: 5.6rem;
-      padding-right: 0;
-      text-align: center;
-      font-size: 1.6rem;
-    }
-  }
-}
-
-@media screen and (max-width: $large-mobile) {
-  .top-order {
-    padding-top: 2rem;
-    gap: 5.2rem;
-
-    &__title {
-      max-width: 95%;
-    }
-  }
-}
-
-@media screen and (max-width: $mobile) {
-  .top-order {
-    padding-top: 2.3rem;
-  }
-}
-
-@media screen and (max-width: $medium-mobile) {
-  .top-order__title {
-    font-size: 1.4rem;
-  }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+//header and burger
 
 
 .top {
@@ -155,7 +78,7 @@
     }
 
     @media screen and (max-width: $mini-tablet) {
-      grid-template-columns: min-content 8fr 1fr;
+      grid-template-columns: min-content 8fr 2fr;
       grid-template-rows: 1fr;
       grid-template-areas: 'logo contacts burger';
     }
@@ -170,7 +93,7 @@
         }
 
         @media screen and (max-width: $mobile) {
-          width: 6.5rem;
+          width: 7.5rem;
           height: auto;
         }
       }
@@ -184,11 +107,12 @@
       grid-area: nav;
 
       &-container {
-        list-style: none;
+        list-style-type: none;
         display: flex;
-        gap: 1.2rem;
         align-items: center;
-        margin: 0;
+        justify-content: center;
+        gap: 1.2rem;
+        margin: 0 -1.2rem 0 0;
         font-size: 1rem;
         font-weight: 700;
 
@@ -205,6 +129,7 @@
 
       &-item {
         white-space: nowrap;
+
       }
 
       &-item-burger {
@@ -265,23 +190,22 @@
 
       @media screen and (max-width: $tablet) {
         padding-top: 0;
-        gap: 1.5rem;
       }
 
-      @media screen and (max-width: $mobile) {
-        gap: 0.5rem;
+      &-socmedia {
+        display: flex;
+        gap: 0.7rem;
       }
-
       &-item {
         @media screen and (max-width: $middle-desktop) {
           width: 1.6rem;
           height: auto;
         }
 
-        @media screen and (max-width: $mobile) {
-          width: 1.2rem;
-          height: auto;
-        }
+        // @media screen and (max-width: $mobile) {
+        //   width: 1.2rem;
+        //   height: auto;
+        // }
 
         @media screen and (max-width: $small-mobile) {
           display: none;
@@ -305,17 +229,9 @@
         }
 
         @media screen and (max-width: $mini-tablet) {
-          display: flex;
-          flex-direction: column;
-          gap: 0.1rem;
-          font-size: 0.6rem;
+          display: none;
         }
 
-        @media screen and (max-width: $mobile) {
-          font-size: 0.45rem;
-          padding-right: 0.3rem;
-          padding-top: 0.2rem;
-        }
       }
     }
   }
@@ -381,4 +297,81 @@
 
 .body-lock {
   overflow: hidden;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//media queries
+
+@media screen and (max-width: $tablet) {
+  .carousel-item {
+    height: 680px;
+  }
+  .top-order__title {
+    font-size: 1.8rem;
+    max-width: 40%;
+  }
+}
+
+@media screen and (max-width: $mini-tablet) {
+  .carousel-item {
+    height: 300px;
+  }
+
+  .top-order {
+    padding-top: 3rem;
+    padding-bottom: 1rem;
+    flex-direction: column;
+    align-items: center;
+    gap: 4.3rem;
+
+    &__title {
+      max-width: 80%;
+      height: 5.6rem;
+      padding-right: 0;
+      text-align: center;
+      font-size: 1.6rem;
+    }
+  }
+}
+
+@media screen and (max-width: $large-mobile) {
+  .top-order {
+    padding-top: 2rem;
+    gap: 5.2rem;
+
+    &__title {
+      max-width: 95%;
+    }
+  }
+}
+
+@media screen and (max-width: $mobile) {
+  .top-order {
+    padding-top: 2.3rem;
+  }
+}
+
+@media screen and (max-width: $medium-mobile) {
+  .top-order__title {
+    font-size: 1.4rem;
+  }
 }
