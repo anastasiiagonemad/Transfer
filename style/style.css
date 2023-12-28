@@ -974,6 +974,22 @@ body {
   background: #5085A5;
   margin: 1rem auto;
 }
+.comments__carousel {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.comments__carousel-button {
+  position: absolute;
+  max-width: 5%;
+  cursor: pointer;
+}
+.comments__carousel-button_left {
+  left: -1.5%;
+}
+.comments__carousel-button_right {
+  right: -1.5%;
+}
 .comments__container {
   overflow: hidden;
   background-color: #F7F9FB;
@@ -1031,6 +1047,15 @@ body {
     height: 3.5rem;
     margin-bottom: 0;
   }
+  .comments__carousel-button {
+    max-width: 6%;
+  }
+  .comments__carousel-button_left {
+    left: -2.5%;
+  }
+  .comments__carousel-button_right {
+    right: -2.5%;
+  }
 }
 @media screen and (max-width: 600px) {
   .comments__container {
@@ -1039,6 +1064,9 @@ body {
   .comments__img {
     width: 3rem;
     height: 3rem;
+  }
+  .comments__carousel-button {
+    max-width: 9%;
   }
 }
 @media screen and (max-width: 450px) {
