@@ -1,10 +1,5 @@
 .departures__container {
 
-  &-title {
-    width: 100%;
-    height: 80px;
-  }
-
   &-item {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -23,7 +18,7 @@
       background-size: cover;
 
       h3 {
-        margin-top: 50%;
+        margin-top: 40%;
         margin-left: 20px;
         font-size: 2rem;
         color: $light-grey;
@@ -31,16 +26,15 @@
       }
 
       &-d1 {
-        margin-left: 20px;
-        font-size: 0.8rem;
+        margin: 1rem;
+        font-size: 1.1rem;
         color: $light-grey;
         font-weight: bold;
       }
 
       &-d2 {
-        margin-bottom: 20px;
-        margin-left: 20px;
-        font-size: 0.6rem;
+        margin: 1rem;
+        font-size: 0.9rem;
         color: $light-grey;
       }
     }
@@ -74,7 +68,7 @@
         margin-top: -5px;
         color: $light-grey;
         width: 100%;
-        font-size: 2.5rem;
+        font-size: 2rem;
         text-align: center;
       }
     }
@@ -83,39 +77,39 @@
 
 @media screen and (max-width: $small-tablet) {
   .departures__container-item-content {
-
       h3 {
           font-size: 1.5rem;
       }
 
       &-d1 {
-          font-size: 0.8rem;
+          font-size: 1rem;
       }
 
       &-d2 {
-          font-size: 0.4rem;
+          font-size: 0.7rem;
       }
   }
 }
 
 @media screen and (max-width: $large-mobile) {
   .departures__container-item-content {
-
     h3 {
       font-size: 1.2rem;
-        margin-left: 7px;
+      margin-left: 0.4rem;
+      margin-right: 0.4rem;
+      margin-bottom: 0.4rem;
     }
 
     &-d1 {
-      font-size: 0.6rem;
-      margin-left: 7px;
+      font-size: 0.8rem;
+      margin: 0.4rem;
     }
 
     &-d2 {
-      font-size: 0.3rem;
-      margin-left: 7px;
+      font-size: 0.6rem;
+      margin: 0.4rem;
     }
-}
+  }
 }
 
 @media screen and (max-width: $medium-mobile) {
@@ -127,33 +121,13 @@
 
   .departures__container-item-content-3 {
     width: 100%;
-   height: 80px;
-   margin-bottom: 4%;
-   
-   h3 {
-    font-size: 1.2rem;
-   }
+    height: 80px;
+    margin-bottom: 4%;
+
+
   }
 
   .departures__container-item-title-3 {
     padding-top: 1rem;
   }
-
-  .departures__container-item-content {
-
-    h3 {
-      font-size: 1.5rem;
-      margin-left: 7px;
-    }
-
-    &-d1 {
-      font-size: 0.8rem;
-      margin-left: 7px;
-    }
-
-    &-d2 {
-      font-size: 0.4rem;
-      margin-left: 7px;
-    }
-}
 }
