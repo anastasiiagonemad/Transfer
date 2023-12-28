@@ -3,7 +3,7 @@
 //create blocks for passengers, euro-passengers and cargo
 let passengers = `
 <div class="form-container">
-  <form class="form form_passengers" name="passengers" id="form" action="#" method="POST">
+  <form class="form form_passengers" name="passengers" id="form" action="send.php" method="post">
     <div class="form__dest">
       <div class="departure" id="departure">Германия</div>
       <img class="reverse-btn" src="assets/icons/exchange.svg">
@@ -12,7 +12,7 @@ let passengers = `
 
     <div class="input-line">
       <label for="date">Дата поездки:*</label>
-      <input class="date" id="date" type="text" required>
+      <input class="date" id="date" type="text" name="date" required>
     </div>
 
     <div class="input-line">
@@ -34,7 +34,7 @@ let passengers = `
 
     <div class="input-line">
       <label for="tel">Ваш номер телефона:*</label>
-      <input class="tel" id="tel" type="tel" required>
+      <input class="tel" id="tel" type="tel" name="tel" required>
     </div>
 
     <div class="input-line">
@@ -267,7 +267,7 @@ window.addEventListener('load', function() {
   addOrderContentsPass();
   reverse();
   createCalendar();
-  whatsappPass();
+  // whatsappPass();
 });
 
 //change block contents
@@ -280,7 +280,7 @@ for (let btn of passengersBtnArr) {
     addOrderContentsPass();
     reverse();
     createCalendar();
-    whatsappPass();
+    // whatsappPass();
   })
 }
 
@@ -292,7 +292,7 @@ for (let btn of euroPassengersBtnArr) {
     removeOrderContents();
     addOrderContentsEuroPass();
     createCalendar();
-    whatsappEuroPass();
+    // whatsappEuroPass();
   })
 }
 
@@ -305,7 +305,7 @@ for (let btn of cargoBtnArr) {
     addOrderContentsCargo();
     reverse();
     createCalendar();
-    whatsappCargo();
+    // whatsappCargo();
   })
 }
 
