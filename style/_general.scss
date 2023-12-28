@@ -18,3 +18,9 @@ body {
 .wrapper {
   @extend %wrapper-paddings;
 }
+
+h2 {
+  font-weight: 700;
+  margin: 0;
+  padding-bottom: 1.4rem;
+}
