@@ -21,6 +21,12 @@
 
     &-nav{
       grid-area: nav;
+
+      a:hover {
+        transition: $transition;
+        border-bottom: 1px solid $dark-blue;
+        padding-bottom: 2px;
+      }
     }
 
     &-wrapper {
