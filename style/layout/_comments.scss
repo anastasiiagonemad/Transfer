@@ -3,7 +3,7 @@
     width: 10rem;
     height: 0.25rem;
     background: $turquoise;
-    margin: 1rem auto;
+    margin: 0 auto 1rem auto;
   }
 
   &__carousel {
@@ -62,6 +62,12 @@
     margin-bottom: 0.25rem;
   }
 }
+
+.owl-carousel .owl-item img {
+  display: inline-block;
+  width: auto;
+}
+
 @media screen and (max-width: $tablet) {
   .comments {
     &__container {

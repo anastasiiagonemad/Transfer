@@ -173,7 +173,7 @@ let cargo = `
 `;
 
 let boxArr = document.querySelectorAll('.order__container');
-
+let orderBtnArr = document.querySelectorAll(".order__button");
 let passengersBtnArr = document.querySelectorAll('.order__passengers');
 let euroPassengersBtnArr = document.querySelectorAll('.order__euro-passengers');
 let cargoBtnArr = document.querySelectorAll('.order__cargo');
@@ -186,32 +186,12 @@ function removeOrderContents() {
   }
 }
 
-//function - add contents to the block passengers
-function addOrderContentsPass() {
+//function - add contents to the block passengers, Euro passengers, cargo
+function addOrderContents(blockValue) {
   for (let box of boxArr) {
     let block = document.createElement('div');
     block.className = 'block';
-    block.innerHTML = passengers;
-    box.append(block);
-  }
-}
-
-//function - add contents to the block Euro passengers
-function addOrderContentsEuroPass() {
-  for (let box of boxArr) {
-    let block = document.createElement('div');
-    block.className = 'block';
-    block.innerHTML = euroPassengers;
-    box.append(block);
-  }
-}
-
-//function - add contents to the block cargo
-function addOrderContentsCargo() {
-  for (let box of boxArr) {
-    let block = document.createElement('div');
-    block.className = 'block';
-    block.innerHTML = cargo;
+    block.innerHTML = blockValue;
     box.append(block);
   }
 }
@@ -221,7 +201,7 @@ function createCalendar() {
   flatpickr('.date', {
     altInput: true,
     altFormat: 'j F Y',
-    dateFormat: 'Y-m-d',
+    dateFormat: 'd-m-Y',
     minDate: 'today',
     locale: 'ru',
     disable: [
@@ -264,131 +244,42 @@ function createCalendar() {
 // add block to the page
 window.addEventListener('load', function() {
   passengersBtnArr.forEach((item) => item.classList.add('checked'));
-  addOrderContentsPass();
+  addOrderContents(passengers);
   reverse();
   createCalendar();
-  // whatsappPass();
+
 });
 
 //change block contents
-for (let btn of passengersBtnArr) {
-  btn.addEventListener('click', function() {
-    passengersBtnArr.forEach((item) => item.classList.add('checked'));
-    euroPassengersBtnArr.forEach((item) => item.classList.remove('checked'));
-    cargoBtnArr.forEach((item) => item.classList.remove('checked'));
+orderBtnArr.forEach((btn) => {
+  btn.addEventListener('click', (event) => {
     removeOrderContents();
-    addOrderContentsPass();
-    reverse();
-    createCalendar();
-    // whatsappPass();
+
+    if (event.target.classList.contains('order__passengers')) {
+      passengersBtnArr.forEach((item) => item.classList.add('checked'));
+      euroPassengersBtnArr.forEach((item) => item.classList.remove('checked'));
+      cargoBtnArr.forEach((item) => item.classList.remove('checked'));
+      removeOrderContents();
+      addOrderContents(passengers);
+      reverse();
+      createCalendar();
+
+    } else if (event.target.classList.contains('order__euro-passengers')) {
+      euroPassengersBtnArr.forEach((item) => item.classList.add('checked'));
+      passengersBtnArr.forEach((item) => item.classList.remove('checked'));
+      cargoBtnArr.forEach((item) => item.classList.remove('checked'));
+      removeOrderContents();
+      addOrderContents(euroPassengers);
+      createCalendar();
+
+    } else if (event.target.classList.contains('order__cargo')) {
+      cargoBtnArr.forEach((item) => item.classList.add('checked'));
+      passengersBtnArr.forEach((item) => item.classList.remove('checked'));
+      euroPassengersBtnArr.forEach((item) => item.classList.remove('checked'));
+      removeOrderContents();
+      addOrderContents(cargo);
+      reverse();
+      createCalendar();
+    }
   })
-}
-
-for (let btn of euroPassengersBtnArr) {
-  btn.addEventListener('click', function() {
-    euroPassengersBtnArr.forEach((item) => item.classList.add('checked'));
-    passengersBtnArr.forEach((item) => item.classList.remove('checked'));
-    cargoBtnArr.forEach((item) => item.classList.remove('checked'));
-    removeOrderContents();
-    addOrderContentsEuroPass();
-    createCalendar();
-    // whatsappEuroPass();
-  })
-}
-
-for (let btn of cargoBtnArr) {
-  btn.addEventListener('click', function() {
-    cargoBtnArr.forEach((item) => item.classList.add('checked'));
-    passengersBtnArr.forEach((item) => item.classList.remove('checked'));
-    euroPassengersBtnArr.forEach((item) => item.classList.remove('checked'));
-    removeOrderContents();
-    addOrderContentsCargo();
-    reverse();
-    createCalendar();
-    // whatsappCargo();
-  })
-}
-
-//whatsapp
-function whatsappPass() {
-  let form = document.getElementById('form');
-  let number = '375296770484';
-  console.log(form);
-
-  function sendToWhatsapp(text, phone) {
-    text = encodeURIComponent(text);
-    let url = `https://web.whatsapp.com/send?phone=${phone}&text=${text}&source=&data=`;
-    window.open(url);
-  }
-
-  form.addEventListener('submit', (e) => {
-    e.preventDefault();
-
-    let text = 'Заявка от ' + document.getElementById('tel').value + ' ' +
-              'пункт отправления: ' + document.getElementById('departure').textContent + ', ' +
-              'дата отправления: ' + document.getElementById('date').value + ', ' +
-              'количество пассажиров: ' + document.getElementById('places').value + ', ' +
-              'адрес: ' + document.getElementById('address').value + ', ' +
-              'есть ли багаж: ' + document.getElementById('luggage').value + ', ' +
-              'комментарии: ' + document.getElementById('comments').value;
-    console.log(text);
-
-    sendToWhatsapp(text, number);
-  });
-}
-
-
-function whatsappEuroPass() {
-  let form = document.getElementById('form');
-  let number = '375296770484';
-  console.log(form);
-
-  function sendToWhatsapp(text, phone) {
-    text = encodeURIComponent(text);
-    let url = `https://web.whatsapp.com/send?phone=${phone}&text=${text}&source=&data=`;
-    window.open(url);
-  }
-
-  form.addEventListener('submit', (e) => {
-    e.preventDefault();
-
-    let text = 'Заявка от ' + document.getElementById('tel').value + ' ' +
-              'желаемое направление по Европе: ' + document.getElementById('destination').textContent + ', ' +
-              'дата отправления: ' + document.getElementById('date').value + ', ' +
-              'количество пассажиров или перевозка груза: ' + document.getElementById('places').value + ', ' +
-              'адрес: ' + document.getElementById('address').value + ', ' +
-              'есть ли багаж: ' + document.getElementById('luggage').value + ', ' +
-              'комментарии: ' + document.getElementById('comments').value;
-    console.log(text);
-
-    sendToWhatsapp(text, number);
-  });
-}
-
-
-
-function whatsappCargo() {
-  let form = document.getElementById('form');
-  let number = '375296770484';
-  console.log(form);
-
-  function sendToWhatsapp(text, phone) {
-    text = encodeURIComponent(text);
-    let url = `https://web.whatsapp.com/send?phone=${phone}&text=${text}&source=&data=`;
-    window.open(url);
-  }
-
-  form.addEventListener('submit', (e) => {
-    e.preventDefault();
-
-    let text = 'Заявка от ' + document.getElementById('tel').value + ' ' +
-              'пункт отправления: ' + document.getElementById('departure').textContent + ', ' +
-              'дата отправления: ' + document.getElementById('date').value + ', ' +
-              'тип груза: ' + document.getElementById('cargo-type').value + ', ' +
-              'примерный вес: ' + document.getElementById('weight').value + ', ' +
-              'комментарии: ' + document.getElementById('comments').value;
-    console.log(text);
-
-    sendToWhatsapp(text, number);
-  });
-}
+})
