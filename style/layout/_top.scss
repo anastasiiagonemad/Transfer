@@ -119,6 +119,11 @@
       gap: 0.2rem;
       justify-content: center;
       max-height: min-content;
+
+      a:hover {
+        transition: $transition;
+        color: $dark-blue;
+      }
     }
   }
 }

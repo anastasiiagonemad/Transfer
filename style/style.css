@@ -412,6 +412,10 @@ h2 {
   max-height: -moz-min-content;
   max-height: min-content;
 }
+.header__contacts-tels a:hover {
+  transition: 0.3s ease;
+  color: #1d4152;
+}
 
 .burger-open-btn {
   grid-area: burger;
