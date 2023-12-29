@@ -1334,47 +1334,60 @@ h2 {
   background-color: #DFEFF9;
 }
 .footer__up {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
+  display: grid;
+  align-items: center;
+  grid-template-columns: min-content 1fr min-content;
+  grid-template-areas: "logo nav social";
   border-bottom: 1px solid #1d4152;
   padding-bottom: 1.5rem;
   padding-top: 0.5rem;
+}
+.footer__up .logo {
+  grid-area: logo;
+}
+.footer__up-nav {
+  grid-area: nav;
 }
 .footer__up-wrapper {
   list-style: none;
   display: flex;
   justify-content: space-evenly;
-  gap: 2rem;
+  align-items: center;
   margin-bottom: 0;
   padding-left: 0;
 }
 .footer__up-social {
+  grid-area: social;
+  height: 100%;
   display: flex;
-  gap: 0.5rem;
+  align-items: center;
+  gap: 1rem;
 }
 .footer__up-link {
   color: #1d4152;
   font-size: 1.2rem;
+  font-weight: 700;
+  white-space: nowrap;
   transition: all 0.8s ease;
-}
-.footer__up-link:hover {
-  font-weight: bold;
 }
 .footer__down {
   display: flex;
   justify-content: space-between;
   padding: 0.75rem 0;
-  font-size: 0.9rem;
+  font-size: 1rem;
 }
 .footer__down-text {
   display: flex;
   gap: 1rem;
 }
+.footer__down-text p {
+  margin: 0;
+}
 .footer__down-confid {
   color: #1d4152;
 }
 .footer__down-contact {
+  font-weight: 700;
   display: flex;
   gap: 1rem;
 }
@@ -1384,85 +1397,82 @@ h2 {
 
 @media screen and (max-width: 1400px) {
   .footer__up-link {
-    font-size: 1.2rem;
-  }
-  .footer__up-wrapper {
-    gap: 1rem;
+    font-size: 1.1rem;
   }
   .social__icon {
     width: 1.6rem;
     height: auto;
   }
 }
-@media screen and (max-width: 1220px) {
+@media screen and (max-width: 1280px) {
   .footer__up {
-    flex-direction: column;
-    gap: 0.5rem;
-    align-items: flex-start;
-  }
-  .footer__up-info {
-    width: 100%;
+    grid-template-columns: min-content 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "logo nav" "logo social";
   }
   .footer__up-wrapper {
-    display: flex;
-    flex-wrap: wrap;
-    width: 100%;
-    justify-content: space-evenly;
+    justify-content: flex-end;
+    gap: 2.5%;
   }
-  .footer__up-logo img {
+  .footer__up-social {
+    justify-content: flex-end;
+  }
+  .footer__down-contact {
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+}
+@media screen and (max-width: 1025px) {
+  .footer__up {
+    padding-bottom: 1rem;
+    grid-template-columns: min-content 1fr;
+    grid-template-rows: 1fr min-content;
+    grid-template-areas: "logo nav" ". social";
+  }
+  .footer__up .logo {
+    align-self: start;
+  }
+  .footer__up-wrapper {
+    flex-direction: column;
+    align-items: flex-end;
+  }
+  .footer__up-social {
+    padding-top: 0.7rem;
+  }
+  .footer__down-text {
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+}
+@media screen and (max-width: 600px) {
+  .logo img {
     width: 10rem;
     height: auto;
   }
 }
-.social {
-  align-self: flex-end;
-}
-.social__icon-img {
-  height: 1.5rem;
-}
-
-.footer__down-text {
-  font-size: 0.8rem;
-}
-
-@media screen and (max-width: 1025px) {
-  .footer__up-link {
-    font-size: 1rem;
-  }
-  .footer__down-text {
-    display: flex;
-    flex-direction: column;
-    gap: 0;
-  }
-  .footer__down-contact {
-    font-size: 0.8rem;
-  }
-}
-@media screen and (max-width: 770px) {
-  .footer__down-contact {
-    display: flex;
-    flex-direction: column;
-  }
-}
 @media screen and (max-width: 450px) {
+  .footer__up {
+    padding-bottom: 0.7rem;
+    justify-items: start;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: repeat(3, min-content);
+    grid-template-areas: "logo ." "nav social";
+  }
+  .footer__up .logo {
+    padding-bottom: 0.7rem;
+  }
   .footer__up-wrapper {
-    display: flex;
-    flex-direction: column;
+    align-items: flex-start;
   }
+  .footer__up-social {
+    justify-self: end;
+    align-items: flex-end;
+    gap: 0.3rem;
+  }
+}
+@media screen and (max-width: 520px) {
   .footer__down {
-    flex-direction: column-reverse;
-    gap: 1rem;
-  }
-  .footer__down-contact {
-    display: flex;
-    flex-direction: row;
-  }
-  .footer__down-text {
-    display: flex;
-    flex-direction: column-reverse;
-    gap: 1rem;
-  }
-  .social {
-    align-self: flex-start;
+    flex-direction: column;
+    gap: 0.4rem;
   }
 }
