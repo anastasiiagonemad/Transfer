@@ -23,4 +23,8 @@ h2 {
   font-weight: 700;
   margin: 0;
   padding-bottom: 1.4rem;
+
+  @media screen and (max-width: $large-mobile) {
+    text-align: center;
+  }
 }
