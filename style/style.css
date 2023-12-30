@@ -202,7 +202,8 @@ h2 {
   content: url("../assets/icons/checkbox-checked18.svg");
 }
 .top-order .order__button:hover {
-  font-weight: 800;
+  transition: 0.3s ease;
+  font-weight: 700;
 }
 .top-order .order__button.checked {
   font-weight: 800;
@@ -266,6 +267,7 @@ h2 {
   transition: 0.3s ease;
 }
 .top-order .order .form__dest .reverse-btn:hover {
+  transition: 0.3s ease;
   transform: scale(1.3);
 }
 .top-order .order .form .input-line {
@@ -321,9 +323,6 @@ h2 {
     font-size: 0.68rem;
   }
 }
-.top-order .order .form *::-moz-placeholder {
-  color: #1d4152;
-}
 .top-order .order .form *::placeholder {
   color: #1d4152;
 }
@@ -332,7 +331,7 @@ h2 {
   font-weight: 600;
   border-radius: 0.2rem;
   color: #1d4152;
-  background-color: #b5d9f1;
+  background-color: #8FC1E3;
   border: none;
   padding: 0.4rem 0.6rem;
   transition: 0.3s ease;
@@ -343,7 +342,8 @@ h2 {
   }
 }
 .top-order .order .form .submit-btn:hover, .top-order .order .form .submit-btn:active {
-  background-color: #8FC1E3;
+  background-color: #256582;
+  color: #F7F9FB;
   transform: scale(0.98);
 }
 .top-order .order .form .date {
@@ -401,15 +401,21 @@ h2 {
   display: flex;
   gap: 1rem;
 }
+.header__contacts-item {
+  transition: 0.3s ease;
+}
+.header__contacts-item:hover {
+  transition: 0.3s ease;
+  transform: scale(0.9);
+}
 .header__contacts-tels {
   font-size: 0.75rem;
   font-weight: 700;
   line-height: 100%;
   display: flex;
   flex-direction: column;
-  gap: 0.2rem;
+  gap: 0.5rem;
   justify-content: center;
-  max-height: -moz-min-content;
   max-height: min-content;
 }
 .header__contacts-tels a:hover {
@@ -466,6 +472,11 @@ h2 {
   .header__contacts-item {
     width: 1.6rem;
     height: auto;
+    transition: 0.3s ease;
+  }
+  .header__contacts-item:hover {
+    transition: 0.3s ease;
+    transform: scale(1.3);
   }
   .header__contacts-tels {
     flex-direction: row;
@@ -501,10 +512,8 @@ h2 {
     grid-template-areas: "logo contacts burger";
   }
   .header__nav {
-    width: -moz-fit-content;
     width: fit-content;
-    height: -moz-fit-content;
-    height: fit-content;
+    height: 20.5rem;
     background-color: #256582;
     position: fixed;
     top: 0;
@@ -703,8 +712,7 @@ h2 {
 .services__main {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  -moz-column-gap: 30px;
-       column-gap: 30px;
+  column-gap: 30px;
   width: 100%;
   height: 50%;
 }
@@ -719,10 +727,8 @@ h2 {
 .services__main .services__container-item-1 img {
   width: 100%;
   height: 270px;
-  -o-object-position: center;
-     object-position: center;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-position: center;
+  object-fit: cover;
   border-radius: 3px;
 }
 .services__main .services__container-item-1 p {
@@ -769,10 +775,8 @@ h2 {
 .services__main .services__container-item-2 img {
   width: 100%;
   height: 270px;
-  -o-object-position: 50% 80%;
-     object-position: 50% 80%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-position: 50% 80%;
+  object-fit: cover;
   border-radius: 3px;
 }
 .services__main .services__container-item-2 p {
@@ -819,10 +823,8 @@ h2 {
 .services__main .services__container-item-3 img {
   width: 100%;
   height: 270px;
-  -o-object-position: center;
-     object-position: center;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-position: center;
+  object-fit: cover;
   border-radius: 3px;
 }
 .services__main .services__container-item-3 p {
@@ -887,8 +889,7 @@ h2 {
   display: grid;
   grid-template-columns: 50px 1fr 50px 1fr;
   width: 100%;
-  -moz-column-gap: 15px;
-       column-gap: 15px;
+  column-gap: 15px;
 }
 .advantages__container-number {
   color: #256582;
@@ -1208,7 +1209,8 @@ h2 {
   content: url("../assets/icons/checkbox-checked18.svg");
 }
 .trip-order .order__button:hover {
-  font-weight: 800;
+  transition: 0.3s ease;
+  font-weight: 700;
 }
 .trip-order .order__button.checked {
   font-weight: 800;
@@ -1272,6 +1274,7 @@ h2 {
   transition: 0.3s ease;
 }
 .trip-order .order .form__dest .reverse-btn:hover {
+  transition: 0.3s ease;
   transform: scale(1.3);
 }
 .trip-order .order .form .input-line {
@@ -1327,9 +1330,6 @@ h2 {
     font-size: 0.68rem;
   }
 }
-.trip-order .order .form *::-moz-placeholder {
-  color: #1d4152;
-}
 .trip-order .order .form *::placeholder {
   color: #1d4152;
 }
@@ -1338,7 +1338,7 @@ h2 {
   font-weight: 600;
   border-radius: 0.2rem;
   color: #1d4152;
-  background-color: #b5d9f1;
+  background-color: #8FC1E3;
   border: none;
   padding: 0.4rem 0.6rem;
   transition: 0.3s ease;
@@ -1349,7 +1349,8 @@ h2 {
   }
 }
 .trip-order .order .form .submit-btn:hover, .trip-order .order .form .submit-btn:active {
-  background-color: #8FC1E3;
+  background-color: #256582;
+  color: #F7F9FB;
   transform: scale(0.98);
 }
 .trip-order .order .form .date {
@@ -1402,6 +1403,10 @@ h2 {
   align-items: center;
   gap: 1rem;
 }
+.footer__up-social-icon:hover {
+  transition: 0.3s ease;
+  transform: scale(0.9);
+}
 .footer__up-link {
   color: #1d4152;
   font-size: 1.2rem;
@@ -1425,6 +1430,11 @@ h2 {
 }
 .footer__down-confid {
   color: #1d4152;
+  transition: 0.3s ease;
+}
+.footer__down-confid:hover {
+  transition: 0.3s ease;
+  font-weight: 700;
 }
 .footer__down-contact {
   font-weight: 700;
@@ -1434,6 +1444,10 @@ h2 {
 }
 .footer__down-tel {
   color: #1d4152;
+}
+.footer__down-tel:hover {
+  transition: 0.3s ease;
+  color: #8FC1E3;
 }
 .footer__down-itgirls {
   display: flex;
@@ -1448,9 +1462,17 @@ h2 {
   .footer__up-link {
     font-size: 1.1rem;
   }
-  .social__icon {
+  .footer__up-social {
+    padding-top: 0.2rem;
+  }
+  .footer__up-social-icon {
     width: 1.6rem;
     height: auto;
+    transition: 0.3s ease;
+  }
+  .footer__up-social-icon:hover {
+    transition: 0.3s ease;
+    transform: scale(1.3);
   }
 }
 @media screen and (max-width: 1280px) {
@@ -1486,6 +1508,10 @@ h2 {
   .footer__up-contact a {
     color: #1d4152;
     font-weight: 700;
+  }
+  .footer__up-contact a:hover {
+    transition: 0.3s ease;
+    color: #8FC1E3;
   }
   .footer__up-wrapper {
     flex-direction: column;
@@ -1537,4 +1563,4 @@ h2 {
     flex-direction: column;
     gap: 0.4rem;
   }
-}/*# sourceMappingURL=style.css.map */
+}
