@@ -179,7 +179,7 @@ h2 {
   font-size: 0.8rem;
   position: relative;
   cursor: pointer;
-  transition: all 0.8s ease;
+  transition: 0.3s ease;
 }
 @media screen and (max-width: 1025px) {
   .top-order .order__button {
@@ -202,7 +202,8 @@ h2 {
   content: url("../assets/icons/checkbox-checked18.svg");
 }
 .top-order .order__button:hover {
-  font-weight: 800;
+  transition: 0.3s ease;
+  font-weight: 700;
 }
 .top-order .order__button.checked {
   font-weight: 800;
@@ -263,9 +264,10 @@ h2 {
 }
 .top-order .order .form__dest .reverse-btn {
   cursor: pointer;
-  transition: all 0.8s ease;
+  transition: 0.3s ease;
 }
 .top-order .order .form__dest .reverse-btn:hover {
+  transition: 0.3s ease;
   transform: scale(1.3);
 }
 .top-order .order .form .input-line {
@@ -329,10 +331,10 @@ h2 {
   font-weight: 600;
   border-radius: 0.2rem;
   color: #1d4152;
-  background-color: #b5d9f1;
+  background-color: #8FC1E3;
   border: none;
   padding: 0.4rem 0.6rem;
-  transition: all 0.8s ease;
+  transition: 0.3s ease;
 }
 @media screen and (max-width: 1025px) {
   .top-order .order .form .submit-btn {
@@ -340,7 +342,8 @@ h2 {
   }
 }
 .top-order .order .form .submit-btn:hover, .top-order .order .form .submit-btn:active {
-  background-color: #8FC1E3;
+  background-color: #256582;
+  color: #F7F9FB;
   transform: scale(0.98);
 }
 .top-order .order .form .date {
@@ -378,6 +381,11 @@ h2 {
   font-size: 1rem;
   font-weight: 700;
 }
+.header__nav-container a:hover {
+  transition: 0.3s ease;
+  border-bottom: 1px solid #F7F9FB;
+  padding-bottom: 2px;
+}
 .header__nav-item {
   white-space: nowrap;
 }
@@ -393,15 +401,26 @@ h2 {
   display: flex;
   gap: 1rem;
 }
+.header__contacts-item {
+  transition: 0.3s ease;
+}
+.header__contacts-item:hover {
+  transition: 0.3s ease;
+  transform: scale(0.9);
+}
 .header__contacts-tels {
   font-size: 0.75rem;
   font-weight: 700;
   line-height: 100%;
   display: flex;
   flex-direction: column;
-  gap: 0.2rem;
+  gap: 0.5rem;
   justify-content: center;
   max-height: min-content;
+}
+.header__contacts-tels a:hover {
+  transition: 0.3s ease;
+  color: #1d4152;
 }
 
 .burger-open-btn {
@@ -453,6 +472,11 @@ h2 {
   .header__contacts-item {
     width: 1.6rem;
     height: auto;
+    transition: 0.3s ease;
+  }
+  .header__contacts-item:hover {
+    transition: 0.3s ease;
+    transform: scale(1.3);
   }
   .header__contacts-tels {
     flex-direction: row;
@@ -489,7 +513,7 @@ h2 {
   }
   .header__nav {
     width: fit-content;
-    height: fit-content;
+    height: 20.5rem;
     background-color: #256582;
     position: fixed;
     top: 0;
@@ -498,7 +522,7 @@ h2 {
     padding: 2.5rem;
     border-radius: 0.2rem;
     box-shadow: 0 0 0.2rem 0.05rem #1d4152;
-    transition: all 0.8s ease;
+    transition: 0.3s ease;
     transform: scale(0);
     transform-origin: right top;
   }
@@ -1108,6 +1132,12 @@ h2 {
 .trip-order__link {
   font-weight: 800;
   color: #1d4152;
+  transition: 0.3s ease;
+}
+.trip-order__link:hover {
+  transition: 0.3s ease;
+  border-bottom: 1px solid #1d4152;
+  padding-bottom: 2px;
 }
 .trip-order .order {
   width: 550px;
@@ -1162,7 +1192,7 @@ h2 {
   font-size: 0.8rem;
   position: relative;
   cursor: pointer;
-  transition: all 0.8s ease;
+  transition: 0.3s ease;
 }
 @media screen and (max-width: 1025px) {
   .trip-order .order__button {
@@ -1185,7 +1215,8 @@ h2 {
   content: url("../assets/icons/checkbox-checked18.svg");
 }
 .trip-order .order__button:hover {
-  font-weight: 800;
+  transition: 0.3s ease;
+  font-weight: 700;
 }
 .trip-order .order__button.checked {
   font-weight: 800;
@@ -1246,9 +1277,10 @@ h2 {
 }
 .trip-order .order .form__dest .reverse-btn {
   cursor: pointer;
-  transition: all 0.8s ease;
+  transition: 0.3s ease;
 }
 .trip-order .order .form__dest .reverse-btn:hover {
+  transition: 0.3s ease;
   transform: scale(1.3);
 }
 .trip-order .order .form .input-line {
@@ -1312,10 +1344,10 @@ h2 {
   font-weight: 600;
   border-radius: 0.2rem;
   color: #1d4152;
-  background-color: #b5d9f1;
+  background-color: #8FC1E3;
   border: none;
   padding: 0.4rem 0.6rem;
-  transition: all 0.8s ease;
+  transition: 0.3s ease;
 }
 @media screen and (max-width: 1025px) {
   .trip-order .order .form .submit-btn {
@@ -1323,7 +1355,8 @@ h2 {
   }
 }
 .trip-order .order .form .submit-btn:hover, .trip-order .order .form .submit-btn:active {
-  background-color: #8FC1E3;
+  background-color: #256582;
+  color: #F7F9FB;
   transform: scale(0.98);
 }
 .trip-order .order .form .date {
@@ -1356,6 +1389,11 @@ h2 {
 .footer__up-nav {
   grid-area: nav;
 }
+.footer__up-nav a:hover {
+  transition: 0.3s ease;
+  border-bottom: 1px solid #1d4152;
+  padding-bottom: 2px;
+}
 .footer__up-wrapper {
   list-style: none;
   display: flex;
@@ -1371,12 +1409,16 @@ h2 {
   align-items: center;
   gap: 1rem;
 }
+.footer__up-social-icon:hover {
+  transition: 0.3s ease;
+  transform: scale(0.9);
+}
 .footer__up-link {
   color: #1d4152;
   font-size: 1.2rem;
   font-weight: 700;
   white-space: nowrap;
-  transition: all 0.8s ease;
+  transition: 0.3s ease;
 }
 .footer__down {
   display: flex;
@@ -1394,6 +1436,11 @@ h2 {
 }
 .footer__down-confid {
   color: #1d4152;
+  transition: 0.3s ease;
+}
+.footer__down-confid:hover {
+  transition: 0.3s ease;
+  font-weight: 700;
 }
 .footer__down-contact {
   font-weight: 700;
@@ -1403,6 +1450,10 @@ h2 {
 }
 .footer__down-tel {
   color: #1d4152;
+}
+.footer__down-tel:hover {
+  transition: 0.3s ease;
+  color: #8FC1E3;
 }
 .footer__down-itgirls {
   display: flex;
@@ -1417,9 +1468,17 @@ h2 {
   .footer__up-link {
     font-size: 1.1rem;
   }
-  .social__icon {
+  .footer__up-social {
+    padding-top: 0.2rem;
+  }
+  .footer__up-social-icon {
     width: 1.6rem;
     height: auto;
+    transition: 0.3s ease;
+  }
+  .footer__up-social-icon:hover {
+    transition: 0.3s ease;
+    transform: scale(1.3);
   }
 }
 @media screen and (max-width: 1280px) {
@@ -1455,6 +1514,10 @@ h2 {
   .footer__up-contact a {
     color: #1d4152;
     font-weight: 700;
+  }
+  .footer__up-contact a:hover {
+    transition: 0.3s ease;
+    color: #8FC1E3;
   }
   .footer__up-wrapper {
     flex-direction: column;
