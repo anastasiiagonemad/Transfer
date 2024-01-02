@@ -41,6 +41,11 @@
   &__link {
     font-weight: 800;
     color: $dark-blue;
+    transition: $transition;
+
+    &:hover {
+      @include hover-underling-dark-blue;
+    }
   }
 
   .order {
