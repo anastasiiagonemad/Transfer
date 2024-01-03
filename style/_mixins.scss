@@ -282,3 +282,13 @@
   color: $light-grey;
   transform: scale(0.98);
 }
+
+@mixin close-btn {
+  display: block;
+  position: absolute;
+  width: 1.4rem;
+  height: 1.4rem;
+  cursor: pointer;
+  top: 1rem;
+  right: 1rem;
+}

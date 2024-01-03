@@ -13,8 +13,8 @@ if(empty($result['status'])){
     $to  = "elle.sinelle@gmail.com";
     $headers  = "Content-type: text/html; charset=utf-8 \r\n";
     $subject = "Сообщение с сайта";
-    $headers .= "From: название сайта <мэйл@сайт>\r\n";
-    $message = "Имя: $name <br> E-mail: $phone <br> Сообщение: $comment";
+    $headers = "From: Transfer mail_ellee@yahoo.com\r\n";
+    $message = "Имя: $name <br> Tel: $phone <br> Сообщение: $comment";
     mail($to, $subject, $message, $headers);
 
     $result['status']='success';
