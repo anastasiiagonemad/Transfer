@@ -128,7 +128,7 @@ h2 {
 }
 .top-order .order {
   width: 550px;
-  height: 530px;
+  height: 535px;
   background-color: #F7F9FB;
   padding: 0.8rem 1.2rem;
   border-radius: 0.2rem;
@@ -136,26 +136,25 @@ h2 {
 }
 @media screen and (max-width: 1025px) {
   .top-order .order {
-    height: 510px;
+    height: 515px;
   }
 }
 @media screen and (max-width: 600px) {
   .top-order .order {
     width: 400px;
-    height: 510px;
+    height: 550px;
   }
 }
 @media screen and (max-width: 520px) {
   .top-order .order {
     width: 320px;
-    height: 530px;
     padding: 0.6rem 0.7rem;
   }
 }
 @media screen and (max-width: 340px) {
   .top-order .order {
     width: 270px;
-    height: 515px;
+    height: 525px;
     padding: 0.4rem 0.2rem;
   }
 }
@@ -351,7 +350,7 @@ h2 {
 }
 .top-order .order .form .confidentiality,
 .top-order .order .form .required-fields {
-  font-size: 0.5rem;
+  font-size: 0.6rem;
   text-align: center;
 }
 
@@ -1141,7 +1140,7 @@ h2 {
 }
 .trip-order .order {
   width: 550px;
-  height: 530px;
+  height: 535px;
   background-color: #F7F9FB;
   padding: 0.8rem 1.2rem;
   border-radius: 0.2rem;
@@ -1149,26 +1148,25 @@ h2 {
 }
 @media screen and (max-width: 1025px) {
   .trip-order .order {
-    height: 510px;
+    height: 515px;
   }
 }
 @media screen and (max-width: 600px) {
   .trip-order .order {
     width: 400px;
-    height: 510px;
+    height: 550px;
   }
 }
 @media screen and (max-width: 520px) {
   .trip-order .order {
     width: 320px;
-    height: 530px;
     padding: 0.6rem 0.7rem;
   }
 }
 @media screen and (max-width: 340px) {
   .trip-order .order {
     width: 270px;
-    height: 515px;
+    height: 525px;
     padding: 0.4rem 0.2rem;
   }
 }
@@ -1364,7 +1362,7 @@ h2 {
 }
 .trip-order .order .form .confidentiality,
 .trip-order .order .form .required-fields {
-  font-size: 0.5rem;
+  font-size: 0.6rem;
   text-align: center;
 }
 
@@ -1568,6 +1566,9 @@ h2 {
   .footer__down {
     flex-direction: column;
     gap: 0.4rem;
+  }
+  .footer__down-confid, .footer__down-creators {
+    font-size: 0.8rem;
   }
 }
 .ready-popup {

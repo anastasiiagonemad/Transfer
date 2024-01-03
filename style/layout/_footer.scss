@@ -231,5 +231,10 @@
   .footer__down  {
     flex-direction: column;
     gap: 0.4rem;
+
+    &-confid,
+    &-creators {
+      font-size: 0.8rem;
+    }
   }
 }

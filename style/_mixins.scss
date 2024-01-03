@@ -1,29 +1,28 @@
 @mixin order {
   width: 550px;
-  height: 530px;
+  height: 535px;
   background-color: $light-grey;
   padding: 0.8rem 1.2rem;
   border-radius: 0.2rem;
   box-shadow: 0 0 0.2rem 0.05rem $grey;
 
   @media screen and (max-width: $tablet) {
-    height: 510px;
+    height: 515px;
   }
 
   @media screen and (max-width: $large-mobile) {
     width: 400px;
-    height: 510px;
+    height: 550px;
   }
 
   @media screen and (max-width: $mobile) {
     width: 320px;
-    height: 530px;
     padding: 0.6rem 0.7rem;
   }
 
   @media screen and (max-width: $small-mobile) {
     width: 270px;
-    height: 515px;
+    height: 525px;
     padding: 0.4rem 0.2rem;
   }
 
@@ -228,7 +227,7 @@
 
     .confidentiality,
     .required-fields {
-      font-size: 0.5rem;
+      font-size: 0.6rem;
       text-align: center;
     }
   }
