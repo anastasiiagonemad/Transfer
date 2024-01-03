@@ -63,7 +63,7 @@ let passengers = `
 
 let euroPassengers = `
 <div class="form-container">
-  <form class="form form_euro-passengers" name="euro-passengers" id="form" action="mail.php" method="POST">
+  <form class="form form_euro-passengers" name="euro-passengers" id="form" action="mail.php" method="post">
     <div class="input-line">
       <label for="destination">Направление<br>поездки: *</label>
       <input class="euro-destination" id="destination" type="text" required>
@@ -122,7 +122,7 @@ let euroPassengers = `
 
 let cargo = `
 <div class="form-container">
-  <form class="form form_cargo" name="cargo" id="form" action="mail.php" method="POST">
+  <form class="form form_cargo" name="cargo" id="form" action="mail.php" method="post">
     <div class="form__dest">
       <div class="departure" id="departure">Германия</div>
       <img class="reverse-btn" src="assets/icons/exchange.svg">

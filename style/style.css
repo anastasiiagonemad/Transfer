@@ -1612,7 +1612,7 @@ h2 {
   text-align: center;
 }
 .ready-popup.active {
-  display: block;
+  display: flex;
 }
 
 @media screen and (max-width: 600px) {

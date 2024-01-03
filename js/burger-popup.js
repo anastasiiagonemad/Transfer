@@ -25,3 +25,26 @@ fade.addEventListener('click', closeBurgerMenu);
 links.forEach(link => {
     link.addEventListener('click', closeBurgerMenu);
 })
+
+
+//popup
+let popup = document.querySelector('.ready-popup');
+let closePopupBtn = document.querySelector('.ready-popup__close-btn');
+// let submitBtn = document.querySelector('.submit-btn');
+let submitBtn = document.querySelector('.logo');
+
+function openPopup() {
+  popup.classList.add('active');
+  body.classList.add('body-lock');
+  fade.classList.add('active');
+}
+
+function closePopup() {
+  popup.classList.remove('active');
+  body.classList.remove('body-lock');
+  fade.classList.remove('active');
+}
+
+submitBtn.addEventListener('click', openPopup);
+closePopupBtn.addEventListener('click', closePopup);
+fade.addEventListener('click', closePopup);
