@@ -3,7 +3,7 @@
 //create blocks for passengers, euro-passengers and cargo
 let passengers = `
 <div class="form-container">
-  <form class="form form_passengers" name="passengers" id="form" action="#" method="POST">
+  <form class="form form_passengers" name="passengers" id="form" action="mail.php" method="post">
     <div class="form__dest">
       <div class="departure" id="departure">Германия</div>
       <img class="reverse-btn" src="assets/icons/exchange.svg">
@@ -12,7 +12,7 @@ let passengers = `
 
     <div class="input-line">
       <label for="date">Дата поездки:*</label>
-      <input class="date" id="date" type="text" required>
+      <input class="date" id="date" type="text" name="date" required>
     </div>
 
     <div class="input-line">
@@ -34,7 +34,7 @@ let passengers = `
 
     <div class="input-line">
       <label for="tel">Ваш номер телефона:*</label>
-      <input class="tel" id="tel" type="tel" required>
+      <input class="tel" id="tel" type="tel" name="tel" required>
     </div>
 
     <div class="input-line">
@@ -63,7 +63,7 @@ let passengers = `
 
 let euroPassengers = `
 <div class="form-container">
-  <form class="form form_euro-passengers" name="euro-passengers" id="form" action="#" method="POST">
+  <form class="form form_euro-passengers" name="euro-passengers" id="form" action="mail.php" method="post">
     <div class="input-line">
       <label for="destination">Направление<br>поездки: *</label>
       <input class="euro-destination" id="destination" type="text" required>
@@ -122,7 +122,7 @@ let euroPassengers = `
 
 let cargo = `
 <div class="form-container">
-  <form class="form form_cargo" name="cargo" id="form" action="#" method="POST">
+  <form class="form form_cargo" name="cargo" id="form" action="mail.php" method="post">
     <div class="form__dest">
       <div class="departure" id="departure">Германия</div>
       <img class="reverse-btn" src="assets/icons/exchange.svg">
