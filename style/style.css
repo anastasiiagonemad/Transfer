@@ -761,6 +761,7 @@ h2 {
   border-radius: 3px;
   color: #256582;
   cursor: pointer;
+  transition: 0.3s ease;
 }
 .services__main .services__container-item-1 details summary {
   list-style: none;
@@ -811,6 +812,7 @@ h2 {
   border-radius: 3px;
   color: #256582;
   cursor: pointer;
+  transition: 0.3s ease;
 }
 .services__main .services__container-item-2 details summary {
   list-style: none;
@@ -861,6 +863,7 @@ h2 {
   border-radius: 3px;
   color: #256582;
   cursor: pointer;
+  transition: 0.3s ease;
 }
 .services__main .services__container-item-3 details summary {
   list-style: none;
@@ -961,12 +964,8 @@ h2 {
   right: -1.5%;
 }
 .comments__container {
-  overflow: hidden;
   background-color: #F7F9FB;
   text-align: center;
-  display: grid;
-  grid-template-columns: repeat(5, 20%);
-  grid-auto-flow: column;
 }
 .comments__item {
   margin: 1rem 0.875rem;
@@ -997,6 +996,20 @@ h2 {
 .owl-carousel .owl-item img {
   display: inline-block;
   width: auto;
+}
+.owl-carousel .owl-nav {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.owl-carousel .owl-prev {
+  position: absolute;
+  left: -2rem;
+}
+.owl-carousel .owl-next {
+  position: absolute;
+  right: -2rem;
 }
 
 @media screen and (max-width: 1025px) {
@@ -1057,6 +1070,9 @@ h2 {
   }
   .comments__name {
     font-size: 0.7rem;
+  }
+  .comments .owl-nav {
+    display: none;
   }
 }
 .accordion {
@@ -1646,4 +1662,4 @@ h2 {
     font-weight: 600;
     font-size: 0.9rem;
   }
-}/*# sourceMappingURL=style.css.map */
+}

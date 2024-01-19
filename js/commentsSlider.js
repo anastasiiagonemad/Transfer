@@ -3,6 +3,7 @@ $(document).ready(function () {
     loop: true,
     margin: 5,
     nav: true,
+    dots: false,
     responsive: {
       0: {
         items: 1,
