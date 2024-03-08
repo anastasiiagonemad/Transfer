@@ -3,9 +3,9 @@
 //create blocks for passengers, euro-passengers and cargo
 let passengers = `
 <div class="form-container">
-  <form class="form form_passengers" name="passengers" id="form" action="mail.php" method="post">
+  <form action="#" method="POST" class="form form_passengers" name="passengers" id="form">
     <div class="form__dest">
-      <div class="departure" id="departure">Германия</div>
+      <div class="departure" id="departure" name="departure">Германия</div>
       <img class="reverse-btn" src="assets/icons/exchange.svg">
       <div class="arrival">Калининград</div>
     </div>
@@ -17,7 +17,7 @@ let passengers = `
 
     <div class="input-line">
       <label for="places">Количество пассажиров:*</label>
-      <select class="places" id="places" required>
+      <select class="places" id="places" name="places" required>
         <option value="">выберите количество</option>
         <option value="1">1</option>
         <option value="2">2</option>
@@ -29,7 +29,7 @@ let passengers = `
 
     <div class="input-line">
       <label for="address">Ваш адрес с индексом:*</label>
-      <input class="address" id="address" type="text" required>
+      <input class="address" name="address" id="address" type="text" required>
     </div>
 
     <div class="input-line">
@@ -39,7 +39,7 @@ let passengers = `
 
     <div class="input-line">
       <label for="luggage">Есть ли у вас багаж?*</label>
-      <select id="luggage" class="luggage" required>
+      <select id="luggage" name="luggage" class="luggage" required>
         <option value="">выберите значение</option>
         <option value="да">да</option>
         <option value="нет">нет</option>
@@ -48,7 +48,7 @@ let passengers = `
 
     <div class="input-line">
       <label for="comments">Комментарии:</label>
-      <textarea id="comments" cols="40" rows="2"></textarea>
+      <textarea id="comments" name="comments" cols="40" rows="2"></textarea>
     </div>
 
     <button class="submit-btn" name="passengers-submit" type="submit">Оставить заявку</button>
@@ -247,6 +247,7 @@ window.addEventListener('load', function() {
   addOrderContents(passengers);
   reverse();
   createCalendar();
+  getFields();
 
 });
 
@@ -283,3 +284,35 @@ orderBtnArr.forEach((btn) => {
     }
   })
 })
+
+
+//getting form fields
+function getFields() {
+  const formPassengers = document.forms.passengers;
+
+  formPassengers.addEventListener('submit', formSend);
+
+  async function formSend(event) {
+    event.preventDefault();
+
+    let formData = new FormData (formPassengers);
+    let departure = formPassengers.querySelector('.departure').textContent;
+
+    formData.append('departure', departure);
+    console.log(formData.get('departure'));
+
+    let response = await fetch('sendmail.php', {
+      method: 'POST',
+      body: formData
+    });
+
+    if(response.ok) {
+      let result = await response.json();
+      alert(result.message);
+      formPassengers.reset();
+
+    } else {
+      alert('Ошибка, попробуйте ещё раз через пару минут');
+    }
+  }
+}
