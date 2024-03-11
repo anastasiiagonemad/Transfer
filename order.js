@@ -3,9 +3,9 @@
 //create blocks for passengers, euro-passengers and cargo
 let passengers = `
 <div class="form-container">
-  <form action="#" method="POST" class="form form_passengers" name="passengers" id="form">
+  <form action="#" method="POST" class="form form_passengers" name="passengers" id="passengers">
     <div class="form__dest">
-      <div class="departure" id="departure" name="departure">Германия</div>
+      <div class="departure">Германия</div>
       <img class="reverse-btn" src="assets/icons/exchange.svg">
       <div class="arrival">Калининград</div>
     </div>
@@ -17,7 +17,7 @@ let passengers = `
 
     <div class="input-line">
       <label for="places">Количество пассажиров:*</label>
-      <select class="places" id="places" name="places" required>
+      <select id="places" name="places" required>
         <option value="">выберите количество</option>
         <option value="1">1</option>
         <option value="2">2</option>
@@ -29,17 +29,17 @@ let passengers = `
 
     <div class="input-line">
       <label for="address">Ваш адрес с индексом:*</label>
-      <input class="address" name="address" id="address" type="text" required>
+      <input name="address" id="address" type="text" required>
     </div>
 
     <div class="input-line">
       <label for="tel">Ваш номер телефона:*</label>
-      <input class="tel" id="tel" type="tel" name="tel" required>
+      <input id="tel" type="tel" name="tel" required>
     </div>
 
     <div class="input-line">
       <label for="luggage">Есть ли у вас багаж?*</label>
-      <select id="luggage" name="luggage" class="luggage" required>
+      <select id="luggage" name="luggage" required>
         <option value="">выберите значение</option>
         <option value="да">да</option>
         <option value="нет">нет</option>
@@ -63,20 +63,20 @@ let passengers = `
 
 let euroPassengers = `
 <div class="form-container">
-  <form class="form form_euro-passengers" name="euro-passengers" id="form" action="mail.php" method="post">
+  <form action="#" method="POST" class="form form_euro-passengers" name="euroPassengers" id="euroPassengers">
     <div class="input-line">
-      <label for="destination">Направление<br>поездки: *</label>
-      <input class="euro-destination" id="destination" type="text" required>
+      <label for="goto">Направление<br>поездки: *</label>
+      <input id="goto" type="text" name="goto" required>
     </div>
 
     <div class="input-line">
       <label for="date">Желаемая дата поездки:*</label>
-      <input class="date" id="date" type="text" required>
+      <input class="date" id="date" type="text" name="date" required>
     </div>
 
     <div class="input-line">
       <label for="places">Количество пассажиров:*</label>
-      <select class="places" id="places" required>
+      <select id="places" name="places" required>
         <option value="">выберите количество</option>
         <option value="1">1</option>
         <option value="2">2</option>
@@ -88,17 +88,17 @@ let euroPassengers = `
 
     <div class="input-line">
       <label for="address">Ваш адрес с индексом:*</label>
-      <input class="address" id="address" type="text" required>
+      <input id="address" type="text" name="address" required>
     </div>
 
     <div class="input-line">
       <label for="tel">Ваш номер телефона:*</label>
-      <input class="tel" id="tel" type="tel" required>
+      <input id="tel" type="tel" name="tel" required>
     </div>
 
     <div class="input-line">
       <label for="luggage">Есть ли у вас багаж?*</label>
-      <select id="luggage" class="luggage" required>
+      <select id="luggage" name="luggage" required>
         <option value="">выберите значение</option>
         <option value="да">да</option>
         <option value="нет">нет</option>
@@ -107,7 +107,7 @@ let euroPassengers = `
 
     <div class="input-line">
       <label for="comments">Комментарии:</label>
-      <textarea id="comments" cols="40" rows="2"></textarea>
+      <textarea id="comments" name="comments" cols="40" rows="2"></textarea>
     </div>
 
     <button class="submit-btn" name="euro-passengers-submit" type="submit">Оставить заявку</button>
@@ -122,21 +122,21 @@ let euroPassengers = `
 
 let cargo = `
 <div class="form-container">
-  <form class="form form_cargo" name="cargo" id="form" action="mail.php" method="post">
+  <form action="#" method="POST" class="form form_cargo" name="cargo" id="cargo">
     <div class="form__dest">
-      <div class="departure" id="departure">Германия</div>
+      <div class="departure">Германия</div>
       <img class="reverse-btn" src="assets/icons/exchange.svg">
       <div class="arrival">Калининград</div>
     </div>
 
     <div class="input-line">
       <label for="date">Дата отправления:*</label>
-      <input class="date" id="date" type="text" required>
+      <input class="date" id="date" name="date" type="text" required>
     </div>
 
     <div class="input-line">
       <label for="cargo-type">Тип груза:*</label>
-      <select class="cargo-type" id="cargo-type" required>
+      <select id="cargo-type" name="cargoType" required>
         <option value="">выберите тип груза</option>
         <option value="письмо">Письмо</option>
         <option value="посылка">Посылка</option>
@@ -149,17 +149,17 @@ let cargo = `
 
     <div class="input-line">
       <label for="weight">Примерный вес груза:*</label>
-      <input class="weight" id="weight" type="text" required>
+      <input id="weight" name="weight" type="text" required>
     </div>
 
     <div class="input-line">
       <label for="tel">Ваш номер телефона:*</label>
-      <input class="tel" id="tel" type="tel" required>
+      <input id="tel" name="tel" type="tel" required>
     </div>
 
     <div class="input-line">
       <label for="comments">Комментарии:</label>
-      <textarea id="comments" cols="40" rows="4"></textarea>
+      <textarea id="comments" name="comments" cols="40" rows="4"></textarea>
     </div>
 
     <button class="submit-btn" name="cargo-submit">Оставить заявку</button>
@@ -247,7 +247,7 @@ window.addEventListener('load', function() {
   addOrderContents(passengers);
   reverse();
   createCalendar();
-  getFields();
+  getFields(passengers);
 
 });
 
@@ -264,6 +264,7 @@ orderBtnArr.forEach((btn) => {
       addOrderContents(passengers);
       reverse();
       createCalendar();
+      getFields(passengers);
 
     } else if (event.target.classList.contains('order__euro-passengers')) {
       euroPassengersBtnArr.forEach((item) => item.classList.add('checked'));
@@ -272,6 +273,7 @@ orderBtnArr.forEach((btn) => {
       removeOrderContents();
       addOrderContents(euroPassengers);
       createCalendar();
+      getFields(euroPassengers);
 
     } else if (event.target.classList.contains('order__cargo')) {
       cargoBtnArr.forEach((item) => item.classList.add('checked'));
@@ -281,25 +283,34 @@ orderBtnArr.forEach((btn) => {
       addOrderContents(cargo);
       reverse();
       createCalendar();
+      getFields(cargo);
     }
   })
 })
 
 
 //getting form fields
-function getFields() {
-  const formPassengers = document.forms.passengers;
+function getFields(form) {
 
-  formPassengers.addEventListener('submit', formSend);
+  if (form === passengers) {
+    form = document.forms.passengers;
+  } else if (form === euroPassengers) {
+    form = document.forms.euroPassengers;
+  } else if (form === cargo) {
+    form = document.forms.cargo;
+  }
+
+  form.addEventListener('submit', formSend);
 
   async function formSend(event) {
     event.preventDefault();
 
-    let formData = new FormData (formPassengers);
-    let departure = formPassengers.querySelector('.departure').textContent;
-
+    let formData = new FormData(form);
+    let formName = form.id;
+    formData.append('formName', formName);
+    let departure = form.querySelector('.departure') ? form.querySelector('.departure').textContent : '';
     formData.append('departure', departure);
-    console.log(formData.get('departure'));
+    console.log(formData.get('formName'));
 
     let response = await fetch('sendmail.php', {
       method: 'POST',
@@ -309,7 +320,7 @@ function getFields() {
     if(response.ok) {
       let result = await response.json();
       alert(result.message);
-      formPassengers.reset();
+      form.reset();
 
     } else {
       alert('Ошибка, попробуйте ещё раз через пару минут');

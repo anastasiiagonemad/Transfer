@@ -6,6 +6,10 @@
   border-radius: 0.2rem;
   box-shadow: 0 0 0.2rem 0.05rem $grey;
 
+  // ._error {
+  //   box-shadow: 0 0 0.1rem 0.05rem rgb(246, 131, 131);
+  // }
+
   @media screen and (max-width: $tablet) {
     height: 515px;
   }
